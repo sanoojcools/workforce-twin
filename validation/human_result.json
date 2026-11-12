@@ -1,0 +1,8 @@
+{
+  "kappa": 0.59,
+  "spearman": 0.71,
+  "within_one": 11,
+  "exact": 3,
+  "n": 12,
+  "text": "Sanuj, an HR leader with roles at Trianz, Swvl and Carrefour, made blind calls on 12 simulated employees (six at the Bengaluru firm, six at the US firm) on 12 November 2026: how likely each person is to leave within 12 months if the mandate goes ahead, in five bands. The twin's answers were hidden until all 12 were saved. Result: quadratic-weighted kappa 0.59, rank correlation 0.71, 11 of 12 calls within one band (3 exact). The twin ran hotter than the human on 7 of 12 people (average band 1.67 vs 1.17). It is the same lean the backtest found: on a takeaway, the simulated employees overstate how many would actually walk."
+}

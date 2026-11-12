@@ -1,0 +1,120 @@
+<title>Workforce Twin Risk Calls</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one employee file card at a time, five big risk buttons under it, progress dots on top. */
+:root{
+  --bg:#f2f3f1; --card:#ffffff; --ink:#1b2023; --muted:#5d666b; --line:#d9ddd8; --soft:#e8ebe7;
+  --accent:#2d4f9e; --accent-soft:#e3e9f6; --ok:#2f7a4b;
+  --r0:#e4efe6; --r1:#eef1df; --r2:#f6ecd6; --r3:#f6e0d3; --r4:#f4d6d6;
+  --body:"Instrument Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141719; --card:#1c2023; --ink:#e6eae8; --muted:#9aa3a6; --line:#30363a; --soft:#252a2d;
+  --accent:#8ea8ec; --accent-soft:#232d47; --ok:#6cc28c;
+  --r0:#1e2f23; --r1:#2b2f1e; --r2:#35301d; --r3:#3a281f; --r4:#3c2224; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141719; --card:#1c2023; --ink:#e6eae8; --muted:#9aa3a6; --line:#30363a; --soft:#252a2d;
+  --accent:#8ea8ec; --accent-soft:#232d47; --ok:#6cc28c;
+  --r0:#1e2f23; --r1:#2b2f1e; --r2:#35301d; --r3:#3a281f; --r4:#3c2224; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
+.wrap{max-width:760px;margin:0 auto;padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:16px}
+h1{font-size:26px;font-weight:700;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.sub{color:var(--muted);margin:0;max-width:62ch}
+.dots{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.dots button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:var(--card);font:500 11px var(--mono);color:var(--muted);cursor:pointer;padding:0}
+.dots button.done{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}
+.dots button[aria-current="true"]{outline:2px solid var(--ink);outline-offset:1px}
+.count{font:500 13px var(--mono);color:var(--muted);margin-left:6px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.co{font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.person{display:flex;flex-direction:column;gap:2px}
+.name{font-size:22px;font-weight:700}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.fact{background:var(--soft);border-radius:8px;padding:8px 10px;min-width:0}
+.fact b{display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.policy{border-left:3px solid var(--accent);padding:2px 0 2px 12px}
+.policy p{margin:2px 0}
+.lbl{font-size:12px;font-weight:600;color:var(--muted)}
+details{font-size:13.5px;color:var(--muted)}
+.q{font-weight:600;font-size:16px;margin:0}
+.risk{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+@media (max-width:520px){.risk{grid-template-columns:minmax(0,1fr)}}
+.risk button{font:600 15px var(--body);padding:14px 6px;border-radius:10px;border:1px solid var(--line);color:var(--ink);cursor:pointer;min-width:0}
+.risk button:nth-child(1){background:var(--r0)}.risk button:nth-child(2){background:var(--r1)}.risk button:nth-child(3){background:var(--r2)}.risk button:nth-child(4){background:var(--r3)}.risk button:nth-child(5){background:var(--r4)}
+.risk button:hover{border-color:var(--ink)}
+.risk button.on{outline:3px solid var(--accent);outline-offset:1px}
+.risk button:focus-visible,.dots button:focus-visible,.nav button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.risk kbd{display:block;font:400 11px var(--mono);color:var(--muted);margin-top:2px}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.nav button{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:8px 14px;cursor:pointer}
+.status{font-size:13.5px;color:var(--muted)}
+.done-box{background:var(--card);border:1px solid var(--ok);border-radius:14px;padding:18px}
+.done-box h2{margin:0 0 4px;font-size:20px}
+@media (prefers-reduced-motion:no-preference){.card{animation:in .18s ease-out}@keyframes in{from{transform:translateY(4px)}to{transform:none}}}
+</style>
+
+<div class="wrap">
+  <h1>Workforce Twin risk calls</h1>
+  <p class="sub">12 employees, one tap each, about two minutes. For each person, call how likely they are to leave within 12 months if the announcement goes ahead. Tap a band or press 1 to 5; it saves and moves on. You won't see what the twin predicted until you're done.</p>
+  <div class="dots" id="dots"></div>
+  <div class="card" id="card"></div>
+  <div class="nav"><button type="button" id="prev">Previous</button><span class="status" id="status" role="status">Connecting…</span></div>
+  <div class="done-box" id="done" hidden><h2>All 12 saved. Thank you.</h2><p class="sub" style="margin:0">Tell Claude in the thread that you're done. It will compare your calls with the twin's and post the agreement score.</p></div>
+</div>
+
+<script>
+const DATA = __CARDS__;
+const CARDS = DATA.cards, BANDS = DATA.bands;
+const SHORT = {rto5_blr:"IT services firm, Bengaluru, 5,000 staff", rto_sp500:"Large US tech or finance firm (S&P 500)"};
+let i = 0, saved = {}, db = null;
+const $ = id => document.getElementById(id);
+function el(tag, cls, text){const e=document.createElement(tag); if(cls) e.className=cls; if(text!=null) e.textContent=text; return e;}
+
+function renderDots(){
+  const d=$("dots"); d.textContent="";
+  CARDS.forEach((c,k)=>{const b=el("button",saved[c.id]!=null?"done":"",String(k+1)); b.type="button"; b.setAttribute("aria-label",`Employee ${k+1}`); b.setAttribute("aria-current",k===i?"true":"false"); b.onclick=()=>{i=k;render();}; d.appendChild(b);});
+  d.appendChild(el("span","count",`${Object.keys(saved).length} of ${CARDS.length} saved`));
+  $("done").hidden = Object.keys(saved).length < CARDS.length;
+}
+function render(){
+  renderDots();
+  const c=CARDS[i], p=c.person, card=$("card"); card.textContent="";
+  card.appendChild(el("div","co",`${i+1} / ${CARDS.length} · ${SHORT[c.case]||c.case}`));
+  const per=el("div","person"); per.appendChild(el("div","name",p.name));
+  per.appendChild(el("div","",`${p.age}, ${p.gender}, ${p.role} (${p.level} level), ${p.tenure_years} yrs at the company`)); card.appendChild(per);
+  const f=el("div","facts");
+  [["Commute",`${p.commute_min_each_way} min each way`],["At home",p.home],["Performance",p.performance]].forEach(([k,v])=>{const x=el("div","fact"); x.appendChild(el("b","",k)); x.appendChild(document.createTextNode(v)); f.appendChild(x);});
+  card.appendChild(f);
+  const pol=el("div","policy"); pol.appendChild(el("span","lbl","Today")); pol.appendChild(el("p","",c.today)); pol.appendChild(el("span","lbl","The announcement")); pol.appendChild(el("p","",c.policy)); card.appendChild(pol);
+  const det=el("details"); det.appendChild(el("summary","","About the company")); det.appendChild(el("p","",c.company)); card.appendChild(det);
+  card.appendChild(el("p","q","Chance they leave within 12 months if this goes ahead?"));
+  const r=el("div","risk");
+  BANDS.forEach((b,k)=>{const btn=el("button",saved[c.id]===k?"on":"",b); btn.type="button"; btn.appendChild(el("kbd","",String(k+1))); btn.onclick=()=>pick(k); r.appendChild(btn);});
+  card.appendChild(r);
+  $("prev").disabled = i===0;
+}
+async function pick(k){
+  const c=CARDS[i]; saved[c.id]=k;
+  if(db){ try{ await db.doc(`ratings/${c.id}`).set({band:k, label:BANDS[k], at:new Date().toISOString()}); $("status").textContent=`Saved ${i+1}.`; } catch(e){ $("status").textContent=`Not saved (${e.code||e.message}). Tap again.`; delete saved[c.id]; } }
+  else $("status").textContent="Not connected: this answer stays in this tab only.";
+  const next = CARDS.findIndex((x,j)=>j>i && saved[x.id]==null);
+  i = next>=0 ? next : Math.min(i+1, CARDS.length-1);
+  render();
+}
+$("prev").onclick=()=>{ if(i>0){i--;render();} };
+document.addEventListener("keydown",e=>{ if(e.target.closest("input,textarea")) return; const n=+e.key; if(n>=1&&n<=5){pick(n-1);} else if(e.key==="ArrowLeft"&&i>0){i--;render();} else if(e.key==="ArrowRight"&&i<CARDS.length-1){i++;render();} });
+render();
+(async()=>{
+  try{ db = window.claude ? await window.claude.use("db") : null; }catch(e){ db=null; }
+  if(!db){ $("status").textContent="Open this page signed in to save your calls."; return; }
+  try{
+    const snap = await db.collection("ratings").get();
+    snap.docs.forEach(d=>{ const v=d.data(); if(v && typeof v.band==="number") saved[d.id]=v.band; });
+    const first = CARDS.findIndex(c=>saved[c.id]==null); if(first>=0) i=first;
+    $("status").textContent = Object.keys(saved).length ? "Picked up where you left off." : "Ready.";
+  }catch(e){ $("status").textContent="Ready."; }
+  render();
+})();
+</script>

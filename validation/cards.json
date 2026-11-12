@@ -1,0 +1,227 @@
+{
+  "bands": [
+    "Under 10%",
+    "10-19%",
+    "20-34%",
+    "35-49%",
+    "50% or more"
+  ],
+  "cards": [
+    {
+      "id": "C01",
+      "case": "rto5_blr",
+      "company": "A 5,000-person IT services company in Bengaluru, India. Clients are in the US and Europe, so some calls run late. Bengaluru traffic is heavy. Competitors hire your skills actively and several of them still offer hybrid work.",
+      "today": "Hybrid: two set office days a week, the rest from home.",
+      "policy": "From the first of next quarter, everyone works from the office five days a week. Attendance counts toward your performance rating. A shuttle service will be added on main routes.",
+      "person": {
+        "name": "Divya",
+        "gender": "woman",
+        "age": 43,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 5,
+        "commute_min_each_way": 16,
+        "home": "lives alone",
+        "performance": "steady, meets expectations"
+      }
+    },
+    {
+      "id": "C02",
+      "case": "rto_sp500",
+      "company": "A large US technology or financial-services company (an S&P 500 firm). You are a salaried professional. Since 2020 most of your team has worked hybrid or remotely, and other employers in your field still offer some flexibility.",
+      "today": "You choose where you work most days; you go into the office when your team needs to.",
+      "policy": "Starting in 90 days, all employees must work from the office at least three set days a week. Badge swipes will be tracked and reviewed with managers. Exceptions need VP approval.",
+      "person": {
+        "name": "Maria",
+        "gender": "woman",
+        "age": 40,
+        "role": "director of operations",
+        "level": "manager",
+        "tenure_years": 7,
+        "commute_min_each_way": 32,
+        "home": "lives alone",
+        "performance": "top performer"
+      }
+    },
+    {
+      "id": "C03",
+      "case": "rto5_blr",
+      "company": "A 5,000-person IT services company in Bengaluru, India. Clients are in the US and Europe, so some calls run late. Bengaluru traffic is heavy. Competitors hire your skills actively and several of them still offer hybrid work.",
+      "today": "Hybrid: two set office days a week, the rest from home.",
+      "policy": "From the first of next quarter, everyone works from the office five days a week. Attendance counts toward your performance rating. A shuttle service will be added on main routes.",
+      "person": {
+        "name": "Siddharth",
+        "gender": "man",
+        "age": 29,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 2,
+        "commute_min_each_way": 26,
+        "home": "an elderly parent who lives with them",
+        "performance": "strong performer"
+      }
+    },
+    {
+      "id": "C04",
+      "case": "rto_sp500",
+      "company": "A large US technology or financial-services company (an S&P 500 firm). You are a salaried professional. Since 2020 most of your team has worked hybrid or remotely, and other employers in your field still offer some flexibility.",
+      "today": "You choose where you work most days; you go into the office when your team needs to.",
+      "policy": "Starting in 90 days, all employees must work from the office at least three set days a week. Badge swipes will be tracked and reviewed with managers. Exceptions need VP approval.",
+      "person": {
+        "name": "Michael",
+        "gender": "man",
+        "age": 29,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 60,
+        "home": "a child in primary school",
+        "performance": "strong performer"
+      }
+    },
+    {
+      "id": "C05",
+      "case": "rto5_blr",
+      "company": "A 5,000-person IT services company in Bengaluru, India. Clients are in the US and Europe, so some calls run late. Bengaluru traffic is heavy. Competitors hire your skills actively and several of them still offer hybrid work.",
+      "today": "Hybrid: two set office days a week, the rest from home.",
+      "policy": "From the first of next quarter, everyone works from the office five days a week. Attendance counts toward your performance rating. A shuttle service will be added on main routes.",
+      "person": {
+        "name": "Siddharth",
+        "gender": "man",
+        "age": 24,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 89,
+        "home": "lives with a partner, no children",
+        "performance": "solid performer"
+      }
+    },
+    {
+      "id": "C06",
+      "case": "rto_sp500",
+      "company": "A large US technology or financial-services company (an S&P 500 firm). You are a salaried professional. Since 2020 most of your team has worked hybrid or remotely, and other employers in your field still offer some flexibility.",
+      "today": "You choose where you work most days; you go into the office when your team needs to.",
+      "policy": "Starting in 90 days, all employees must work from the office at least three set days a week. Badge swipes will be tracked and reviewed with managers. Exceptions need VP approval.",
+      "person": {
+        "name": "James",
+        "gender": "man",
+        "age": 38,
+        "role": "director of operations",
+        "level": "manager",
+        "tenure_years": 15,
+        "commute_min_each_way": 11,
+        "home": "lives alone",
+        "performance": "steady, meets expectations"
+      }
+    },
+    {
+      "id": "C07",
+      "case": "rto5_blr",
+      "company": "A 5,000-person IT services company in Bengaluru, India. Clients are in the US and Europe, so some calls run late. Bengaluru traffic is heavy. Competitors hire your skills actively and several of them still offer hybrid work.",
+      "today": "Hybrid: two set office days a week, the rest from home.",
+      "policy": "From the first of next quarter, everyone works from the office five days a week. Attendance counts toward your performance rating. A shuttle service will be added on main routes.",
+      "person": {
+        "name": "Rahul",
+        "gender": "man",
+        "age": 37,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 5,
+        "commute_min_each_way": 25,
+        "home": "lives with a partner, no children",
+        "performance": "steady, meets expectations"
+      }
+    },
+    {
+      "id": "C08",
+      "case": "rto_sp500",
+      "company": "A large US technology or financial-services company (an S&P 500 firm). You are a salaried professional. Since 2020 most of your team has worked hybrid or remotely, and other employers in your field still offer some flexibility.",
+      "today": "You choose where you work most days; you go into the office when your team needs to.",
+      "policy": "Starting in 90 days, all employees must work from the office at least three set days a week. Badge swipes will be tracked and reviewed with managers. Exceptions need VP approval.",
+      "person": {
+        "name": "Jessica",
+        "gender": "woman",
+        "age": 28,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 34,
+        "home": "lives with a partner, no children",
+        "performance": "top performer"
+      }
+    },
+    {
+      "id": "C09",
+      "case": "rto5_blr",
+      "company": "A 5,000-person IT services company in Bengaluru, India. Clients are in the US and Europe, so some calls run late. Bengaluru traffic is heavy. Competitors hire your skills actively and several of them still offer hybrid work.",
+      "today": "Hybrid: two set office days a week, the rest from home.",
+      "policy": "From the first of next quarter, everyone works from the office five days a week. Attendance counts toward your performance rating. A shuttle service will be added on main routes.",
+      "person": {
+        "name": "Karthik",
+        "gender": "man",
+        "age": 35,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 7,
+        "commute_min_each_way": 79,
+        "home": "two young children",
+        "performance": "strong performer"
+      }
+    },
+    {
+      "id": "C10",
+      "case": "rto_sp500",
+      "company": "A large US technology or financial-services company (an S&P 500 firm). You are a salaried professional. Since 2020 most of your team has worked hybrid or remotely, and other employers in your field still offer some flexibility.",
+      "today": "You choose where you work most days; you go into the office when your team needs to.",
+      "policy": "Starting in 90 days, all employees must work from the office at least three set days a week. Badge swipes will be tracked and reviewed with managers. Exceptions need VP approval.",
+      "person": {
+        "name": "Emily",
+        "gender": "woman",
+        "age": 27,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 88,
+        "home": "an elderly parent who lives with them",
+        "performance": "solid performer"
+      }
+    },
+    {
+      "id": "C11",
+      "case": "rto5_blr",
+      "company": "A 5,000-person IT services company in Bengaluru, India. Clients are in the US and Europe, so some calls run late. Bengaluru traffic is heavy. Competitors hire your skills actively and several of them still offer hybrid work.",
+      "today": "Hybrid: two set office days a week, the rest from home.",
+      "policy": "From the first of next quarter, everyone works from the office five days a week. Attendance counts toward your performance rating. A shuttle service will be added on main routes.",
+      "person": {
+        "name": "Sneha",
+        "gender": "woman",
+        "age": 29,
+        "role": "product marketing lead",
+        "level": "mid",
+        "tenure_years": 7,
+        "commute_min_each_way": 10,
+        "home": "two young children",
+        "performance": "strong performer"
+      }
+    },
+    {
+      "id": "C12",
+      "case": "rto_sp500",
+      "company": "A large US technology or financial-services company (an S&P 500 firm). You are a salaried professional. Since 2020 most of your team has worked hybrid or remotely, and other employers in your field still offer some flexibility.",
+      "today": "You choose where you work most days; you go into the office when your team needs to.",
+      "policy": "Starting in 90 days, all employees must work from the office at least three set days a week. Badge swipes will be tracked and reviewed with managers. Exceptions need VP approval.",
+      "person": {
+        "name": "David",
+        "gender": "man",
+        "age": 38,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 80,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      }
+    }
+  ]
+}

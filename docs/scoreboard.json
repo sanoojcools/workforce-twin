@@ -1,0 +1,306 @@
+[
+  {
+    "config": "v1|claude-haiku-5-5",
+    "label": "A. First version: Haiku 5.5 voices",
+    "case": "hybrid_trip",
+    "title": "Hybrid WFH at a travel-tech company",
+    "kind": "backtest",
+    "runs": 3,
+    "twin_each": [
+      -0.38,
+      -0.381,
+      -0.39
+    ],
+    "twin_mean": -0.38366666666666666,
+    "usd_per_run": 0.04493333333333333,
+    "published": -0.33,
+    "study": "Bloom, Han & Liang (2024), randomised trial of 1,612 Trip.com employees, Nature",
+    "caveat": "Randomised trial, the strongest evidence of the three.",
+    "sources": [
+      "https://www.scimex.org/newsfeed/working-from-home-flexibility-can-improve-staff-retention-without-impacting-their-performance",
+      "https://cep.lse.ac.uk/_NEW/PUBLICATIONS/abstract.asp?index=10993"
+    ],
+    "abs_error_pp": 5.366666666666664,
+    "direction_hits": 3,
+    "subgroup_hits": 9,
+    "subgroup_total": 9
+  },
+  {
+    "config": "v1|claude-haiku-5-5",
+    "label": "A. First version: Haiku 5.5 voices",
+    "case": "rto_sp500",
+    "title": "Return-to-office mandate at a big US tech or finance firm",
+    "kind": "backtest",
+    "runs": 3,
+    "twin_each": [
+      2.114,
+      2.219,
+      2.147
+    ],
+    "twin_mean": 2.1599999999999997,
+    "usd_per_run": 0.04093333333333333,
+    "published": 0.14,
+    "study": "Ding, Jin, Ma, Xing & Yang (2024), LinkedIn data on 3M+ employees at 54 S&P 500 tech and finance firms, SSRN 5031481",
+    "caveat": "Observational (event study), not randomised.",
+    "sources": [
+      "https://hankamer.baylor.edu/news/story/2025/return-office-mandates-and-hidden-cost-brain-drain",
+      "https://fortune.com/2024/12/13/return-to-office-mandate-risk-losing-top-performers-study/"
+    ],
+    "abs_error_pp": 201.99999999999994,
+    "direction_hits": 3,
+    "subgroup_hits": 6,
+    "subgroup_total": 6
+  },
+  {
+    "config": "v1|claude-haiku-5-5",
+    "label": "A. First version: Haiku 5.5 voices",
+    "case": "fourday_uk",
+    "title": "Four-day week at UK small and mid-size firms",
+    "kind": "backtest",
+    "runs": 2,
+    "twin_each": [
+      -0.484,
+      -0.491
+    ],
+    "twin_mean": -0.4875,
+    "usd_per_run": 0.04325,
+    "published": -0.57,
+    "study": "Autonomy and 4 Day Week Global (2023), UK pilot, 61 companies, about 2,900 workers",
+    "caveat": "Firms volunteered and there was no control group, so the drop is likely overstated.",
+    "sources": [
+      "https://autonomy.work/portfolio/uk4dwpilotresults/"
+    ],
+    "abs_error_pp": 8.249999999999996,
+    "direction_hits": 2,
+    "subgroup_hits": 0,
+    "subgroup_total": 0
+  },
+  {
+    "config": "v2|claude-haiku-5-5",
+    "label": "B. Haiku 5.5 voices + say-do check",
+    "case": "hybrid_trip",
+    "title": "Hybrid WFH at a travel-tech company",
+    "kind": "backtest",
+    "runs": 3,
+    "twin_each": [
+      -0.325,
+      -0.336,
+      -0.309
+    ],
+    "twin_mean": -0.3233333333333333,
+    "usd_per_run": 0.04203333333333333,
+    "published": -0.33,
+    "study": "Bloom, Han & Liang (2024), randomised trial of 1,612 Trip.com employees, Nature",
+    "caveat": "Randomised trial, the strongest evidence of the three.",
+    "sources": [
+      "https://www.scimex.org/newsfeed/working-from-home-flexibility-can-improve-staff-retention-without-impacting-their-performance",
+      "https://cep.lse.ac.uk/_NEW/PUBLICATIONS/abstract.asp?index=10993"
+    ],
+    "abs_error_pp": 0.666666666666671,
+    "direction_hits": 3,
+    "subgroup_hits": 7,
+    "subgroup_total": 9
+  },
+  {
+    "config": "v2|claude-haiku-5-5",
+    "label": "B. Haiku 5.5 voices + say-do check",
+    "case": "rto_sp500",
+    "title": "Return-to-office mandate at a big US tech or finance firm",
+    "kind": "backtest",
+    "runs": 3,
+    "twin_each": [
+      1.868,
+      1.802,
+      1.754
+    ],
+    "twin_mean": 1.808,
+    "usd_per_run": 0.04376666666666667,
+    "published": 0.14,
+    "study": "Ding, Jin, Ma, Xing & Yang (2024), LinkedIn data on 3M+ employees at 54 S&P 500 tech and finance firms, SSRN 5031481",
+    "caveat": "Observational (event study), not randomised.",
+    "sources": [
+      "https://hankamer.baylor.edu/news/story/2025/return-office-mandates-and-hidden-cost-brain-drain",
+      "https://fortune.com/2024/12/13/return-to-office-mandate-risk-losing-top-performers-study/"
+    ],
+    "abs_error_pp": 166.8,
+    "direction_hits": 3,
+    "subgroup_hits": 3,
+    "subgroup_total": 6
+  },
+  {
+    "config": "v2|claude-haiku-5-5",
+    "label": "B. Haiku 5.5 voices + say-do check",
+    "case": "fourday_uk",
+    "title": "Four-day week at UK small and mid-size firms",
+    "kind": "backtest",
+    "runs": 1,
+    "twin_each": [
+      -0.427
+    ],
+    "twin_mean": -0.427,
+    "usd_per_run": 0.0467,
+    "published": -0.57,
+    "study": "Autonomy and 4 Day Week Global (2023), UK pilot, 61 companies, about 2,900 workers",
+    "caveat": "Firms volunteered and there was no control group, so the drop is likely overstated.",
+    "sources": [
+      "https://autonomy.work/portfolio/uk4dwpilotresults/"
+    ],
+    "abs_error_pp": 14.299999999999995,
+    "direction_hits": 1,
+    "subgroup_hits": 0,
+    "subgroup_total": 0
+  },
+  {
+    "config": "v3|claude-haiku-5-5",
+    "label": "B2. Haiku 5.5 voices + say-do + outside view (spot check)",
+    "case": "hybrid_trip",
+    "title": "Hybrid WFH at a travel-tech company",
+    "kind": "backtest",
+    "runs": 1,
+    "twin_each": [
+      -0.34
+    ],
+    "twin_mean": -0.34,
+    "usd_per_run": 0.0427,
+    "published": -0.33,
+    "study": "Bloom, Han & Liang (2024), randomised trial of 1,612 Trip.com employees, Nature",
+    "caveat": "Randomised trial, the strongest evidence of the three.",
+    "sources": [
+      "https://www.scimex.org/newsfeed/working-from-home-flexibility-can-improve-staff-retention-without-impacting-their-performance",
+      "https://cep.lse.ac.uk/_NEW/PUBLICATIONS/abstract.asp?index=10993"
+    ],
+    "abs_error_pp": 1.0000000000000009,
+    "direction_hits": 1,
+    "subgroup_hits": 2,
+    "subgroup_total": 3
+  },
+  {
+    "config": "v3|claude-haiku-5-5",
+    "label": "B2. Haiku 5.5 voices + say-do + outside view (spot check)",
+    "case": "rto_sp500",
+    "title": "Return-to-office mandate at a big US tech or finance firm",
+    "kind": "backtest",
+    "runs": 1,
+    "twin_each": [
+      1.818
+    ],
+    "twin_mean": 1.818,
+    "usd_per_run": 0.0472,
+    "published": 0.14,
+    "study": "Ding, Jin, Ma, Xing & Yang (2024), LinkedIn data on 3M+ employees at 54 S&P 500 tech and finance firms, SSRN 5031481",
+    "caveat": "Observational (event study), not randomised.",
+    "sources": [
+      "https://hankamer.baylor.edu/news/story/2025/return-office-mandates-and-hidden-cost-brain-drain",
+      "https://fortune.com/2024/12/13/return-to-office-mandate-risk-losing-top-performers-study/"
+    ],
+    "abs_error_pp": 167.79999999999998,
+    "direction_hits": 1,
+    "subgroup_hits": 1,
+    "subgroup_total": 2
+  },
+  {
+    "config": "v2|claude-sonnet-5-5",
+    "label": "C. Sonnet 5.5 voices + say-do check (current)",
+    "case": "hybrid_trip",
+    "title": "Hybrid WFH at a travel-tech company",
+    "kind": "backtest",
+    "runs": 3,
+    "twin_each": [
+      -0.351,
+      -0.338,
+      -0.338
+    ],
+    "twin_mean": -0.3423333333333334,
+    "usd_per_run": 0.16206666666666666,
+    "published": -0.33,
+    "study": "Bloom, Han & Liang (2024), randomised trial of 1,612 Trip.com employees, Nature",
+    "caveat": "Randomised trial, the strongest evidence of the three.",
+    "sources": [
+      "https://www.scimex.org/newsfeed/working-from-home-flexibility-can-improve-staff-retention-without-impacting-their-performance",
+      "https://cep.lse.ac.uk/_NEW/PUBLICATIONS/abstract.asp?index=10993"
+    ],
+    "abs_error_pp": 1.2333333333333363,
+    "direction_hits": 3,
+    "subgroup_hits": 5,
+    "subgroup_total": 9
+  },
+  {
+    "config": "v2|claude-sonnet-5-5",
+    "label": "C. Sonnet 5.5 voices + say-do check (current)",
+    "case": "rto_sp500",
+    "title": "Return-to-office mandate at a big US tech or finance firm",
+    "kind": "backtest",
+    "runs": 3,
+    "twin_each": [
+      0.935,
+      0.911,
+      0.89
+    ],
+    "twin_mean": 0.912,
+    "usd_per_run": 0.17013333333333333,
+    "published": 0.14,
+    "study": "Ding, Jin, Ma, Xing & Yang (2024), LinkedIn data on 3M+ employees at 54 S&P 500 tech and finance firms, SSRN 5031481",
+    "caveat": "Observational (event study), not randomised.",
+    "sources": [
+      "https://hankamer.baylor.edu/news/story/2025/return-office-mandates-and-hidden-cost-brain-drain",
+      "https://fortune.com/2024/12/13/return-to-office-mandate-risk-losing-top-performers-study/"
+    ],
+    "abs_error_pp": 77.2,
+    "direction_hits": 3,
+    "subgroup_hits": 6,
+    "subgroup_total": 6
+  },
+  {
+    "config": "v2|claude-sonnet-5-5",
+    "label": "C. Sonnet 5.5 voices + say-do check (current)",
+    "case": "fourday_uk",
+    "title": "Four-day week at UK small and mid-size firms",
+    "kind": "backtest",
+    "runs": 3,
+    "twin_each": [
+      -0.481,
+      -0.493,
+      -0.501
+    ],
+    "twin_mean": -0.4916666666666667,
+    "usd_per_run": 0.16146666666666668,
+    "published": -0.57,
+    "study": "Autonomy and 4 Day Week Global (2023), UK pilot, 61 companies, about 2,900 workers",
+    "caveat": "Firms volunteered and there was no control group, so the drop is likely overstated.",
+    "sources": [
+      "https://autonomy.work/portfolio/uk4dwpilotresults/"
+    ],
+    "abs_error_pp": 7.833333333333325,
+    "direction_hits": 3,
+    "subgroup_hits": 0,
+    "subgroup_total": 0
+  },
+  {
+    "config": "v2|claude-sonnet-5-5",
+    "label": "C. Sonnet 5.5 voices + say-do check (current)",
+    "case": "rto5_blr",
+    "title": "Five-day office return at a Bengaluru IT services firm",
+    "kind": "forward",
+    "runs": 2,
+    "twin_each": [
+      1.146,
+      1.259
+    ],
+    "twin_mean": 1.2025,
+    "usd_per_run": 0.17704999999999999
+  },
+  {
+    "config": "v2|claude-sonnet-5-5",
+    "label": "C. Sonnet 5.5 voices + say-do check (current)",
+    "case": "rto3_blr",
+    "title": "Redesigned: three office days at the same Bengaluru firm",
+    "kind": "forward",
+    "runs": 2,
+    "twin_each": [
+      0.388,
+      0.4
+    ],
+    "twin_mean": 0.394,
+    "usd_per_run": 0.17915
+  }
+]

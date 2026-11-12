@@ -1,0 +1,1358 @@
+{
+  "case": "hybrid_trip",
+  "title": "Hybrid WFH at a travel-tech company",
+  "kind": "backtest",
+  "seed": 7,
+  "voices": [
+    {
+      "cell": "F-junior-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Liu Yan",
+        "gender": "woman",
+        "age": 28,
+        "role": "marketing associate",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 62,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 12.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days would genuinely help, since that's almost two hours a day back on the commute and time with my toddler. It doesn't fix everything, but it's the first thing here that actually makes my week easier.",
+        "top_factor": "Saves commute and family time"
+      }
+    },
+    {
+      "cell": "F-junior-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Wang Fang",
+        "gender": "woman",
+        "age": 26,
+        "role": "finance analyst",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 60,
+        "home": "two young children",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 14.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is a real help. I'd save about four hours of commuting a week, and with the kids that matters a lot. It won't make me stay forever, but it makes this job easier to keep.",
+        "top_factor": "Cuts weekly commute by two days"
+      }
+    },
+    {
+      "cell": "F-junior-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Wang Fang",
+        "gender": "woman",
+        "age": 24,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 68,
+        "home": "lives alone",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 12.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days would save me about two and a half hours of commuting every week, which is a real improvement. It doesn't fix everything, but I'm glad they did it.",
+        "top_factor": "saves two long commutes weekly"
+      }
+    },
+    {
+      "cell": "F-junior-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Wang Fang",
+        "gender": "woman",
+        "age": 25,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 91,
+        "home": "lives alone",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 8.0,
+        "feeling": 2,
+        "quote": "Two WFH days out of five, with a 91-minute commute each way? That's basically getting back three hours a week, and I didn't have to fight for it. I'm actually glad they did this.",
+        "top_factor": "saves long commute time"
+      }
+    },
+    {
+      "cell": "F-junior-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Chen Jing",
+        "gender": "woman",
+        "age": 29,
+        "role": "marketing associate",
+        "level": "junior",
+        "tenure_years": 3,
+        "commute_min_each_way": 28,
+        "home": "a child in primary school",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 9.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is a real help with picking my kid up and not losing two hours a day on the metro. It doesn't make me want to stay forever, but it's the kind of thing that makes me less likely to start looking.",
+        "top_factor": "Saves commute and childcare time"
+      }
+    },
+    {
+      "cell": "F-junior-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Liu Yan",
+        "gender": "woman",
+        "age": 28,
+        "role": "finance analyst",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 32,
+        "home": "an elderly parent who lives with them",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 9.0,
+        "feeling": 1.0,
+        "quote": "Two days from home is a real help, especially with my mum needing someone around. It doesn't change my pay or my prospects, but it makes the daily grind a lot more bearable.",
+        "top_factor": "Caring for elderly parent"
+      }
+    },
+    {
+      "cell": "F-junior-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Zhang Min",
+        "gender": "woman",
+        "age": 27,
+        "role": "marketing associate",
+        "level": "junior",
+        "tenure_years": 3,
+        "commute_min_each_way": 31,
+        "home": "lives alone",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 8.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is nice, and my commute is annoying enough that I'll actually notice the difference. It doesn't make me want to stay forever, but it's a point in their favor.",
+        "top_factor": "Saves commute time"
+      }
+    },
+    {
+      "cell": "F-junior-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Zhang Min",
+        "gender": "woman",
+        "age": 26,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 35,
+        "home": "lives with a partner, no children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 9.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days would save me about two hours of commuting every week, which is nice. It won't make me stay or go, but I'll take it.",
+        "top_factor": "saves commute time"
+      }
+    },
+    {
+      "cell": "F-mid-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Zhao Lei",
+        "gender": "woman",
+        "age": 32,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 92,
+        "home": "a child in primary school",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 8.0,
+        "feeling": 2,
+        "quote": "Two WFH days would save me about three hours of commuting a week and I could actually see my kid's homework routine. It doesn't fix everything, but it's a real change and I'm glad they did it.",
+        "top_factor": "Saves long commute time"
+      }
+    },
+    {
+      "cell": "F-mid-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Zhang Min",
+        "gender": "woman",
+        "age": 37,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 4,
+        "commute_min_each_way": 82,
+        "home": "a child in primary school",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 12.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days out of five is a real improvement given the 82-minute commute each way, and it means I can handle school pickups on Wednesdays and Fridays. It doesn't fix everything, but I'd rather stay and see how it works.",
+        "top_factor": "saves two commute days"
+      }
+    },
+    {
+      "cell": "F-mid-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Wang Fang",
+        "gender": "woman",
+        "age": 33,
+        "role": "product marketing lead",
+        "level": "mid",
+        "tenure_years": 7,
+        "commute_min_each_way": 64,
+        "home": "no caring duties",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 7.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days would save me over two hours of commuting every week, which is honestly a big deal in Shanghai. I'm still not sure it changes whether I stay, but I'm glad they did it.",
+        "top_factor": "saves long commute time"
+      }
+    },
+    {
+      "cell": "F-mid-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Zhang Min",
+        "gender": "woman",
+        "age": 30,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 4,
+        "commute_min_each_way": 73,
+        "home": "lives alone",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 12.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days would save me over two hours a week on the commute, which is genuinely nice. It won't change my plans much, but I'm glad they're doing it.",
+        "top_factor": "saves long commute time"
+      }
+    },
+    {
+      "cell": "F-mid-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Chen Jing",
+        "gender": "woman",
+        "age": 29,
+        "role": "product marketing lead",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 28,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 9.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is a real help with the toddler and the school run, and I'm not going to pretend otherwise. It won't change much for my career, but it's the first thing in a while that makes me feel the company sees people with kids.",
+        "top_factor": "Childcare flexibility with toddler"
+      }
+    },
+    {
+      "cell": "F-mid-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Zhao Lei",
+        "gender": "woman",
+        "age": 28,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 3,
+        "commute_min_each_way": 16,
+        "home": "an elderly parent who lives with them",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 8.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is nice, especially with my mom at home and only a 16-minute commute, but it's not going to change my life. I'll still keep an eye on the job market like I always do.",
+        "top_factor": "Elderly parent care flexibility"
+      }
+    },
+    {
+      "cell": "F-mid-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Zhao Lei",
+        "gender": "woman",
+        "age": 38,
+        "role": "product marketing lead",
+        "level": "mid",
+        "tenure_years": 4,
+        "commute_min_each_way": 17,
+        "home": "no caring duties",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 9.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is a nice bonus, and it's not like I was planning to leave anyway. Short commute, decent team, so it just makes the week a bit easier.",
+        "top_factor": "Short commute, modest flexibility gain"
+      }
+    },
+    {
+      "cell": "F-mid-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Chen Jing",
+        "gender": "woman",
+        "age": 28,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 2,
+        "commute_min_each_way": 27,
+        "home": "no caring duties",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 9.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is a nice bonus, honestly. It doesn't change much for me, but it's a sign they're listening, and I'd still rather stay here than restart my job search in this market.",
+        "top_factor": "Two flexible days helps"
+      }
+    },
+    {
+      "cell": "F-manager-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Zhang Min",
+        "gender": "woman",
+        "age": 45,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 14,
+        "commute_min_each_way": 58,
+        "home": "a child in primary school",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 6.0,
+        "feeling": 1.0,
+        "quote": "Two days at home means I get back almost four hours a week, and I can actually see my daughter's homework before bed. It's not everything, but it's a real improvement and it shows they listen a bit.",
+        "top_factor": "saves commute time for family"
+      }
+    },
+    {
+      "cell": "F-manager-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Liu Yan",
+        "gender": "woman",
+        "age": 36,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 4,
+        "commute_min_each_way": 62,
+        "home": "two young children",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 12.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days out of five would save me about two hours of commuting a week and that's real, especially with the kids. It doesn't fix everything, but I'd rather stay here than start over somewhere else.",
+        "top_factor": "Saves two commute days weekly"
+      }
+    },
+    {
+      "cell": "F-manager-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Li Na",
+        "gender": "woman",
+        "age": 34,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 8,
+        "commute_min_each_way": 88,
+        "home": "lives with a partner, no children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 8.0,
+        "feeling": 1.0,
+        "quote": "Two days at home means I get back about six hours a week I currently spend on the metro. That's real, and it's more than I expected from them. I'm still staying put, though, because I like my team and my manager.",
+        "top_factor": "Saves six commute hours weekly"
+      }
+    },
+    {
+      "cell": "F-manager-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Li Na",
+        "gender": "woman",
+        "age": 49,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 11,
+        "commute_min_each_way": 83,
+        "home": "lives with a partner, no children",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 7.0,
+        "feeling": 1.0,
+        "quote": "Two days at home means I get back about three hours a week I'd otherwise spend on the metro. That's a real improvement, though I'd still rather have it than not, not a reason to change my life. I'm glad they did it.",
+        "top_factor": "Saves 2-3 hours commuting weekly"
+      }
+    },
+    {
+      "cell": "F-manager-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Li Na",
+        "gender": "woman",
+        "age": 42,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 9,
+        "commute_min_each_way": 10,
+        "home": "an elderly parent who lives with them",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 9.0,
+        "feeling": 1.0,
+        "quote": "Two work-from-home days is a nice step, and with Mum living with us it will help on those days. It doesn't change much about why I stay, though: I've been here nine years and the work is good.",
+        "top_factor": "Helps with elderly parent care"
+      }
+    },
+    {
+      "cell": "F-manager-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Zhang Min",
+        "gender": "woman",
+        "age": 47,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 7,
+        "commute_min_each_way": 11,
+        "home": "a child in primary school",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 7.0,
+        "policy": 5.0,
+        "feeling": 1.0,
+        "quote": "It's a nice perk, and it'll make Wednesdays and Fridays easier with my daughter's school schedule. But my commute is only eleven minutes, so it doesn't change much for me. I'm staying either way.",
+        "top_factor": "Short commute, modest benefit"
+      }
+    },
+    {
+      "cell": "F-manager-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Li Na",
+        "gender": "woman",
+        "age": 46,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 8,
+        "commute_min_each_way": 10,
+        "home": "no caring duties",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 6.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is nice, but my commute is only ten minutes so it doesn't change much for me. I'm glad it's there for people who have longer trips.",
+        "top_factor": "Short commute makes it marginal"
+      }
+    },
+    {
+      "cell": "F-manager-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Wang Fang",
+        "gender": "woman",
+        "age": 38,
+        "role": "director of operations",
+        "level": "manager",
+        "tenure_years": 4,
+        "commute_min_each_way": 10,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 8.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is a nice perk, and my commute is short anyway so it doesn't change much for me. Still, I'm glad they're trying to be more flexible.",
+        "top_factor": "Short commute, modest perk"
+      }
+    },
+    {
+      "cell": "M-junior-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Chen Hao",
+        "gender": "man",
+        "age": 27,
+        "role": "finance analyst",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 93,
+        "home": "two young children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 12.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days would save me nearly three hours of commuting a week, which is a big deal with two little kids at home. It doesn't fix everything, but it's the first thing here that actually makes my life easier.",
+        "top_factor": "saves long commute time"
+      }
+    },
+    {
+      "cell": "M-junior-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Zhang Jun",
+        "gender": "man",
+        "age": 26,
+        "role": "finance analyst",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 91,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 14.0,
+        "feeling": 1.0,
+        "quote": "Two days from home after a 91-minute commute each way is a real change for us, with a toddler at home. It doesn't make me want to stay forever, but it makes staying a lot more reasonable.",
+        "top_factor": "Saves two commute days weekly"
+      }
+    },
+    {
+      "cell": "M-junior-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Huang Tao",
+        "gender": "man",
+        "age": 29,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 68,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 12.0,
+        "feeling": 1.0,
+        "quote": "Two days from home with a 68-minute commute each way is a real win, I get back about three hours a week. It doesn't change my pay or my path, but it makes staying a lot easier.",
+        "top_factor": "Commute time saved"
+      }
+    },
+    {
+      "cell": "M-junior-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Huang Tao",
+        "gender": "man",
+        "age": 25,
+        "role": "finance analyst",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 89,
+        "home": "no caring duties",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 10.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days would save me about three hours of commuting a week, which is nice. It won't make me stay forever, though, if something better comes up.",
+        "top_factor": "Saves 3 hours weekly commute"
+      }
+    },
+    {
+      "cell": "M-junior-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Chen Hao",
+        "gender": "man",
+        "age": 28,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 19,
+        "home": "an elderly parent who lives with them",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 9.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is a nice bonus, especially with my mom at home and not having to commute every single day. It won't make me stay forever, but it's a real plus.",
+        "top_factor": "Less commuting, caregiving flexibility"
+      }
+    },
+    {
+      "cell": "M-junior-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Liu Yang",
+        "gender": "man",
+        "age": 26,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 3,
+        "commute_min_each_way": 33,
+        "home": "two young children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 8.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is a real help with a 33-minute commute and the kids, especially on Fridays. It doesn't change my job much, but it makes the week easier to live with.",
+        "top_factor": "Saves commute time with kids"
+      }
+    },
+    {
+      "cell": "M-junior-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Li Qiang",
+        "gender": "man",
+        "age": 24,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 3,
+        "commute_min_each_way": 26,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 9.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is nice, and I like not spending 50 minutes a day on the metro for those two days. It doesn't change much for me, but it's a good sign they listen to us.",
+        "top_factor": "saves commute time"
+      }
+    },
+    {
+      "cell": "M-junior-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Li Qiang",
+        "gender": "man",
+        "age": 24,
+        "role": "finance analyst",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 32,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 9.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is nice, a real perk for a 32-minute commute, though I'd still rather have more flexibility. It won't make me stay or go on its own.",
+        "top_factor": "Saves commute time"
+      }
+    },
+    {
+      "cell": "M-mid-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Wang Wei",
+        "gender": "man",
+        "age": 29,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 5,
+        "commute_min_each_way": 59,
+        "home": "two young children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 8.0,
+        "feeling": 2,
+        "quote": "Two days from home with a 59-minute commute each way is a real difference, especially with the kids. It doesn't make me want to stay forever, but it makes me much less likely to start looking.",
+        "top_factor": "saves two commutes weekly"
+      }
+    },
+    {
+      "cell": "M-mid-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Chen Hao",
+        "gender": "man",
+        "age": 30,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 4,
+        "commute_min_each_way": 60,
+        "home": "two young children",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 9.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days would save me about four hours of commuting a week and I'd get more time with the kids, so that's a real win. It doesn't change my pay or promotion, but I'm still glad they did it.",
+        "top_factor": "saves two-hour commute daily"
+      }
+    },
+    {
+      "cell": "M-mid-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Liu Yang",
+        "gender": "man",
+        "age": 32,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 7,
+        "commute_min_each_way": 91,
+        "home": "lives with a partner, no children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 7.0,
+        "feeling": 1.0,
+        "quote": "Two days at home means about three hours back each of those days, so it's a real improvement. It doesn't fix everything, and I'd still like more flexibility, but I'm glad they did it.",
+        "top_factor": "Saves about 6 commute hours weekly"
+      }
+    },
+    {
+      "cell": "M-mid-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Chen Hao",
+        "gender": "man",
+        "age": 34,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 6,
+        "commute_min_each_way": 83,
+        "home": "lives alone",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 14.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days would save me over three hours a week on the commute, which is a real improvement. It doesn't fix everything, but I'd be lying if I said it didn't make me less likely to start looking.",
+        "top_factor": "Cutting 83-minute commute"
+      }
+    },
+    {
+      "cell": "M-mid-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Li Qiang",
+        "gender": "man",
+        "age": 35,
+        "role": "product marketing lead",
+        "level": "mid",
+        "tenure_years": 3,
+        "commute_min_each_way": 27,
+        "home": "two young children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 8.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is a real win with two little kids and a 27-minute commute each way. It won't make me stay forever, but it's the kind of thing that makes me less likely to start looking.",
+        "top_factor": "Saves commute with young kids"
+      }
+    },
+    {
+      "cell": "M-mid-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Chen Hao",
+        "gender": "man",
+        "age": 37,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 6,
+        "commute_min_each_way": 24,
+        "home": "two young children",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 7.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is a nice win, especially with the kids, and it's better than what we had. It won't make me stay forever, but it helps.",
+        "top_factor": "Two home days with kids"
+      }
+    },
+    {
+      "cell": "M-mid-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Wang Wei",
+        "gender": "man",
+        "age": 33,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 31,
+        "home": "lives alone",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 9.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is a nice bonus, and it saves me the commute twice a week, which is honestly welcome after eight years of the same 31-minute ride. It won't make me stay or go on its own, though.",
+        "top_factor": "saves commute time"
+      }
+    },
+    {
+      "cell": "M-mid-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Liu Yang",
+        "gender": "man",
+        "age": 38,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 2,
+        "commute_min_each_way": 29,
+        "home": "lives alone",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 9.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is a nice bump, and I like not spending over an hour a day commuting on those days. It doesn't change much about whether I stay, though; I'm here for the work and the people.",
+        "top_factor": "Saves commute time"
+      }
+    },
+    {
+      "cell": "M-manager-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Huang Tao",
+        "gender": "man",
+        "age": 41,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 14,
+        "commute_min_each_way": 64,
+        "home": "an elderly parent who lives with them",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 7.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days would save me over two hours of commuting every week, and with Dad at home that's a real help. It doesn't make me want to stay forever, but it's the kind of thing that makes me glad I didn't jump ship last year.",
+        "top_factor": "saves long commute"
+      }
+    },
+    {
+      "cell": "M-manager-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Huang Tao",
+        "gender": "man",
+        "age": 39,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 4,
+        "commute_min_each_way": 90,
+        "home": "an elderly parent who lives with them",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 9.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days would save me about three hours of commuting a week, and I can be home for my mother on those days. It's not perfect, but it's a real improvement and I'm glad they did it.",
+        "top_factor": "Saves 3 hours commute weekly"
+      }
+    },
+    {
+      "cell": "M-manager-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Chen Hao",
+        "gender": "man",
+        "age": 46,
+        "role": "director of operations",
+        "level": "manager",
+        "tenure_years": 12,
+        "commute_min_each_way": 56,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 9.0,
+        "policy": 6.0,
+        "feeling": 1.0,
+        "quote": "Two days at home means about four hours a week back, which is real. It doesn't change much else, but after 12 years here I'm not going to start job hunting over it.",
+        "top_factor": "Saves two long commutes weekly"
+      }
+    },
+    {
+      "cell": "M-manager-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Chen Hao",
+        "gender": "man",
+        "age": 39,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 5,
+        "commute_min_each_way": 99,
+        "home": "no caring duties",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 7.0,
+        "feeling": 1.0,
+        "quote": "Two days at home means I get about 3 hours back every week, which is a real improvement after a 99-minute commute each way. It doesn't change much else, but I'm glad they did it.",
+        "top_factor": "Cuts long commute"
+      }
+    },
+    {
+      "cell": "M-manager-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Li Qiang",
+        "gender": "man",
+        "age": 46,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 10,
+        "commute_min_each_way": 31,
+        "home": "an elderly parent who lives with them",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 7.0,
+        "policy": 5.0,
+        "feeling": 1.0,
+        "quote": "Two days at home will help a lot, since I'm the one who looks after my mother during the day. It doesn't change my job much, but it's a real relief and I'm glad they're doing it.",
+        "top_factor": "Caring for elderly parent"
+      }
+    },
+    {
+      "cell": "M-manager-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Wang Wei",
+        "gender": "man",
+        "age": 34,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 9,
+        "commute_min_each_way": 21,
+        "home": "two young children",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 8.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is a nice bonus, and with a 21-minute commute and two little kids it helps at the margins. It won't change whether I stay, but I'm glad they did it.",
+        "top_factor": "Family time and flexibility"
+      }
+    },
+    {
+      "cell": "M-manager-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Huang Tao",
+        "gender": "man",
+        "age": 48,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 5,
+        "commute_min_each_way": 19,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 9.0,
+        "policy": 7.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is a nice change, and I'm glad they listened. My commute is only 19 minutes, though, so it doesn't change my life much. It won't be the reason I stay or go.",
+        "top_factor": "Modest flexibility, short commute"
+      }
+    },
+    {
+      "cell": "M-manager-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Li Qiang",
+        "gender": "man",
+        "age": 37,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 10,
+        "commute_min_each_way": 33,
+        "home": "lives with a partner, no children",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 9.0,
+        "feeling": 1.0,
+        "quote": "Two WFH days is a nice bit of breathing room, and a 33-minute commute each way is not nothing. It doesn't make me want to stay forever, but it's a point in their favour.",
+        "top_factor": "Saves two commutes weekly"
+      }
+    }
+  ],
+  "forecast": {
+    "employees": 5000,
+    "relative_change": -0.38,
+    "leavers_status_quo": 746,
+    "leavers_with_policy": 476,
+    "feeling": 1.07,
+    "subgroups": {
+      "gender": {
+        "F": {
+          "relative_change": -0.401,
+          "headcount": 1750
+        },
+        "M": {
+          "relative_change": -0.368,
+          "headcount": 3250
+        }
+      },
+      "managerial": {
+        "non-manager": {
+          "relative_change": -0.384,
+          "headcount": 4248
+        },
+        "manager": {
+          "relative_change": -0.35,
+          "headcount": 752
+        }
+      },
+      "level": {
+        "junior": {
+          "relative_change": -0.396,
+          "headcount": 2248
+        },
+        "mid": {
+          "relative_change": -0.368,
+          "headcount": 2000
+        },
+        "manager": {
+          "relative_change": -0.35,
+          "headcount": 752
+        }
+      },
+      "commute": {
+        "long": {
+          "relative_change": -0.412,
+          "headcount": 2501
+        },
+        "short": {
+          "relative_change": -0.338,
+          "headcount": 2499
+        }
+      },
+      "caregiver": {
+        "caregiver": {
+          "relative_change": -0.39,
+          "headcount": 1373
+        },
+        "no caring duties": {
+          "relative_change": -0.376,
+          "headcount": 3627
+        }
+      }
+    },
+    "cells": [
+      {
+        "cell": "F-junior-long-care",
+        "headcount": 39,
+        "base": 0.22,
+        "policy": 0.13,
+        "feeling": 1.0
+      },
+      {
+        "cell": "F-junior-long-nocare",
+        "headcount": 354,
+        "base": 0.18,
+        "policy": 0.1,
+        "feeling": 1.5
+      },
+      {
+        "cell": "F-junior-short-care",
+        "headcount": 39,
+        "base": 0.14,
+        "policy": 0.09,
+        "feeling": 1.0
+      },
+      {
+        "cell": "F-junior-short-nocare",
+        "headcount": 354,
+        "base": 0.14,
+        "policy": 0.085,
+        "feeling": 1.0
+      },
+      {
+        "cell": "F-mid-long-care",
+        "headcount": 122,
+        "base": 0.18,
+        "policy": 0.1,
+        "feeling": 1.5
+      },
+      {
+        "cell": "F-mid-long-nocare",
+        "headcount": 228,
+        "base": 0.17,
+        "policy": 0.095,
+        "feeling": 1.0
+      },
+      {
+        "cell": "F-mid-short-care",
+        "headcount": 122,
+        "base": 0.13,
+        "policy": 0.085,
+        "feeling": 1.0
+      },
+      {
+        "cell": "F-mid-short-nocare",
+        "headcount": 228,
+        "base": 0.13,
+        "policy": 0.09,
+        "feeling": 1.0
+      },
+      {
+        "cell": "F-manager-long-care",
+        "headcount": 79,
+        "base": 0.16,
+        "policy": 0.09,
+        "feeling": 1.0
+      },
+      {
+        "cell": "F-manager-long-nocare",
+        "headcount": 53,
+        "base": 0.13,
+        "policy": 0.075,
+        "feeling": 1.0
+      },
+      {
+        "cell": "F-manager-short-care",
+        "headcount": 79,
+        "base": 0.095,
+        "policy": 0.07,
+        "feeling": 1.0
+      },
+      {
+        "cell": "F-manager-short-nocare",
+        "headcount": 53,
+        "base": 0.1,
+        "policy": 0.07,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-junior-long-care",
+        "headcount": 73,
+        "base": 0.22,
+        "policy": 0.13,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-junior-long-nocare",
+        "headcount": 658,
+        "base": 0.185,
+        "policy": 0.11,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-junior-short-care",
+        "headcount": 73,
+        "base": 0.13,
+        "policy": 0.085,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-junior-short-nocare",
+        "headcount": 658,
+        "base": 0.14,
+        "policy": 0.09,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-mid-long-care",
+        "headcount": 228,
+        "base": 0.14,
+        "policy": 0.085,
+        "feeling": 1.5
+      },
+      {
+        "cell": "M-mid-long-nocare",
+        "headcount": 423,
+        "base": 0.17,
+        "policy": 0.105,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-mid-short-care",
+        "headcount": 227,
+        "base": 0.13,
+        "policy": 0.075,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-mid-short-nocare",
+        "headcount": 422,
+        "base": 0.12,
+        "policy": 0.09,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-manager-long-care",
+        "headcount": 146,
+        "base": 0.13,
+        "policy": 0.08,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-manager-long-nocare",
+        "headcount": 98,
+        "base": 0.105,
+        "policy": 0.065,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-manager-short-care",
+        "headcount": 146,
+        "base": 0.095,
+        "policy": 0.065,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-manager-short-nocare",
+        "headcount": 98,
+        "base": 0.105,
+        "policy": 0.08,
+        "feeling": 1.0
+      }
+    ]
+  },
+  "briefing": {
+    "headline": "The simulation predicts the two work-from-home days would cut leavers over the next 12 months by about 38%, from 746 to 476 (roughly 270 fewer departures out of 5,000), with no group reacting negatively.",
+    "most_at_risk": "Long commuters gain the most (leaving down 41%) because they get two to three hours a week back, while short commuters (down 34%) and managers (down 35%) gain the least, since many say a 10\u201330 minute commute means 'it doesn't change much for me.'",
+    "risks": [
+      "The 38% drop may be optimistic: the voices are warm but lukewarm on staying ('it doesn't fix everything,' 'it won't make me stay forever if something better comes up'), so this policy is unlikely to hold people against a stronger outside offer.",
+      "Parents and carers say they will plan school pickups and elder care around Wednesdays and Fridays, so if managers later pull people in on those days for meetings, the goodwill could turn into a sense of broken promises.",
+      "The gaps between groups are small (34% to 41%) and come from only 48 modelled voices, so they are not a reliable basis for targeting particular groups. The broad direction is more trustworthy than any single number."
+    ],
+    "design_changes": [
+      "Protect Wednesdays and Fridays in writing: tell managers not to schedule mandatory in-person meetings on those days, so carers can rely on them for pickups and care.",
+      "Frame and track this as a 6-month pilot with a clear review date and published measures (attrition, team output, employee survey), so a later adjustment reads as planned rather than a reversal.",
+      "Consider extra flexibility for very long commuters, such as later start times or a third remote day, since they gain most, and pair it with other retention levers (pay, career growth) because the voices say flexibility alone won't keep people who get a better offer."
+    ],
+    "confidence": "medium, because the direction is consistent across every group and fits the stated commute savings, but the size of the effect rests on a small set of modelled voices whose actual enthusiasm about staying is milder than a 38% drop implies."
+  },
+  "score": {
+    "predicted": -0.38,
+    "published": -0.33,
+    "direction_hit": true,
+    "abs_error_pp": 5.0,
+    "subgroup_hits": 3,
+    "subgroup_checks": [
+      {
+        "claim": "Larger drop for women",
+        "twin": "F -40% vs M -37%",
+        "hit": true
+      },
+      {
+        "claim": "Larger drop for non-managers",
+        "twin": "non-manager -38% vs manager -35%",
+        "hit": true
+      },
+      {
+        "claim": "Larger drop for long commuters",
+        "twin": "long -41% vs short -34%",
+        "hit": true
+      }
+    ]
+  },
+  "mode": "claude",
+  "spend": {
+    "usd": 0.0405,
+    "calls": 49,
+    "by_role": {
+      "persona (claude-haiku-5-5)": {
+        "calls": 48,
+        "usd": 0.0065,
+        "output": 7583
+      },
+      "analyst (claude-opus-5-5)": {
+        "calls": 1,
+        "usd": 0.0339,
+        "output": 1352
+      }
+    },
+    "budget_usd": 5.0,
+    "total_usd": 0.083
+  },
+  "seconds": 24.5,
+  "prompt": "v1",
+  "persona_model": "claude-haiku-5-5"
+}

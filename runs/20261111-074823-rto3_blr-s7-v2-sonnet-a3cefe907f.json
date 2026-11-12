@@ -1,0 +1,1335 @@
+{
+  "case": "rto3_blr",
+  "title": "Redesigned: three office days at the same Bengaluru firm",
+  "kind": "forward",
+  "seed": 7,
+  "prompt": "v2",
+  "persona_model": "claude-sonnet-5-5",
+  "voices": [
+    {
+      "cell": "F-junior-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Kavya",
+        "gender": "woman",
+        "age": 23,
+        "role": "marketing associate",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 59,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 22.0,
+        "feeling": -1.0,
+        "quote": "One more office day is annoying with a toddler at home and an hour each way, but the shuttle helps and I can apply for the caring exception. I'll try it for a few months before I think about leaving.",
+        "top_factor": "Extra commute day, toddler"
+      }
+    },
+    {
+      "cell": "F-junior-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Fatima",
+        "gender": "woman",
+        "age": 29,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 3,
+        "commute_min_each_way": 90,
+        "home": "a child in primary school",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 20.0,
+        "feeling": -1.0,
+        "quote": "One more day in the office means another three hours on the road and more juggling with my child's school pickup. I'll apply for the exception and see what HR says before I think about anything bigger. I'm not quitting over this, but I'll quietly keep an eye on other openings.",
+        "top_factor": "Extra commute day with child"
+      }
+    },
+    {
+      "cell": "F-junior-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Lakshmi",
+        "gender": "woman",
+        "age": 29,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 69,
+        "home": "lives alone",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 21.0,
+        "feeling": -1.0,
+        "quote": "Three days instead of two is annoying with the 69-minute commute, but the shuttle might help and attendance isn't in ratings, so I'll just deal with it. I'm not job hunting over one extra day, though I'll keep an eye on what other places offer.",
+        "top_factor": "Extra commute day"
+      }
+    },
+    {
+      "cell": "F-junior-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Fatima",
+        "gender": "woman",
+        "age": 24,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 76,
+        "home": "lives alone",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 21.0,
+        "feeling": -1.0,
+        "quote": "Ugh, one more day of sitting in traffic for two and a half hours total. The shuttle might help if it actually runs on my route, and at least it's not in our ratings. I'll grumble and go, and keep an eye on what other places are offering.",
+        "top_factor": "Extra commute day"
+      }
+    },
+    {
+      "cell": "F-junior-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Sneha",
+        "gender": "woman",
+        "age": 23,
+        "role": "marketing associate",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 31,
+        "home": "an elderly parent who lives with them",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 15.0,
+        "feeling": -0.5,
+        "quote": "It's one more office day, not the end of the world, and the commute is only about half an hour. I'll apply for the caring exception if Amma needs me home, but I'm not going to quit over this.",
+        "top_factor": "One extra office day"
+      }
+    },
+    {
+      "cell": "F-junior-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Lakshmi",
+        "gender": "woman",
+        "age": 23,
+        "role": "finance analyst",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 28,
+        "home": "a child in primary school",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 19.0,
+        "feeling": -0.5,
+        "quote": "It's one more day in the office, but the commute is only 28 minutes and there's a shuttle, so I can manage. Attendance isn't in ratings and I can apply for an exception if school pickups get hard, so I'll wait and see before I think about anything else.",
+        "top_factor": "One extra office day"
+      }
+    },
+    {
+      "cell": "F-junior-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Kavya",
+        "gender": "woman",
+        "age": 27,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 35,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 18.0,
+        "feeling": -1.0,
+        "quote": "Three days instead of two is annoying, but the commute is only 35 minutes, there's a shuttle, and it's not tied to ratings. I'll grumble and go in. I'm only 1 year in and still learning, so being around the team probably helps.",
+        "top_factor": "One extra office day"
+      }
+    },
+    {
+      "cell": "F-junior-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Sneha",
+        "gender": "woman",
+        "age": 26,
+        "role": "finance analyst",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 32,
+        "home": "lives with a partner, no children",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 18.0,
+        "feeling": -0.5,
+        "quote": "Ugh, one more day in the office, but it's three days, not five, and my commute is only about 30 minutes. The shuttle helps a bit and at least it's not tied to ratings, so I'll just adjust. I'm not job hunting over this.",
+        "top_factor": "Mild extra commute day"
+      }
+    },
+    {
+      "cell": "F-mid-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Lakshmi",
+        "gender": "woman",
+        "age": 30,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 2,
+        "commute_min_each_way": 84,
+        "home": "two young children",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 22.0,
+        "feeling": -1.0,
+        "quote": "Three days with an 84-minute commute each way and two small kids is a lot more than two days, and I'm not happy about it. I'll apply for the exception and see what HR says before I even think about updating my resume, though I'll quietly start looking if they say no.",
+        "top_factor": "Extra commute day with kids"
+      }
+    },
+    {
+      "cell": "F-mid-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Ananya",
+        "gender": "woman",
+        "age": 30,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 79,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 22.0,
+        "feeling": -1.0,
+        "quote": "Three days is annoying with a toddler and a 79-minute commute each way, but it's only one extra day, attendance isn't in ratings, and I can apply for the caring exception. I'll try the shuttle and see how it goes, and quietly keep an eye on hybrid openings elsewhere.",
+        "top_factor": "Extra commute day with toddler"
+      }
+    },
+    {
+      "cell": "F-mid-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Ananya",
+        "gender": "woman",
+        "age": 32,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 3,
+        "commute_min_each_way": 56,
+        "home": "lives alone",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 21.0,
+        "feeling": -1.0,
+        "quote": "One more day in the office means another two hours of traffic, but it's not a dealbreaker, and at least it isn't tied to ratings and there's a shuttle. I'll grumble, adjust, and keep an eye on what other companies are offering.",
+        "top_factor": "Extra commute day"
+      }
+    },
+    {
+      "cell": "F-mid-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Kavya",
+        "gender": "woman",
+        "age": 28,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 65,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 16.0,
+        "feeling": -1.0,
+        "quote": "Three days is annoying with that commute, and I'll grumble about it, but it's one extra day, the shuttle might actually help, and it's not tied to my rating. I'm not job-hunting over this, though I'll probably keep an eye on what other places offer.",
+        "top_factor": "One extra commute day"
+      }
+    },
+    {
+      "cell": "F-mid-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Fatima",
+        "gender": "woman",
+        "age": 38,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 5,
+        "commute_min_each_way": 29,
+        "home": "a child in primary school",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 16.0,
+        "feeling": -0.5,
+        "quote": "One more office day is annoying, but it's not a disaster. The commute is short for Bengaluru, teams pick the days, and attendance isn't in ratings, so I'll adjust. I'll only look harder if the exception process turns out to be a mess for school-pickup days.",
+        "top_factor": "One extra day, manageable commute"
+      }
+    },
+    {
+      "cell": "F-mid-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Kavya",
+        "gender": "woman",
+        "age": 28,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 2,
+        "commute_min_each_way": 16,
+        "home": "a child in primary school",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 15.0,
+        "feeling": -0.5,
+        "quote": "It's one more day in the office, which is annoying but my commute is short, so I can live with it. Teams picking their own days and no hit on ratings makes it easier, and I'll apply for the exception if school pickups get tricky.",
+        "top_factor": "Short commute, mild change"
+      }
+    },
+    {
+      "cell": "F-mid-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Sneha",
+        "gender": "woman",
+        "age": 34,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 2,
+        "commute_min_each_way": 17,
+        "home": "no caring duties",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 15.0,
+        "feeling": -0.5,
+        "quote": "It's one more day in the office, that's all. My commute is short and attendance isn't in ratings, so I'll grumble and go in. I'd only start looking if they keep tightening it.",
+        "top_factor": "Short commute, minor change"
+      }
+    },
+    {
+      "cell": "F-mid-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Kavya",
+        "gender": "woman",
+        "age": 30,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 15,
+        "home": "lives alone",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 12.0,
+        "feeling": 0.0,
+        "quote": "It's one more day in the office, and mine is a 15-minute commute, so it's not a big deal for me. Teams picking their own days helps, and it's not tied to ratings. I'd only start looking if they keep tightening it.",
+        "top_factor": "Short commute, small change"
+      }
+    },
+    {
+      "cell": "F-manager-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Lakshmi",
+        "gender": "woman",
+        "age": 41,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 12,
+        "commute_min_each_way": 85,
+        "home": "an elderly parent who lives with them",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 14.0,
+        "feeling": -1.0,
+        "quote": "One more office day means another 170 minutes on the road and more time away from my mother, which is annoying. But attendance isn't in ratings, the team picks the days, and I can apply for the caring exception, so I'll see how that goes before I think about leaving.",
+        "top_factor": "Extra commute day, caring load"
+      }
+    },
+    {
+      "cell": "F-manager-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Kavya",
+        "gender": "woman",
+        "age": 47,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 11,
+        "commute_min_each_way": 88,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 14.0,
+        "feeling": -1.0,
+        "quote": "Three days with that commute and a toddler at home is a lot more than two, but attendance isn't in ratings and I can apply for the caring exception, so I'll see how it goes. I'm not job-hunting over one extra day, though I'll keep an ear out if it gets stricter.",
+        "top_factor": "Extra commute day, toddler"
+      }
+    },
+    {
+      "cell": "F-manager-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Lakshmi",
+        "gender": "woman",
+        "age": 39,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 12,
+        "commute_min_each_way": 65,
+        "home": "lives with a partner, no children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 14.0,
+        "feeling": -1.0,
+        "quote": "Three days is annoying with that commute, but teams get to pick the days, it's not in ratings, and there's a shuttle, so it's not a disaster. I'll grumble and adjust, and I'm not going to quit over one extra day.",
+        "top_factor": "Extra commute day, softened"
+      }
+    },
+    {
+      "cell": "F-manager-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Sneha",
+        "gender": "woman",
+        "age": 35,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 7,
+        "commute_min_each_way": 99,
+        "home": "lives with a partner, no children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 16.0,
+        "feeling": -1.0,
+        "quote": "Three days is one more day of over three hours on the road, which is annoying, but it's not a dealbreaker on its own. Attendance isn't in ratings and the shuttle might help, so I'll see how it goes first, though I'll quietly keep an eye on hybrid roles elsewhere.",
+        "top_factor": "Extra commute day"
+      }
+    },
+    {
+      "cell": "F-manager-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Fatima",
+        "gender": "woman",
+        "age": 37,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 13,
+        "commute_min_each_way": 35,
+        "home": "a child in primary school",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 11.0,
+        "feeling": -0.5,
+        "quote": "It's one more day in the office, so it's annoying but I can live with it. Teams choosing the days and the exception process help, and I'm not going to walk away from 13 years over a day a week.",
+        "top_factor": "One extra office day"
+      }
+    },
+    {
+      "cell": "F-manager-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Divya",
+        "gender": "woman",
+        "age": 34,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 4,
+        "commute_min_each_way": 27,
+        "home": "two young children",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 14.0,
+        "feeling": -1.0,
+        "quote": "It's one more day in the office, and the commute is only 27 minutes, so I can live with it. Teams picking their own days and the exception process help, but I'm not thrilled about the extra day with the kids and the late client calls. I'll see how it works out before I think about moving.",
+        "top_factor": "Extra office day, childcare juggling"
+      }
+    },
+    {
+      "cell": "F-manager-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Ananya",
+        "gender": "woman",
+        "age": 39,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 4,
+        "commute_min_each_way": 29,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 13.0,
+        "feeling": -1.0,
+        "quote": "It's one more day in the office, and at least teams get to pick which days and it doesn't touch ratings. I'm not thrilled, but with a 29-minute commute and no caring duties I'll just adapt. I'll only start looking if they tighten it further.",
+        "top_factor": "Modest extra office day"
+      }
+    },
+    {
+      "cell": "F-manager-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Sneha",
+        "gender": "woman",
+        "age": 45,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 13,
+        "commute_min_each_way": 17,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 10.0,
+        "feeling": 0.0,
+        "quote": "Three days instead of two isn't a big deal for me since I'm only 17 minutes away, and at least teams get to pick the days and it's not tied to ratings. I'd rather they'd left it alone, but I'm not going anywhere over one extra day.",
+        "top_factor": "Short commute, minor change"
+      }
+    },
+    {
+      "cell": "M-junior-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Arjun",
+        "gender": "man",
+        "age": 24,
+        "role": "marketing associate",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 62,
+        "home": "an elderly parent who lives with them",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 20.0,
+        "feeling": -1.0,
+        "quote": "One more office day is annoying with the traffic, but it's not the end of the world, and attendance isn't tied to ratings. I'll see if the shuttle works for my route and maybe apply for the exception because of my parent, but I'm not quitting over this.",
+        "top_factor": "Extra commute day, mitigated"
+      }
+    },
+    {
+      "cell": "M-junior-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Vikram",
+        "gender": "man",
+        "age": 28,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 87,
+        "home": "two young children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 24.0,
+        "feeling": -1.0,
+        "quote": "Three days with an 87-minute commute each way is a real hit with two small kids at home, but it's one extra day and attendance isn't in ratings. I'll apply for the exception and see what HR says, and quietly keep an eye on what the hybrid competitors are offering.",
+        "top_factor": "Extra commute day, young kids"
+      }
+    },
+    {
+      "cell": "M-junior-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Arjun",
+        "gender": "man",
+        "age": 26,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 67,
+        "home": "no caring duties",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 20.0,
+        "feeling": -1.0,
+        "quote": "One more day in the office means another 2+ hours on the road, which is annoying. But attendance isn't in ratings and there'll be a shuttle, so I'll grumble and go. I'm not quitting over it, though I might look around a bit more.",
+        "top_factor": "Extra commute day"
+      }
+    },
+    {
+      "cell": "M-junior-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Arjun",
+        "gender": "man",
+        "age": 27,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 57,
+        "home": "lives alone",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 20.0,
+        "feeling": -1.0,
+        "quote": "One more day in office is annoying with that 57-minute commute each way, but it's not a dealbreaker. The shuttle helps a bit, and since attendance isn't in ratings I'll just comply and keep an eye on what other companies offer.",
+        "top_factor": "Extra commute day"
+      }
+    },
+    {
+      "cell": "M-junior-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Arjun",
+        "gender": "man",
+        "age": 28,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 32,
+        "home": "two young children",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 16.0,
+        "feeling": -0.5,
+        "quote": "It's one more day in the office, so more traffic and less time with the kids, but it's not a disaster. Teams pick the days, there's a shuttle, and it doesn't hit my ratings, so I'll go along with it and see how it works out. If it gets worse, I'll quietly start looking.",
+        "top_factor": "One extra commute day"
+      }
+    },
+    {
+      "cell": "M-junior-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Rahul",
+        "gender": "man",
+        "age": 27,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 29,
+        "home": "a child in primary school",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 19.0,
+        "feeling": -0.5,
+        "quote": "One more office day is annoying, but the commute is only half an hour and they're adding a shuttle, and it doesn't count in ratings. I'll grumble, adjust the school pickup, and keep an eye on what other places are offering.",
+        "top_factor": "One extra office day"
+      }
+    },
+    {
+      "cell": "M-junior-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Vikram",
+        "gender": "man",
+        "age": 28,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 19,
+        "home": "lives alone",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 14.0,
+        "feeling": 0.0,
+        "quote": "It's one more day in the office, and my commute is short, so it doesn't really change much for me. Teams choosing the days and attendance not counting in ratings makes it easier to live with. I'm not going to job hunt over this.",
+        "top_factor": "Short commute, minor change"
+      }
+    },
+    {
+      "cell": "M-junior-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Arjun",
+        "gender": "man",
+        "age": 28,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 32,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 19.0,
+        "feeling": -0.5,
+        "quote": "It's one more day in the office, so it's annoying but not a big deal. The team picks the days and it doesn't affect ratings, so I'll just adjust. The shuttle helps a bit, and I'd only think about leaving if other things started piling up too.",
+        "top_factor": "One extra office day"
+      }
+    },
+    {
+      "cell": "M-mid-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Arjun",
+        "gender": "man",
+        "age": 32,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 5,
+        "commute_min_each_way": 84,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 17.0,
+        "feeling": -1.0,
+        "quote": "Three days is one more day of nearly three hours on the road, and with a toddler that really hurts. I'll apply for the exception and see how the shuttle works. I'm not quitting over this, but I'll quietly keep an eye on what other companies are offering.",
+        "top_factor": "Extra commute day with toddler"
+      }
+    },
+    {
+      "cell": "M-mid-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Vikram",
+        "gender": "man",
+        "age": 33,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 55,
+        "home": "an elderly parent who lives with them",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 14.0,
+        "feeling": -1.0,
+        "quote": "Three days instead of two is annoying with the commute and Dad at home, but it's not a disaster. Attendance isn't in ratings, there's a shuttle, and I'll apply for the exception before I think about job hunting.",
+        "top_factor": "Extra commute day, caring exception"
+      }
+    },
+    {
+      "cell": "M-mid-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Rahul",
+        "gender": "man",
+        "age": 35,
+        "role": "product marketing lead",
+        "level": "mid",
+        "tenure_years": 5,
+        "commute_min_each_way": 87,
+        "home": "lives alone",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 20.0,
+        "feeling": -1.0,
+        "quote": "Three days with an 87-minute commute each way is annoying, no way around it. But it's not tied to ratings and teams pick the days, so I'll grumble, adjust, and maybe quietly look around if nothing else improves.",
+        "top_factor": "Extra commute day, long travel"
+      }
+    },
+    {
+      "cell": "M-mid-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Karthik",
+        "gender": "man",
+        "age": 28,
+        "role": "product marketing lead",
+        "level": "mid",
+        "tenure_years": 6,
+        "commute_min_each_way": 80,
+        "home": "lives with a partner, no children",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 20.0,
+        "feeling": -1.0,
+        "quote": "Going from two to three days is annoying with an 80-minute commute each way, but it's not a dealbreaker. Teams choose their own days, attendance isn't in ratings, and there's a shuttle, so I'll grumble and adjust. I'll just keep an eye on what other hybrid roles are out there.",
+        "top_factor": "Extra commute day"
+      }
+    },
+    {
+      "cell": "M-mid-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Karthik",
+        "gender": "man",
+        "age": 30,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 3,
+        "commute_min_each_way": 31,
+        "home": "an elderly parent who lives with them",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 16.0,
+        "feeling": -0.5,
+        "quote": "One more day in office is annoying, but 31 minutes isn't terrible and attendance isn't in ratings. I'll apply for the caring exception if Dad needs me around, otherwise I'll just adjust and keep an eye on what other companies offer.",
+        "top_factor": "One extra office day"
+      }
+    },
+    {
+      "cell": "M-mid-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Vikram",
+        "gender": "man",
+        "age": 34,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 5,
+        "commute_min_each_way": 35,
+        "home": "an elderly parent who lives with them",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 16.0,
+        "feeling": -1.0,
+        "quote": "Three days instead of two is annoying, but it's not a dealbreaker, and the commute is only 35 minutes for me. I'll apply for the caring exception for my dad if I need it, and I'm not going to start interviewing over one extra day.",
+        "top_factor": "One extra office day"
+      }
+    },
+    {
+      "cell": "M-mid-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Rahul",
+        "gender": "man",
+        "age": 36,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 13,
+        "home": "lives with a partner, no children",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 14.0,
+        "feeling": -0.5,
+        "quote": "It's one extra office day and I live 13 minutes away, so honestly it barely changes my life. Teams picking their own days and no ratings hit makes it easy to live with, though I'd rather they'd left it at two.",
+        "top_factor": "Short commute, minor change"
+      }
+    },
+    {
+      "cell": "M-mid-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Vikram",
+        "gender": "man",
+        "age": 32,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 28,
+        "home": "no caring duties",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 15.0,
+        "feeling": -0.5,
+        "quote": "One extra office day is annoying, but my commute is short and it's not tied to ratings, so I'll just adjust. I'd get more irritated if they push it to four or five days later.",
+        "top_factor": "One extra day, short commute"
+      }
+    },
+    {
+      "cell": "M-manager-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Siddharth",
+        "gender": "man",
+        "age": 39,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 7,
+        "commute_min_each_way": 70,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 15.0,
+        "feeling": -1.0,
+        "quote": "One more day in the office means another two and a half hours on the road, and with a toddler at home that hurts. But it's three days, attendance isn't in ratings, and I can apply for an exception, so I'll grumble, try the shuttle and see how it goes before I think about moving.",
+        "top_factor": "Extra commute day with toddler"
+      }
+    },
+    {
+      "cell": "M-manager-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Siddharth",
+        "gender": "man",
+        "age": 50,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 9,
+        "commute_min_each_way": 76,
+        "home": "two young children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 13.0,
+        "feeling": -1.0,
+        "quote": "Three days is annoying with that commute and the kids, but it's one extra day, attendance isn't in ratings, and I can apply for an exception if it gets bad. I'll grumble, adjust, and keep an eye on what's out there, but I'm not walking out over one day.",
+        "top_factor": "Extra commute day, young kids"
+      }
+    },
+    {
+      "cell": "M-manager-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Vikram",
+        "gender": "man",
+        "age": 34,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 7,
+        "commute_min_each_way": 90,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 20.0,
+        "feeling": -1.0,
+        "quote": "Three days with a 90-minute commute each way is a real hit, but teams choose the days and it's not in ratings, so I can live with it for now. I'll grumble, keep an eye on what the competitors are offering, and probably stay unless something else pushes me.",
+        "top_factor": "Extra commute day burden"
+      }
+    },
+    {
+      "cell": "M-manager-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Imran",
+        "gender": "man",
+        "age": 36,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 6,
+        "commute_min_each_way": 71,
+        "home": "no caring duties",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 17.0,
+        "feeling": -1.0,
+        "quote": "Three days is annoying with a 71-minute commute each way, but teams pick the days and it's not tied to ratings, so I can live with it. I'll grumble, and I'll quietly look at what the hybrid competitors are offering, but I'm not walking out over one extra day.",
+        "top_factor": "Extra commute day"
+      }
+    },
+    {
+      "cell": "M-manager-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Imran",
+        "gender": "man",
+        "age": 48,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 6,
+        "commute_min_each_way": 34,
+        "home": "two young children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 10.0,
+        "feeling": -0.5,
+        "quote": "One more day in the office is annoying with the kids, but 34 minutes isn't terrible, attendance isn't in ratings, and teams pick the days. I'll grumble and adjust; I'm not starting a job search over this.",
+        "top_factor": "One extra office day"
+      }
+    },
+    {
+      "cell": "M-manager-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Imran",
+        "gender": "man",
+        "age": 39,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 11,
+        "commute_min_each_way": 24,
+        "home": "two young children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 10.0,
+        "feeling": -0.5,
+        "quote": "One more office day is annoying with the kids, but my commute is short and teams get to pick the days, so I'll adjust. Attendance isn't in ratings and there's an exception route if it gets hard, so I'm not going to rock the boat over this.",
+        "top_factor": "Short commute, mild change"
+      }
+    },
+    {
+      "cell": "M-manager-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Karthik",
+        "gender": "man",
+        "age": 40,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 10,
+        "commute_min_each_way": 23,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 10.0,
+        "feeling": 0.0,
+        "quote": "It's one more day in the office, and my commute is short, so honestly it doesn't change much for me. Teams picking their own days and attendance staying out of ratings makes it easier to live with, though I'd have grumbled more if I lived far away.",
+        "top_factor": "Short commute, minor change"
+      }
+    },
+    {
+      "cell": "M-manager-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Siddharth",
+        "gender": "man",
+        "age": 39,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 14,
+        "commute_min_each_way": 14,
+        "home": "lives alone",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 9.0,
+        "feeling": 0.0,
+        "quote": "Three days instead of two, and I'm only 14 minutes away, so it barely changes my week. Teams picking their own days is sensible, and attendance isn't in ratings, so I'll just get on with it.",
+        "top_factor": "Short commute, minor change"
+      }
+    }
+  ],
+  "forecast": {
+    "employees": 5000,
+    "relative_change": 0.388,
+    "leavers_status_quo": 641,
+    "leavers_with_policy": 893,
+    "feeling": -0.79,
+    "subgroups": {
+      "gender": {
+        "F": {
+          "relative_change": 0.393,
+          "headcount": 1899
+        },
+        "M": {
+          "relative_change": 0.385,
+          "headcount": 3101
+        }
+      },
+      "managerial": {
+        "non-manager": {
+          "relative_change": 0.378,
+          "headcount": 4250
+        },
+        "manager": {
+          "relative_change": 0.471,
+          "headcount": 750
+        }
+      },
+      "level": {
+        "junior": {
+          "relative_change": 0.319,
+          "headcount": 2500
+        },
+        "mid": {
+          "relative_change": 0.484,
+          "headcount": 1750
+        },
+        "manager": {
+          "relative_change": 0.471,
+          "headcount": 750
+        }
+      },
+      "commute": {
+        "long": {
+          "relative_change": 0.482,
+          "headcount": 3000
+        },
+        "short": {
+          "relative_change": 0.242,
+          "headcount": 2000
+        }
+      },
+      "caregiver": {
+        "caregiver": {
+          "relative_change": 0.509,
+          "headcount": 1650
+        },
+        "no caring duties": {
+          "relative_change": 0.34,
+          "headcount": 3350
+        }
+      }
+    },
+    "cells": [
+      {
+        "cell": "F-junior-long-care",
+        "headcount": 85,
+        "base": 0.135,
+        "policy": 0.21,
+        "feeling": -1.0
+      },
+      {
+        "cell": "F-junior-long-nocare",
+        "headcount": 484,
+        "base": 0.15,
+        "policy": 0.21,
+        "feeling": -1.0
+      },
+      {
+        "cell": "F-junior-short-care",
+        "headcount": 57,
+        "base": 0.135,
+        "policy": 0.17,
+        "feeling": -0.5
+      },
+      {
+        "cell": "F-junior-short-nocare",
+        "headcount": 323,
+        "base": 0.15,
+        "policy": 0.18,
+        "feeling": -0.75
+      },
+      {
+        "cell": "F-mid-long-care",
+        "headcount": 180,
+        "base": 0.12,
+        "policy": 0.22,
+        "feeling": -1.0
+      },
+      {
+        "cell": "F-mid-long-nocare",
+        "headcount": 219,
+        "base": 0.135,
+        "policy": 0.185,
+        "feeling": -1.0
+      },
+      {
+        "cell": "F-mid-short-care",
+        "headcount": 120,
+        "base": 0.12,
+        "policy": 0.155,
+        "feeling": -0.5
+      },
+      {
+        "cell": "F-mid-short-nocare",
+        "headcount": 146,
+        "base": 0.11,
+        "policy": 0.135,
+        "feeling": -0.25
+      },
+      {
+        "cell": "F-manager-long-care",
+        "headcount": 111,
+        "base": 0.08,
+        "policy": 0.14,
+        "feeling": -1.0
+      },
+      {
+        "cell": "F-manager-long-nocare",
+        "headcount": 60,
+        "base": 0.1,
+        "policy": 0.15,
+        "feeling": -1.0
+      },
+      {
+        "cell": "F-manager-short-care",
+        "headcount": 74,
+        "base": 0.09,
+        "policy": 0.125,
+        "feeling": -0.75
+      },
+      {
+        "cell": "F-manager-short-nocare",
+        "headcount": 40,
+        "base": 0.09,
+        "policy": 0.115,
+        "feeling": -0.5
+      },
+      {
+        "cell": "M-junior-long-care",
+        "headcount": 140,
+        "base": 0.15,
+        "policy": 0.22,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-junior-long-nocare",
+        "headcount": 791,
+        "base": 0.15,
+        "policy": 0.2,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-junior-short-care",
+        "headcount": 93,
+        "base": 0.135,
+        "policy": 0.175,
+        "feeling": -0.5
+      },
+      {
+        "cell": "M-junior-short-nocare",
+        "headcount": 527,
+        "base": 0.135,
+        "policy": 0.165,
+        "feeling": -0.25
+      },
+      {
+        "cell": "M-mid-long-care",
+        "headcount": 293,
+        "base": 0.09,
+        "policy": 0.155,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-mid-long-nocare",
+        "headcount": 358,
+        "base": 0.12,
+        "policy": 0.2,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-mid-short-care",
+        "headcount": 195,
+        "base": 0.12,
+        "policy": 0.16,
+        "feeling": -0.75
+      },
+      {
+        "cell": "M-mid-short-nocare",
+        "headcount": 239,
+        "base": 0.12,
+        "policy": 0.145,
+        "feeling": -0.5
+      },
+      {
+        "cell": "M-manager-long-care",
+        "headcount": 181,
+        "base": 0.09,
+        "policy": 0.14,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-manager-long-nocare",
+        "headcount": 98,
+        "base": 0.12,
+        "policy": 0.185,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-manager-short-care",
+        "headcount": 121,
+        "base": 0.08,
+        "policy": 0.1,
+        "feeling": -0.5
+      },
+      {
+        "cell": "M-manager-short-nocare",
+        "headcount": 65,
+        "base": 0.08,
+        "policy": 0.095,
+        "feeling": 0.0
+      }
+    ]
+  },
+  "briefing": {
+    "headline": "Moving from two to three office days is predicted to raise leavers over the next 12 months from 641 to 893, about 250 more people or a 39% increase, with mood clearly negative (-0.79 on a -2 to +2 scale).",
+    "most_at_risk": "Caregivers (+51%, 1,650 people) and long commuters (+48%, 3,000 people, 60% of staff) react worst, along with mid-level staff and managers (+47\u201348% versus +32% for juniors), while short-commute staff barely mind (+24%) because one extra 15\u201330 minute trip changes little for them.",
+    "risks": [
+      "The exception process carries most of the caregiver risk: the long-commute parents quoted say they will apply and wait, and one says outright she will start looking if HR says no, so a slow or stingy process could turn waiting into resignations.",
+      "Almost every voice with a 30+ minute commute says they will 'keep an eye on' hybrid competitors, so this policy creates a pool of passive job-seekers that active recruiters can easily convert, even if most stay at first.",
+      "The higher loss rates among mid-level staff and managers, about 1 in 2.8 of the extra leavers coming from the 750 managers alone if rates hold, would cost more in client continuity and replacement than the junior headline suggests."
+    ],
+    "design_changes": [
+      "Open exception applications now, publish clear approval criteria for caring and health needs, and give decisions before the policy starts so no one spends the first weeks of the quarter waiting and job-hunting.",
+      "Before launch, check that shuttle routes actually cover where the 3,000 long commuters live (80\u201390 minutes each way in the voices), and let teams set office-day start and end times to avoid peak traffic and fit late client calls.",
+      "Phase in the third day or pilot it with a few teams, and commit publicly to a review date using actual resignation and exception data, since several voices say they would only leave 'if they keep tightening it.'"
+    ],
+    "confidence": "medium, the direction and the ranking of groups are consistent across every cut and match the voices, but with only 48 modelled voices (about two per group) treat the extra 250 leavers as a rough range, not a forecast."
+  },
+  "score": null,
+  "mode": "claude",
+  "spend": {
+    "usd": 0.1819,
+    "calls": 49,
+    "by_role": {
+      "persona (claude-sonnet-5-5)": {
+        "calls": 48,
+        "usd": 0.1394,
+        "output": 6828
+      },
+      "analyst (claude-opus-5-5)": {
+        "calls": 1,
+        "usd": 0.0426,
+        "output": 1732
+      }
+    },
+    "budget_usd": 5.0,
+    "total_usd": 1.5033
+  },
+  "seconds": 32.8
+}

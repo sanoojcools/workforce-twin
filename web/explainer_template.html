@@ -1,0 +1,310 @@
+<title>Workforce Twin</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one long scroll. A 5,000-dot workforce opens it; then a CHRO's day in four steps; then the proof (error rate, human check, cost). */
+:root{
+  --bg:#f5f6f8; --panel:#ffffff; --ink:#15202b; --muted:#5a6672; --line:#dadfe5; --soft:#eceff3;
+  --stay:#b9c3cf; --leave:#d9532c; --leave-soft:#fbe5dc; --saved:#1f8a7a; --saved-soft:#d8efeb; --pub:#15202b; --v1:#d9532c; --v2:#2f5fb3;
+  --display:"Bricolage Grotesque",system-ui,sans-serif; --body:"Source Sans 3",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#10161c; --panel:#18212a; --ink:#e7ecf1; --muted:#9ba7b3; --line:#2b3641; --soft:#1f2a34;
+  --stay:#3c4a58; --leave:#f07a52; --leave-soft:#3b2219; --saved:#4cc2ad; --saved-soft:#173430; --pub:#e7ecf1; --v1:#f07a52; --v2:#7fa6ee; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10161c; --panel:#18212a; --ink:#e7ecf1; --muted:#9ba7b3; --line:#2b3641; --soft:#1f2a34;
+  --stay:#3c4a58; --leave:#f07a52; --leave-soft:#3b2219; --saved:#4cc2ad; --saved-soft:#173430; --pub:#e7ecf1; --v1:#f07a52; --v2:#7fa6ee; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.015em}
+h1{font-size:clamp(34px,5.4vw,56px);font-weight:800;line-height:1.02}
+h2{font-size:clamp(26px,3.4vw,34px);font-weight:800;line-height:1.1}
+h3{font-size:20px;font-weight:600}
+p{margin:0}
+.eyebrow{font:600 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lead{font-size:20px;color:var(--muted);max-width:60ch}
+.sec{display:flex;flex-direction:column;gap:18px}
+.prose{max-width:66ch;display:flex;flex-direction:column;gap:10px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.hero{display:flex;flex-direction:column;gap:18px}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:700px){.fields{grid-template-columns:minmax(0,1fr)}}
+.field{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.field canvas{width:100%;aspect-ratio:2/1;display:block}
+.field .head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.big{font:600 30px var(--mono);font-variant-numeric:tabular-nums}
+.big.leave{color:var(--leave)}
+.key{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--muted);align-items:center}
+.sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.steps{display:grid;gap:14px;counter-reset:s}
+.step{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start}
+.step .n{font:600 15px var(--mono);width:36px;height:36px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center}
+.step .body{display:flex;flex-direction:column;gap:10px;min-width:0;padding-bottom:10px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;min-width:0}
+.memo{font-size:15.5px;border-left:3px solid var(--ink);padding-left:12px}
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.quotes{grid-template-columns:minmax(0,1fr)}}
+.quote{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.quote q{font-size:16px}
+.quote .who{font-size:13.5px;color:var(--muted)}
+.chip{display:inline-block;font:600 12.5px var(--mono);padding:2px 8px;border-radius:99px;background:var(--leave-soft);color:var(--leave)}
+.chip.good{background:var(--saved-soft);color:var(--saved)}
+.scroll{overflow-x:auto}
+svg text{fill:var(--muted);font-family:var(--mono);font-size:11px}
+svg .ink{fill:var(--ink)}
+.cmp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.cmp{grid-template-columns:minmax(0,1fr)}}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:4px}
+.stat.saved{border-color:var(--saved);background:var(--saved-soft)}
+.stat small{color:var(--muted);font-size:14px}
+ul.clean{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.who-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.who-grid .panel{display:flex;flex-direction:column;gap:6px}
+.note{font-size:14.5px;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+td.num{white-space:nowrap}
+a{color:var(--v2)}
+footer{font-size:14px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+</style>
+
+<div class="wrap">
+
+<header class="hero">
+  <span class="eyebrow">Workforce Twin</span>
+  <h1>Hear 5,000 reactions before you send the email.</h1>
+  <p class="lead">A synthetic copy of your workforce reads a draft policy and tells you who would leave, who would shrug, and what to change, before anyone real finds out. Then it shows you how wrong it has been on real policies.</p>
+  <div class="fields">
+    <div class="field"><div class="head"><span class="eyebrow">If nothing changes</span><span class="big num" id="sqN"></span></div><canvas id="cv0" aria-label="5,000 employees, leavers highlighted"></canvas><span class="note">Expected leavers over the next 12 months</span></div>
+    <div class="field"><div class="head"><span class="eyebrow">With a five-day office mandate</span><span class="big num leave" id="polN"></span></div><canvas id="cv1" aria-label="5,000 employees under the mandate, leavers highlighted"></canvas><span class="note" id="polNote"></span></div>
+  </div>
+  <div class="key"><span><i class="sw" style="background:var(--stay)"></i>stays</span><span><i class="sw" style="background:var(--leave)"></i>leaves within 12 months</span><span>Each dot is one simulated employee at a 5,000-person IT services firm in Bengaluru.</span></div>
+</header>
+
+<section class="sec">
+  <span class="eyebrow">The customer's day</span>
+  <h2>Meera has 48 hours before the CEO announces five days in the office.</h2>
+  <p class="prose lead">Meera is CHRO of a 5,000-person IT services company in Bengaluru (a composite, not a real person). Today her people work two set days in the office. The CEO wants five, starting next quarter. The draft email is on her screen.</p>
+  <div class="steps">
+    <div class="step"><span class="n">1</span><div class="body"><h3>She pastes the draft.</h3><p class="memo" id="polText"></p></div></div>
+    <div class="step"><span class="n">2</span><div class="body"><h3>The twin builds her workforce and asks it.</h3>
+      <p class="prose">5,000 people, split into 24 groups by gender, level, commute and caring duties, in her real headcount mix. Two people from every group read the email and say what they would actually do. Their answers are weighted back up to 5,000.</p>
+      <div class="panel scroll"><svg id="grid" role="img" aria-label="Change in 12-month leaving for each of 24 groups"></svg></div>
+      <p class="note">Each square is one group, sized by headcount. Colour shows how much the mandate raises that group's chance of leaving.</p></div></div>
+    <div class="step"><span class="n">3</span><div class="body"><h3>She listens.</h3><div class="quotes" id="quotes"></div></div></div>
+    <div class="step"><span class="n">4</span><div class="body"><h3>She redesigns before anyone sees it.</h3>
+      <p class="prose" id="redesignText"></p>
+      <div class="cmp" id="cmp"></div></div></div>
+  </div>
+</section>
+
+<section class="sec">
+  <span class="eyebrow">Who it lands on</span>
+  <h2>The mandate does not hit everyone equally.</h2>
+  <div class="panel scroll"><svg id="subs" role="img" aria-label="Change in leaving by group, five-day vs redesigned policy"></svg></div>
+  <p class="note">Relative change in 12-month leaving versus today. Orange: the five-day draft. Teal: the redesigned three-day version.</p>
+</section>
+
+<section class="sec">
+  <span class="eyebrow">The briefing Meera takes to the CEO</span>
+  <h2 id="bHead"></h2>
+  <div class="panel prose" id="brief" style="max-width:none"></div>
+  <p class="note">Written by Claude Opus 5.5 from the simulation output. It never sees the employees' private profiles, only the weighted numbers and a sample of voices.</p>
+</section>
+
+<section class="sec">
+  <span class="eyebrow">Can she trust it?</span>
+  <h2>We ran it on three real policies with published results, and we publish the miss.</h2>
+  <p class="prose">The twin was shown each company, the status quo and the announcement. It was never shown the outcome. Each policy was run three times with fresh voices.</p>
+  <div class="panel scroll"><svg id="board" role="img" aria-label="Twin forecasts versus published results for three studies"></svg></div>
+  <div class="key"><span><i class="sw" style="background:var(--pub)"></i>published result</span><span><i class="sw" style="background:var(--v1)"></i>first version (Haiku voices)</span><span><i class="sw" style="background:var(--v2)"></i>now (Sonnet voices, say-do check)</span></div>
+  <div class="prose" id="boardText"></div>
+  <div class="scroll"><table id="boardTable"></table></div>
+</section>
+
+<section class="sec">
+  <span class="eyebrow">A human check</span>
+  <h2>Does it read people the way an HR leader does?</h2>
+  <div class="prose" id="human"></div>
+</section>
+
+<section class="sec">
+  <span class="eyebrow">What it costs</span>
+  <h2 id="costHead"></h2>
+  <p class="prose" id="costText"></p>
+</section>
+
+<section class="sec">
+  <span class="eyebrow">Who it is for</span>
+  <div class="who-grid">
+    <div class="panel"><h3>CHRO</h3><p>Walks into the CEO conversation with a number, the groups at risk and a better version of the policy, not a gut feel.</p></div>
+    <div class="panel"><h3>CEO and CFO</h3><p>Sees regrettable attrition as a cost before the decision, alongside the real-estate savings.</p></div>
+    <div class="panel"><h3>HR business partners</h3><p>Know which teams to sit with first, and what those people will say, on announcement day.</p></div>
+    <div class="panel"><h3>Employees</h3><p>Their likely reactions shape the policy before it ships, instead of in an exit interview after.</p></div>
+  </div>
+</section>
+
+<section class="sec">
+  <span class="eyebrow">Limits</span>
+  <ul class="clean prose">
+    <li>Three backtests is a small sample. The say-do fix was written after seeing the return-to-office miss, so that result is in-sample.</li>
+    <li>The studies measure different things over different windows (a six-month trial, an event study of turnover, a six-month pilot). The twin forecasts a 12-month change, so the comparison is approximate.</li>
+    <li>The models may have read these studies. The twin is never told the outcome, but contamination cannot be ruled out; that is why the forward case and the human check matter.</li>
+    <li>The workforce is synthetic. A real deployment would build the 24 groups from the company's HRIS, never from individuals' records, and would keep the output at group level.</li>
+  </ul>
+</section>
+
+<footer>
+  <span>Code, runs and validation: <a href="https://github.com/sanoojcools/workforce-twin">github.com/sanoojcools/workforce-twin</a>. Built by Sanuj, a certified Amazon Bar Raiser and HR leader (Trianz, Swvl, Carrefour).</span>
+  <span id="sources"></span>
+</footer>
+</div>
+
+<script>
+const D = __DATA__;
+const $ = id => document.getElementById(id);
+const pct = x => (x>=0?"+":"") + Math.round(x*100) + "%";
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+function el(tag, attrs, text){const e=document.createElement(tag); for(const k in (attrs||{})) e.setAttribute(k,attrs[k]); if(text!=null) e.textContent=text; return e;}
+function sv(tag, attrs, text){const e=document.createElementNS("http://www.w3.org/2000/svg",tag); for(const k in attrs) e.setAttribute(k,attrs[k]); if(text!=null) e.textContent=text; return e;}
+const F = D.rto5, R = D.rto3;
+
+/* hero dot fields: same people, same random draw, so the extra orange dots are the policy's effect */
+function rng(seed){let s=seed>>>0; return ()=>{s=(s*1664525+1013904223)>>>0; return s/4294967296;};}
+const ORDER = (()=>{const r=rng(42), a=[...Array(5000).keys()]; for(let i=a.length-1;i>0;i--){const j=Math.floor(r()*(i+1)); [a[i],a[j]]=[a[j],a[i]];} return a;})();
+function drawField(cv, n){
+  const w=cv.clientWidth, h=w/2, dpr=window.devicePixelRatio||1; cv.width=w*dpr; cv.height=h*dpr;
+  const g=cv.getContext("2d"); g.scale(dpr,dpr);
+  const cols=100, rows=50, cw=w/cols, ch=h/rows, rad=Math.max(1, Math.min(cw,ch)*0.36);
+  const lit=new Set(ORDER.slice(0,n)); const stay=css("--stay"), leave=css("--leave");
+  for(let k=0;k<5000;k++){ g.fillStyle=lit.has(k)?leave:stay; g.beginPath(); g.arc((k%cols+.5)*cw, (Math.floor(k/cols)+.5)*ch, rad, 0, 7); g.fill(); }
+}
+function heroes(){ drawField($("cv0"), F.sq); drawField($("cv1"), F.pol); }
+$("sqN").textContent = F.sq.toLocaleString(); $("polN").textContent = F.pol.toLocaleString();
+$("polNote").textContent = `${(F.pol-F.sq).toLocaleString()} more people leave (${pct(F.rel)}). Same people, same luck; only the policy differs. On takeaways the twin runs hot, so read this as a ceiling (see the error rate below).`;
+
+/* step 1 */
+$("polText").textContent = "“" + F.policy + "”";
+
+/* step 2: 24-group grid */
+(function(){
+  const s=$("grid"), levels=["junior","mid","manager"], genders=["F","M"], commute=["short","long"], care=["nocare","care"];
+  const W=720, cellW=140, cellH=58, x0=150, y0=48; s.setAttribute("viewBox",`0 0 ${W} ${y0+6*cellH+10}`); s.style.minWidth="560px";
+  const byKey=Object.fromEntries(F.cells.map(c=>[c.cell,c]));
+  const cols=[]; commute.forEach(cm=>care.forEach(cg=>cols.push([cm,cg])));
+  cols.forEach(([cm,cg],j)=>{ s.appendChild(sv("text",{x:x0+j*cellW+cellW/2-20,y:y0-22,"text-anchor":"middle",class:"ink"}, `${cm} commute`)); s.appendChild(sv("text",{x:x0+j*cellW+cellW/2-20,y:y0-9,"text-anchor":"middle"}, cg==="care"?"carer":"no caring duties")); });
+  const maxHc=Math.max(...F.cells.map(c=>c.headcount)); const leave=css("--leave");
+  let row=0;
+  genders.forEach(g=>levels.forEach(l=>{
+    s.appendChild(sv("text",{x:x0-10,y:y0+row*cellH+cellH/2+4,"text-anchor":"end",class:"ink"}, `${g==="F"?"Women":"Men"}, ${l}`));
+    cols.forEach(([cm,cg],j)=>{
+      const c=byKey[`${g}-${l}-${cm}-${cg}`]; if(!c) return;
+      const rel=c.base? c.policy/c.base-1 : 0, side=Math.sqrt(c.headcount/maxHc)*(cellH-8);
+      const cx=x0+j*cellW+cellW/2, cy=y0+row*cellH+cellH/2;
+      const op=Math.min(1, .15+rel/2.5);
+      s.appendChild(sv("rect",{x:cx-side/2-30,y:cy-side/2,width:side,height:side,rx:3,fill:leave,"fill-opacity":op.toFixed(2)}));
+      s.appendChild(sv("text",{x:cx-30+side/2+6,y:cy+4,class:"ink"}, pct(rel)));
+      s.appendChild(sv("text",{x:cx-30+side/2+6,y:cy+17}, `${c.headcount} ppl`));
+    });
+    row++;
+  }));
+})();
+
+/* step 3: voices */
+F.quotes.forEach(v=>{
+  const d=el("div",{class:"quote"}); d.appendChild(el("q",{},v.quote));
+  d.appendChild(el("span",{class:"who"}, `${v.who} · ${v.detail}`));
+  const up=v.policy-v.base; const c=el("span",{class:"chip"+(up<=2?" good":"")}, `chance of leaving ${Math.round(v.base)}% → ${Math.round(v.policy)}%`);
+  d.appendChild(c); $("quotes").appendChild(d);
+});
+
+/* step 4: redesign */
+$("redesignText").textContent = `Meera tests a second draft: three office days chosen by each team around client hours, attendance kept out of ratings, the shuttle, and a two-week route for caring or health exceptions. Same 5,000 people, same luck.`;
+(function(){
+  const kept=R.pol? F.pol-R.pol : 0;
+  [[`${F.pol.toLocaleString()}`,"leave under the five-day draft",""],[`${R.pol.toLocaleString()}`,"leave under the redesign",""],[`${kept.toLocaleString()}`,"people kept by changing the email","saved"]]
+  .forEach(([n,t,cls])=>{const s=el("div",{class:"stat "+cls}); s.appendChild(el("span",{class:"big num"},n)); s.appendChild(el("small",{},t)); $("cmp").appendChild(s);});
+})();
+
+/* subgroup bars */
+(function(){
+  const s=$("subs"), rows=[["Women","gender","F"],["Men","gender","M"],["Junior","level","junior"],["Mid","level","mid"],["Managers","level","manager"],["Long commute","commute","long"],["Short commute","commute","short"],["Carers","caregiver","caregiver"],["No caring duties","caregiver","no caring duties"]];
+  const W=720, x0=150, x1=W-60, rowH=34, y0=16;
+  const vals=rows.flatMap(([_,a,g])=>[F.subgroups[a][g].relative_change, R.subgroups[a][g].relative_change]);
+  const mx=Math.max(.5, ...vals)*1.1, X=v=>x0+(x1-x0)*Math.max(0,v)/mx;
+  s.setAttribute("viewBox",`0 0 ${W} ${y0+rows.length*rowH+20}`); s.style.minWidth="520px";
+  [0,.5,1,1.5,2,2.5,3].filter(t=>t<=mx).forEach(t=>{s.appendChild(sv("line",{x1:X(t),x2:X(t),y1:y0-6,y2:y0+rows.length*rowH,stroke:css("--line")})); s.appendChild(sv("text",{x:X(t),y:y0+rows.length*rowH+14,"text-anchor":"middle"}, pct(t)));});
+  rows.forEach(([label,a,g],i)=>{
+    const y=y0+i*rowH, f=F.subgroups[a][g].relative_change, r=R.subgroups[a][g].relative_change;
+    s.appendChild(sv("text",{x:x0-10,y:y+15,"text-anchor":"end",class:"ink"},label));
+    s.appendChild(sv("rect",{x:x0,y:y+2,width:X(f)-x0,height:11,rx:2,fill:css("--leave")}));
+    s.appendChild(sv("rect",{x:x0,y:y+15,width:Math.max(1,X(r)-x0),height:11,rx:2,fill:css("--saved")}));
+    s.appendChild(sv("text",{x:X(f)+5,y:y+12}, pct(f))); s.appendChild(sv("text",{x:X(r)+5,y:y+25}, pct(r)));
+  });
+})();
+
+/* briefing */
+(function(){
+  const b=F.briefing; $("bHead").textContent=b.headline;
+  const box=$("brief");
+  box.appendChild(el("p",{},b.most_at_risk));
+  const h1=el("h3",{},"Risks"); box.appendChild(h1); const u1=el("ul",{class:"clean"}); b.risks.forEach(t=>u1.appendChild(el("li",{},t))); box.appendChild(u1);
+  box.appendChild(el("h3",{},"Change before announcing")); const u2=el("ul",{class:"clean"}); b.design_changes.forEach(t=>u2.appendChild(el("li",{},t))); box.appendChild(u2);
+  box.appendChild(el("p",{class:"note"},"Confidence: "+b.confidence));
+})();
+
+/* scoreboard */
+(function(){
+  const bt=D.board, studies=[...new Set(bt.map(b=>b.case))];
+  const s=$("board"), W=760, x0=210, x1=W-30, rowH=70, y0=24;
+  const all=bt.flatMap(b=>[b.published,...b.twin_each]); const lo=Math.min(-.8,...all)-.05, hi=Math.max(.4,...all)+.1;
+  const X=v=>x0+(x1-x0)*(v-lo)/(hi-lo);
+  s.setAttribute("viewBox",`0 0 ${W} ${y0+studies.length*rowH+24}`); s.style.minWidth="600px";
+  const ticks=[]; for(let t=Math.ceil(lo*2)/2;t<=hi;t+=.5) ticks.push(Math.round(t*10)/10);
+  ticks.forEach(t=>{s.appendChild(sv("line",{x1:X(t),x2:X(t),y1:y0-8,y2:y0+studies.length*rowH,stroke:t===0?css("--muted"):css("--line"),"stroke-dasharray":t===0?"":"2 3"})); s.appendChild(sv("text",{x:X(t),y:y0+studies.length*rowH+16,"text-anchor":"middle"},pct(t)));});
+  studies.forEach((cid,i)=>{
+    const y=y0+i*rowH+rowH/2, rows=bt.filter(b=>b.case===cid), t=rows[0].title;
+    const words=t.split(" "); let l1="",l2=""; words.forEach(w=>{ if((l1+" "+w).length<30 && !l2) l1=(l1+" "+w).trim(); else l2=(l2+" "+w).trim(); });
+    s.appendChild(sv("text",{x:x0-12,y:y-4,"text-anchor":"end",class:"ink"},l1)); if(l2) s.appendChild(sv("text",{x:x0-12,y:y+10,"text-anchor":"end",class:"ink"},l2));
+    rows.forEach(b=>{ const col=b.stage==="first"?css("--v1"):css("--v2"), dy=b.stage==="first"?-9:9;
+      b.twin_each.forEach(p=>s.appendChild(sv("circle",{cx:X(p),cy:y+dy,r:5,fill:col,"fill-opacity":.85}))); });
+    const p=rows[0].published; s.appendChild(sv("line",{x1:X(p),x2:X(p),y1:y-20,y2:y+20,stroke:css("--pub"),"stroke-width":3}));
+    s.appendChild(sv("text",{x:X(p),y:y-24,"text-anchor":"middle",class:"ink"},pct(p)));
+  });
+  const v1=bt.filter(b=>b.stage==="first"), v2=bt.filter(b=>b.stage==="final");
+  const mae=a=>a.length? Math.round(a.reduce((s,b)=>s+b.abs_error_pp,0)/a.length):null;
+  const rto1=v1.find(b=>b.case==="rto_sp500"), rto2=v2.find(b=>b.case==="rto_sp500");
+  const bx=$("boardText");
+  bx.appendChild(el("p",{}, `The first version got the direction right every time and was close on the two policies that give people more flexibility. It was badly wrong on the takeaway: it predicted the return-to-office mandate would raise leaving by ${rto1?pct(rto1.twin_mean):"?"}; the study found ${rto1?pct(rto1.published):"?"}. Average miss: ${mae(v1)} percentage points.`));
+  bx.appendChild(el("p",{}, `The simulated employees were answering the way people talk when a perk is taken away, not the way they act. Asking each voice to separate what they would say from what they would do barely moved the cheaper model (${D.mid.length? pct(D.mid.find(b=>b.case==="rto_sp500").twin_mean):"?"}). Switching the voices from Claude Haiku to Claude Sonnet did: the return-to-office forecast fell to ${pct(rto2.twin_mean)} and the average miss to ${mae(v2)} points. It still overstates exits from a takeaway about ${Math.round(rto2.twin_mean/rto2.published)} times.`));
+  bx.appendChild(el("p",{}, `What that means for Meera: trust the direction, the ranking of groups, and the comparison between two drafts. Treat the leaver count for a takeaway as a ceiling, not a budget number.`));
+  const tb=$("boardTable"); const hr=el("tr"); ["Study","Published","First version","After fix","Who it hit harder (twin got right)"].forEach(h=>hr.appendChild(el("th",{},h))); tb.appendChild(hr);
+  studies.forEach(cid=>{ const a=v1.find(b=>b.case===cid), b=v2.find(x=>x.case===cid), any=a||b; const tr=el("tr");
+    const td=el("td"); const link=el("a",{href:any.sources[0],target:"_blank",rel:"noopener"},any.study); td.appendChild(link); td.appendChild(el("div",{class:"note"},any.caveat)); tr.appendChild(td);
+    tr.appendChild(el("td",{class:"num"},pct(any.published)));
+    tr.appendChild(el("td",{class:"num"},a?`${pct(a.twin_mean)} (miss ${Math.round(a.abs_error_pp)} pp)`:"–"));
+    tr.appendChild(el("td",{class:"num"},b?`${pct(b.twin_mean)} (miss ${Math.round(b.abs_error_pp)} pp)`:"running"));
+    const best=b||a; tr.appendChild(el("td",{class:"num"}, best.subgroup_total?`${best.subgroup_hits} of ${best.subgroup_total}`:"not reported"));
+    tb.appendChild(tr); });
+  $("sources").textContent = "Sources: " + bt.filter((b,i,arr)=>arr.findIndex(x=>x.case===b.case)===i).map(b=>b.study).join("; ") + ".";
+})();
+
+/* human check */
+(function(){
+  const h=D.human, box=$("human");
+  if(!h){ box.appendChild(el("p",{},"An experienced HR leader is making blind calls on 12 simulated employees: for each person, how likely they are to leave if the policy goes ahead, without seeing the twin's answer. The agreement score will appear here.")); return; }
+  const row=el("div",{class:"cmp"}); [[h.kappa.toFixed(2),"agreement (weighted kappa)"],[h.spearman.toFixed(2),"rank correlation"],[`${h.within_one} of ${h.n}`,"calls within one band"]].forEach(([n,t])=>{const s=el("div",{class:"stat"}); s.appendChild(el("span",{class:"big num"},n)); s.appendChild(el("small",{},t)); row.appendChild(s);}); box.appendChild(row);
+  box.appendChild(el("p",{}, h.text));
+})();
+
+/* cost */
+(function(){
+  const c=F.usd, r=R.usd; $("costHead").textContent = `About ${(c*100).toFixed(0)} cents a run.`;
+  $("costText").textContent = `One run is ${F.calls} model calls: 48 short employee voices on Claude Sonnet 5.5 and one briefing on Claude Opus 5.5. It costs the same for 5,000 or 50,000 people, because the twin interviews groups, not individuals. Meera's two drafts cost $${(c+r).toFixed(2)} together. A hard spending cap stops the app at $5.`;
+})();
+
+heroes(); let t; window.addEventListener("resize",()=>{clearTimeout(t); t=setTimeout(heroes,150);});
+matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change",()=>location.reload());
+</script>

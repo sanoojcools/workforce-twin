@@ -1,0 +1,1342 @@
+{
+  "case": "fourday_uk",
+  "title": "Four-day week at UK small and mid-size firms",
+  "kind": "backtest",
+  "seed": 7,
+  "voices": [
+    {
+      "cell": "F-junior-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Priya",
+        "gender": "woman",
+        "age": 25,
+        "role": "finance analyst",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 91,
+        "home": "an elderly parent who lives with them",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 9.0,
+        "feeling": 2,
+        "quote": "Honestly, a four-day week with the same pay would be a massive help. My commute is over an hour and a half each way, and I'm juggling looking after my nan, so one less commute day would give me back real breathing room. I'd just want to see how they measure the output bit.",
+        "top_factor": "Lost commute time, caring duties"
+      }
+    },
+    {
+      "cell": "F-junior-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Priya",
+        "gender": "woman",
+        "age": 25,
+        "role": "marketing associate",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 73,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 9.0,
+        "feeling": 2,
+        "quote": "Honestly, that's the best news I've had in ages. Losing a whole commute day with a toddler at home would change my week, but I'm also going to be watching how they handle the 'same output' bit, because that can quietly become doing five days in four.",
+        "top_factor": "Gaining a day with toddler"
+      }
+    },
+    {
+      "cell": "F-junior-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Priya",
+        "gender": "woman",
+        "age": 23,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 3,
+        "commute_min_each_way": 98,
+        "home": "lives alone",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 12.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a fifth of my week back is huge when I'm spending nearly three hours a day on the train. I'd still want to see how the output commitment works in practice, though, because if it means working longer days I'll be annoyed.",
+        "top_factor": "Losing a commute day"
+      }
+    },
+    {
+      "cell": "F-junior-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Grace",
+        "gender": "woman",
+        "age": 27,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 60,
+        "home": "lives alone",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 9.0,
+        "feeling": 2,
+        "quote": "Honestly, a four-day week on the same pay would be brilliant. Two hours less commuting each week is a real chunk of my life back, and I'd still be doing my job, so I'm glad they're trying it.",
+        "top_factor": "Fewer commuting days, same pay"
+      }
+    },
+    {
+      "cell": "F-junior-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Hannah",
+        "gender": "woman",
+        "age": 27,
+        "role": "marketing associate",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 19,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 9.0,
+        "feeling": 2,
+        "quote": "Honestly, a fifth day back with a toddler is the thing I dread most, so a four-day week with the same pay would be huge for us. I'll still have to prove I can keep output up, but I'm glad they're trying it.",
+        "top_factor": "Childcare load eased, same pay"
+      }
+    },
+    {
+      "cell": "F-junior-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Chloe",
+        "gender": "woman",
+        "age": 27,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 28,
+        "home": "an elderly parent who lives with them",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 20.0,
+        "policy": 12.0,
+        "feeling": 2,
+        "quote": "Honestly, that's a big deal for me with Mum living with us. A free day every week to deal with appointments and the house without losing pay. I'm still going to have to see whether they actually let us switch off at 32 hours, though.",
+        "top_factor": "Extra day for caring duties"
+      }
+    },
+    {
+      "cell": "F-junior-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Hannah",
+        "gender": "woman",
+        "age": 28,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 21,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 7.0,
+        "feeling": 2,
+        "quote": "Honestly, a four-day week on the same pay would be brilliant. I'd still need to see how the output expectations get measured though, or it could just mean squeezing five days into four.",
+        "top_factor": "Extra day off, same pay"
+      }
+    },
+    {
+      "cell": "F-junior-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Amira",
+        "gender": "woman",
+        "age": 27,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 19,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 7.0,
+        "feeling": 2,
+        "quote": "Honestly, a four-day week on the same pay would be brilliant, and I'd be keen to see how it goes. The output commitment is the bit I'd watch, because if it turns into doing five days' work in four, it'll be a different story.",
+        "top_factor": "Same pay, fewer hours"
+      }
+    },
+    {
+      "cell": "F-mid-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Priya",
+        "gender": "woman",
+        "age": 35,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 82,
+        "home": "an elderly parent who lives with them",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 5.0,
+        "feeling": 2,
+        "quote": "Honestly, this is the first thing in ages that makes my week livable. Losing a day of that commute and getting proper time with Mum matters more to me than the pay conversation. I just hope they don't quietly expect the same output squeezed into four days.",
+        "top_factor": "One fewer 82-minute commute day"
+      }
+    },
+    {
+      "cell": "F-mid-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Sophie",
+        "gender": "woman",
+        "age": 32,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 6,
+        "commute_min_each_way": 81,
+        "home": "two young children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 2,
+        "quote": "Honestly, a fifth day back with two kids and an 81-minute commute each way is brutal, so a four-day week with the same pay would be the best thing that's happened here in ages. I'll be watching whether they actually let us have it, though, because 'keep output the same' can quietly become 'do five days in four'.",
+        "top_factor": "Losing a commute day"
+      }
+    },
+    {
+      "cell": "F-mid-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Chloe",
+        "gender": "woman",
+        "age": 38,
+        "role": "product marketing lead",
+        "level": "mid",
+        "tenure_years": 3,
+        "commute_min_each_way": 98,
+        "home": "lives with a partner, no children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 18.0,
+        "policy": 9.0,
+        "feeling": 1.0,
+        "quote": "Honestly, I'd take it in a heartbeat. Losing a whole day of a 98-minute commute each way is huge. My only worry is whether they'll quietly expect the same output squeezed into fewer days.",
+        "top_factor": "Scrapping a commute day"
+      }
+    },
+    {
+      "cell": "F-mid-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Sophie",
+        "gender": "woman",
+        "age": 37,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 7,
+        "commute_min_each_way": 64,
+        "home": "no caring duties",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 2,
+        "quote": "Honestly, a four-day week on the same money would be brilliant, especially with a 64-minute commute each way, that's a whole day back. I'd just want to see how they measure 'same output' so it doesn't quietly become five days' work squeezed into four.",
+        "top_factor": "Commute time saved, same pay"
+      }
+    },
+    {
+      "cell": "F-mid-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Chloe",
+        "gender": "woman",
+        "age": 31,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 21,
+        "home": "two young children",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 5.0,
+        "feeling": 2,
+        "quote": "A four-day week on full pay with two kids at home would be a massive help, and eight years in, I'd rather stay and see how it goes than start over somewhere new. The output commitment is the bit I'd want clarity on so it doesn't turn into doing five days' work in four.",
+        "top_factor": "Childcare and time with kids"
+      }
+    },
+    {
+      "cell": "F-mid-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Amira",
+        "gender": "woman",
+        "age": 32,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 5,
+        "commute_min_each_way": 30,
+        "home": "an elderly parent who lives with them",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a four-day week with the same pay would make a real difference for me, especially with Mum at home and needing appointments. I'm a bit wary they'll just expect the same output in fewer days, though.",
+        "top_factor": "Time for elderly parent care"
+      }
+    },
+    {
+      "cell": "F-mid-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Sophie",
+        "gender": "woman",
+        "age": 29,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 34,
+        "home": "lives alone",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 9.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a free day every week with the same pay is a good deal, and I'd like to see if it works. My worry is that 'same output' just means squeezing five days of work into four.",
+        "top_factor": "Extra day off, same pay"
+      }
+    },
+    {
+      "cell": "F-mid-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Chloe",
+        "gender": "woman",
+        "age": 33,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 6,
+        "commute_min_each_way": 23,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 7.0,
+        "feeling": 2,
+        "quote": "Honestly, a four-day week on the same money would be brilliant, and it says they trust us. I'd just want to see how they measure 'output' so it doesn't quietly turn into working five days squeezed into four.",
+        "top_factor": "Same pay, fewer hours"
+      }
+    },
+    {
+      "cell": "F-manager-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Sophie",
+        "gender": "woman",
+        "age": 42,
+        "role": "director of operations",
+        "level": "manager",
+        "tenure_years": 5,
+        "commute_min_each_way": 70,
+        "home": "a child in primary school",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 1.0,
+        "quote": "A four-day week on full pay would be brilliant, especially with that 70-minute commute, but I'm not signing up to cram five days of output into four. If they mean it as a genuine trial with proper support, I'll give it a go.",
+        "top_factor": "Commute and no pay cut"
+      }
+    },
+    {
+      "cell": "F-manager-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Chloe",
+        "gender": "woman",
+        "age": 50,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 11,
+        "commute_min_each_way": 92,
+        "home": "a child in primary school",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 7.0,
+        "feeling": 2,
+        "quote": "Honestly, a fifth of my week back with no pay cut would be huge, given I'm on a train for three hours a day. My only worry is whether they'll quietly expect the same output in four days, which is a lot of pressure on the team.",
+        "top_factor": "Losing a 92-minute commute day"
+      }
+    },
+    {
+      "cell": "F-manager-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Grace",
+        "gender": "woman",
+        "age": 38,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 4,
+        "commute_min_each_way": 98,
+        "home": "lives alone",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 7.0,
+        "feeling": 2,
+        "quote": "Honestly, I'd take it in a heartbeat. I spend over three hours a day on the train, so losing one of those days would mean I get my life back without losing a penny. The only worry is whether they'll expect the same output in fewer hours, but I'd still give it a go.",
+        "top_factor": "Scrapping a 98-minute commute day"
+      }
+    },
+    {
+      "cell": "F-manager-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Sophie",
+        "gender": "woman",
+        "age": 41,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 9,
+        "commute_min_each_way": 88,
+        "home": "lives alone",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 7.0,
+        "feeling": 1.0,
+        "quote": "Honestly, if they really keep pay and output the same, that's a massive win. Losing one of those 88-minute commutes each week would give me my life back. I'm just waiting to see whether the workload quietly expands to fill the gap.",
+        "top_factor": "Losing one long commute day"
+      }
+    },
+    {
+      "cell": "F-manager-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Sophie",
+        "gender": "woman",
+        "age": 37,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 12,
+        "commute_min_each_way": 34,
+        "home": "a child in primary school",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a four-day week on full pay would be brilliant for me, with the school run and that 34-minute commute. I'm just wary they'll quietly expect the same output squeezed into fewer days, so I'll be watching how it's measured.",
+        "top_factor": "Fewer days, same pay"
+      }
+    },
+    {
+      "cell": "F-manager-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Priya",
+        "gender": "woman",
+        "age": 44,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 9,
+        "commute_min_each_way": 24,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 5.0,
+        "feeling": 2,
+        "quote": "Honestly, if they really mean no pay cut, that's the best news I've heard in months. Having a toddler and a partner who's full-time means one extra day for school runs and the inevitable sick days would change my life. I'm just wary of the 'keep output the same' bit turning into everyone working longer hours in four days.",
+        "top_factor": "Extra day for family life"
+      }
+    },
+    {
+      "cell": "F-manager-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Amira",
+        "gender": "woman",
+        "age": 50,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 14,
+        "commute_min_each_way": 27,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 5.0,
+        "feeling": 1.0,
+        "quote": "A four-day week on full pay is a nice thing to be offered, but I'll believe it when I see it after six months. I'm glad to give it a go as long as nobody quietly piles more onto the other day.",
+        "top_factor": "Full pay, but workload risk"
+      }
+    },
+    {
+      "cell": "F-manager-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Priya",
+        "gender": "woman",
+        "age": 50,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 9,
+        "commute_min_each_way": 33,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 1.0,
+        "quote": "A four-day week on full pay is a good deal, and I'd be a fool to not want it. I'm just worried it turns into five days of work squeezed into four, and we all end up knackered by month three.",
+        "top_factor": "Full pay with fewer days"
+      }
+    },
+    {
+      "cell": "M-junior-long-care",
+      "i": 0,
+      "persona": {
+        "name": "James",
+        "gender": "man",
+        "age": 26,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 81,
+        "home": "a child in primary school",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 6.0,
+        "feeling": 2,
+        "quote": "Honestly, if they actually do this, that's the best news I've had in ages. Losing a day of that 81-minute commute, with the same money, would make a real difference to how I get through the week with my kid. I'll be watching whether the 'same output' bit turns into a workload problem.",
+        "top_factor": "Scrapping a commute day"
+      }
+    },
+    {
+      "cell": "M-junior-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Tom",
+        "gender": "man",
+        "age": 28,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 92,
+        "home": "a child in primary school",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 25.0,
+        "policy": 12.0,
+        "feeling": 2,
+        "quote": "Honestly, if they actually pull this off, I'd be thrilled. Losing a day of that 92-minute commute, with pay intact, means I'd finally see my kid's school run more than once a week. My worry is whether they'll quietly expect the same output squeezed into fewer hours.",
+        "top_factor": "Gaining a commute-free day"
+      }
+    },
+    {
+      "cell": "M-junior-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Oliver",
+        "gender": "man",
+        "age": 28,
+        "role": "marketing associate",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 87,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 12.0,
+        "feeling": 1.0,
+        "quote": "Honestly a fifth day off would be brilliant given I spend nearly three hours a day on the train. I'll be watching whether the output promise turns into extra pressure though.",
+        "top_factor": "Long commute, four-day week"
+      }
+    },
+    {
+      "cell": "M-junior-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Oliver",
+        "gender": "man",
+        "age": 24,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 98,
+        "home": "lives alone",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 25.0,
+        "policy": 17.0,
+        "feeling": 1.0,
+        "quote": "Honestly that's a big deal for me. I spend nearly three hours a day on the train, so losing a day of that is huge. I'm still worried about whether we can really keep the same output in four days, though.",
+        "top_factor": "cutting a commute day"
+      }
+    },
+    {
+      "cell": "M-junior-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Ravi",
+        "gender": "man",
+        "age": 24,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 11,
+        "home": "a child in primary school",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 13.0,
+        "feeling": 1.0,
+        "quote": "Honestly, that's a good deal. Same money and I get a day back with my kid. The catch is the output commitment, so I'd want to see how that's measured before I get too excited.",
+        "top_factor": "Same pay, extra day with child"
+      }
+    },
+    {
+      "cell": "M-junior-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Callum",
+        "gender": "man",
+        "age": 23,
+        "role": "marketing associate",
+        "level": "junior",
+        "tenure_years": 3,
+        "commute_min_each_way": 24,
+        "home": "an elderly parent who lives with them",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 2,
+        "quote": "Honestly, a four-day week on the same pay is brilliant, and it would make looking after Dad so much easier. I'd just want to see how they measure 'same output' so it doesn't quietly become five days of work squeezed into four.",
+        "top_factor": "Extra day for elderly parent"
+      }
+    },
+    {
+      "cell": "M-junior-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Oliver",
+        "gender": "man",
+        "age": 23,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 30,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 7.0,
+        "feeling": 2,
+        "quote": "Honestly, a paid four-day week would be brilliant, and I'd be glad to give it a go for six months. The output bit is a bit vague though, so I'll want to see how they measure it.",
+        "top_factor": "Extra day off, same pay"
+      }
+    },
+    {
+      "cell": "M-junior-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Oliver",
+        "gender": "man",
+        "age": 27,
+        "role": "finance analyst",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 10,
+        "home": "no caring duties",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 9.0,
+        "feeling": 2,
+        "quote": "Honestly, a paid four-day week for six months is a great deal, and I'd be a fool not to be happy about it. The output condition is the bit I'll keep an eye on, but I'm not going anywhere over it.",
+        "top_factor": "Free extra day off"
+      }
+    },
+    {
+      "cell": "M-mid-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Ravi",
+        "gender": "man",
+        "age": 34,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 4,
+        "commute_min_each_way": 77,
+        "home": "an elderly parent who lives with them",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a four-day week with the same pay would be a big deal for me, especially with the commute and looking after my dad. I'm just worried that 'same output' means I end up doing the same work in fewer days and burning out.",
+        "top_factor": "Commute and caring duties relief"
+      }
+    },
+    {
+      "cell": "M-mid-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Oliver",
+        "gender": "man",
+        "age": 37,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 3,
+        "commute_min_each_way": 72,
+        "home": "a child in primary school",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 2,
+        "quote": "A four-day week on full pay with a 72-minute commute each way? That's basically one less day of travel a week, and I get to do pickups twice as often. Honestly it's the best thing they've done since I joined, as long as they don't quietly expect the same work in less time.",
+        "top_factor": "Losing one commute day weekly"
+      }
+    },
+    {
+      "cell": "M-mid-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Callum",
+        "gender": "man",
+        "age": 29,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 5,
+        "commute_min_each_way": 64,
+        "home": "no caring duties",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 7.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a four-day week on the same pay would be brilliant, especially with a 64-minute commute each way, which is basically a day of my life gone. I'm still going to be wary of the 'keep output the same' bit, because that could just mean the same work squeezed into fewer days.",
+        "top_factor": "Saves commute time, same pay"
+      }
+    },
+    {
+      "cell": "M-mid-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Ravi",
+        "gender": "man",
+        "age": 31,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 89,
+        "home": "lives with a partner, no children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a four-day week with the same pay would be brilliant, especially with my commute. My worry is that 'keep output the same' means they'll quietly expect us to squeeze five days of work into four, and I'm the one who'll be answering for my team.",
+        "top_factor": "Losing a commute day"
+      }
+    },
+    {
+      "cell": "M-mid-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Oliver",
+        "gender": "man",
+        "age": 29,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 6,
+        "commute_min_each_way": 29,
+        "home": "an elderly parent who lives with them",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a free day with the same pay would make a real difference, especially with Mum at home and the reliance on me. My worry is that 'keep output the same' just means cramming five days of work into four, so I'll be watching how it's actually run.",
+        "top_factor": "Extra day for caring duties"
+      }
+    },
+    {
+      "cell": "M-mid-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Oliver",
+        "gender": "man",
+        "age": 31,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 6,
+        "commute_min_each_way": 27,
+        "home": "a child in primary school",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 1.0,
+        "quote": "A four-day week on the same pay is a good deal, and it'd mean one less school run juggle a week. I'm a bit wary about the 'same output' bit, though, so I'll wait and see how the trial actually runs.",
+        "top_factor": "Extra day with child"
+      }
+    },
+    {
+      "cell": "M-mid-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Oliver",
+        "gender": "man",
+        "age": 33,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 3,
+        "commute_min_each_way": 24,
+        "home": "lives with a partner, no children",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 2,
+        "quote": "Honestly, a four-day week on the same pay is a big deal, and I'd be pleased. I'll still have to make sure my team actually delivers the same output, though, so I'm not sure it's a free lunch.",
+        "top_factor": "Same pay, one fewer workday"
+      }
+    },
+    {
+      "cell": "M-mid-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "James",
+        "gender": "man",
+        "age": 35,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 5,
+        "commute_min_each_way": 14,
+        "home": "lives with a partner, no children",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 2,
+        "quote": "Honestly, a four-day week on the same pay would be brilliant. I'd still need to see how they measure 'today's output' though, because that's where it could get messy.",
+        "top_factor": "Same pay, one fewer day"
+      }
+    },
+    {
+      "cell": "M-manager-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Callum",
+        "gender": "man",
+        "age": 34,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 9,
+        "commute_min_each_way": 56,
+        "home": "an elderly parent who lives with them",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 5.0,
+        "feeling": 2,
+        "quote": "Honestly, that's the first thing in ages that makes my week work. Losing a day of the 56-minute commute and having more time with Mum without taking a pay cut is huge. My worry is being the one who has to make sure the team hits output in four days, but I'd still rather try that than keep doing five.",
+        "top_factor": "Saves commute and caregiving time"
+      }
+    },
+    {
+      "cell": "M-manager-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Tom",
+        "gender": "man",
+        "age": 42,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 12,
+        "commute_min_each_way": 61,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 4.0,
+        "feeling": 2,
+        "quote": "Honestly, that's the best thing I've heard here in years. Losing a commute day with a toddler at home would change my week. I'm just hoping they don't quietly pile more work on us to keep output the same.",
+        "top_factor": "Losing a commute day with toddler"
+      }
+    },
+    {
+      "cell": "M-manager-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Tom",
+        "gender": "man",
+        "age": 43,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 12,
+        "commute_min_each_way": 60,
+        "home": "lives with a partner, no children",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 7.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a fifth of my week back with the same pay is a good deal, and I've got a 60-minute commute each way so a day off is worth a lot to me. The catch is the 'same output' bit, which means we'll probably just end up working the same hours squeezed into four days, so I'll wait and see how it actually plays out.",
+        "top_factor": "Commute time saved, same pay"
+      }
+    },
+    {
+      "cell": "M-manager-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Callum",
+        "gender": "man",
+        "age": 45,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 9,
+        "commute_min_each_way": 64,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 4.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a four-day week on the same pay would be brilliant, and with my commute that's basically an extra day back each week. I'll be watching whether they actually cut the workload or just squeeze the same stuff into fewer days.",
+        "top_factor": "Long commute, same pay"
+      }
+    },
+    {
+      "cell": "M-manager-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Tom",
+        "gender": "man",
+        "age": 46,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 15,
+        "commute_min_each_way": 13,
+        "home": "two young children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 6.0,
+        "policy": 4.0,
+        "feeling": 1.0,
+        "quote": "A four-day week on full pay is a decent perk, but I'll believe it when I see how they measure 'output' and whether it's just us doing the same work in fewer hours. Two kids means I'd happily take the extra day, though.",
+        "top_factor": "Free day with kids"
+      }
+    },
+    {
+      "cell": "M-manager-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Tom",
+        "gender": "man",
+        "age": 40,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 15,
+        "commute_min_each_way": 31,
+        "home": "an elderly parent who lives with them",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 4.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a four-day week on the same pay would make a real difference with Mum at home. I'd still want to see how the output commitment works in practice, because if it just means cramming five days into four, that's not really a gift.",
+        "top_factor": "More time for elderly parent"
+      }
+    },
+    {
+      "cell": "M-manager-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Daniel",
+        "gender": "man",
+        "age": 44,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 6,
+        "commute_min_each_way": 25,
+        "home": "no caring duties",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 7.0,
+        "feeling": 1.0,
+        "quote": "A four-day week on full pay is a good offer, though I'll be watching whether they quietly expect the same output in fewer hours. If it's real, I'm happy to stay.",
+        "top_factor": "Gain of a day off, full pay"
+      }
+    },
+    {
+      "cell": "M-manager-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Oliver",
+        "gender": "man",
+        "age": 42,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 9,
+        "commute_min_each_way": 24,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 4.0,
+        "feeling": 1.0,
+        "quote": "A four-day week on full pay is a decent thing to try, but I'll believe it when I see whether the six-month trial actually sticks. Output at today's level for fewer hours is going to land on managers like me first.",
+        "top_factor": "Fewer hours, same pay"
+      }
+    }
+  ],
+  "forecast": {
+    "employees": 5000,
+    "relative_change": -0.484,
+    "leavers_status_quo": 733,
+    "leavers_with_policy": 361,
+    "feeling": 1.57,
+    "subgroups": {
+      "gender": {
+        "F": {
+          "relative_change": -0.487,
+          "headcount": 2500
+        },
+        "M": {
+          "relative_change": -0.482,
+          "headcount": 2500
+        }
+      },
+      "managerial": {
+        "non-manager": {
+          "relative_change": -0.481,
+          "headcount": 4000
+        },
+        "manager": {
+          "relative_change": -0.503,
+          "headcount": 1000
+        }
+      },
+      "level": {
+        "junior": {
+          "relative_change": -0.489,
+          "headcount": 2000
+        },
+        "mid": {
+          "relative_change": -0.47,
+          "headcount": 2000
+        },
+        "manager": {
+          "relative_change": -0.503,
+          "headcount": 1000
+        }
+      },
+      "commute": {
+        "long": {
+          "relative_change": -0.484,
+          "headcount": 1500
+        },
+        "short": {
+          "relative_change": -0.484,
+          "headcount": 3500
+        }
+      },
+      "caregiver": {
+        "caregiver": {
+          "relative_change": -0.521,
+          "headcount": 1652
+        },
+        "no caring duties": {
+          "relative_change": -0.469,
+          "headcount": 3348
+        }
+      }
+    },
+    "cells": [
+      {
+        "cell": "F-junior-long-care",
+        "headcount": 45,
+        "base": 0.22,
+        "policy": 0.09,
+        "feeling": 2.0
+      },
+      {
+        "cell": "F-junior-long-nocare",
+        "headcount": 255,
+        "base": 0.22,
+        "policy": 0.105,
+        "feeling": 1.5
+      },
+      {
+        "cell": "F-junior-short-care",
+        "headcount": 105,
+        "base": 0.21,
+        "policy": 0.105,
+        "feeling": 2.0
+      },
+      {
+        "cell": "F-junior-short-nocare",
+        "headcount": 595,
+        "base": 0.135,
+        "policy": 0.07,
+        "feeling": 2.0
+      },
+      {
+        "cell": "F-mid-long-care",
+        "headcount": 120,
+        "base": 0.12,
+        "policy": 0.055,
+        "feeling": 2.0
+      },
+      {
+        "cell": "F-mid-long-nocare",
+        "headcount": 180,
+        "base": 0.15,
+        "policy": 0.075,
+        "feeling": 1.5
+      },
+      {
+        "cell": "F-mid-short-care",
+        "headcount": 280,
+        "base": 0.12,
+        "policy": 0.055,
+        "feeling": 1.5
+      },
+      {
+        "cell": "F-mid-short-nocare",
+        "headcount": 420,
+        "base": 0.12,
+        "policy": 0.08,
+        "feeling": 1.5
+      },
+      {
+        "cell": "F-manager-long-care",
+        "headcount": 83,
+        "base": 0.13,
+        "policy": 0.065,
+        "feeling": 1.5
+      },
+      {
+        "cell": "F-manager-long-nocare",
+        "headcount": 67,
+        "base": 0.14,
+        "policy": 0.07,
+        "feeling": 1.5
+      },
+      {
+        "cell": "F-manager-short-care",
+        "headcount": 193,
+        "base": 0.13,
+        "policy": 0.055,
+        "feeling": 1.5
+      },
+      {
+        "cell": "F-manager-short-nocare",
+        "headcount": 157,
+        "base": 0.1,
+        "policy": 0.055,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-junior-long-care",
+        "headcount": 45,
+        "base": 0.195,
+        "policy": 0.09,
+        "feeling": 2.0
+      },
+      {
+        "cell": "M-junior-long-nocare",
+        "headcount": 255,
+        "base": 0.235,
+        "policy": 0.145,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-junior-short-care",
+        "headcount": 105,
+        "base": 0.17,
+        "policy": 0.095,
+        "feeling": 1.5
+      },
+      {
+        "cell": "M-junior-short-nocare",
+        "headcount": 595,
+        "base": 0.17,
+        "policy": 0.08,
+        "feeling": 2.0
+      },
+      {
+        "cell": "M-mid-long-care",
+        "headcount": 120,
+        "base": 0.12,
+        "policy": 0.06,
+        "feeling": 1.5
+      },
+      {
+        "cell": "M-mid-long-nocare",
+        "headcount": 180,
+        "base": 0.12,
+        "policy": 0.065,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-mid-short-care",
+        "headcount": 280,
+        "base": 0.12,
+        "policy": 0.06,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-mid-short-nocare",
+        "headcount": 420,
+        "base": 0.12,
+        "policy": 0.06,
+        "feeling": 2.0
+      },
+      {
+        "cell": "M-manager-long-care",
+        "headcount": 83,
+        "base": 0.12,
+        "policy": 0.045,
+        "feeling": 2.0
+      },
+      {
+        "cell": "M-manager-long-nocare",
+        "headcount": 67,
+        "base": 0.1,
+        "policy": 0.055,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-manager-short-care",
+        "headcount": 193,
+        "base": 0.07,
+        "policy": 0.04,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-manager-short-nocare",
+        "headcount": 157,
+        "base": 0.1,
+        "policy": 0.055,
+        "feeling": 1.0
+      }
+    ]
+  },
+  "briefing": {
+    "headline": "The simulation predicts that a four-day week on full pay would roughly halve departures over the next 12 months, from 733 to 361 out of 5,000 staff (-48%), but treat that figure as a strong signal of direction, not a forecast.",
+    "most_at_risk": "No group reacts badly; caregivers respond most positively (-52% leaving vs -47% for those without caring duties) because a fifth day back eases childcare and eldercare, while managers are the most sceptical voices, expecting the 'same output' promise to land on them first.",
+    "risks": [
+      "Almost every voice, including the most enthusiastic, warns that 'keep output the same' could quietly become five days' work squeezed into four; if that happens, the goodwill could turn into resentment and burnout rather than retention.",
+      "This is a six-month trial, but the leaving figure covers 12 months, so it assumes the benefit lasts; several staff say they'll 'believe it when I see it,' and withdrawing the policy at month six could cost more trust than never offering it.",
+      "Managers expect to absorb the pressure of hitting output targets with fewer hours, and starting next month leaves little time to plan cover, client expectations and how output will be measured."
+    ],
+    "design_changes": [
+      "Before the trial starts, agree with each team how 'output' will be measured, using a small number of concrete measures, and publish them, so staff can see it is not a disguised workload increase.",
+      "Give managers time and support to redesign workloads, such as cutting low-value meetings, setting cover rotas for client-facing roles and protecting the day off, and consider pushing the start date back a few weeks to allow this.",
+      "Say up front how and when the decision will be made at six months and what happens next, and track hours, workload and wellbeing during the trial, not just output, so a 'yes' or 'no' is based on evidence and does not feel like a cliff edge."
+    ],
+    "confidence": "low, because the direction is consistent and believable but the size rests on only 48 modelled voices for 5,000 staff, the near-identical effect across every group suggests the model isn't telling groups apart well, and the 12-month figure assumes the policy continues beyond the six-month trial."
+  },
+  "score": {
+    "predicted": -0.484,
+    "published": -0.57,
+    "direction_hit": true,
+    "abs_error_pp": 8.6,
+    "subgroup_hits": 0,
+    "subgroup_checks": []
+  },
+  "mode": "claude",
+  "spend": {
+    "usd": 0.0426,
+    "calls": 49,
+    "by_role": {
+      "persona (claude-haiku-5-5)": {
+        "calls": 48,
+        "usd": 0.0072,
+        "output": 9220
+      },
+      "analyst (claude-opus-5-5)": {
+        "calls": 1,
+        "usd": 0.0354,
+        "output": 1393
+      }
+    },
+    "budget_usd": 5.0,
+    "total_usd": 0.3427
+  },
+  "seconds": 25.6,
+  "prompt": "v1",
+  "persona_model": "claude-haiku-5-5"
+}

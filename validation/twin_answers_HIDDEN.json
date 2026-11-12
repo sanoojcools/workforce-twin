@@ -1,0 +1,98 @@
+{
+  "C01": {
+    "case": "rto5_blr",
+    "cell": "F-manager-short-nocare",
+    "twin_policy_pct": 14.0,
+    "twin_base_pct": 8.0,
+    "twin_band": 1,
+    "quote": "It's annoying, but my commute is short and I live alone, so being in the office isn't a big hardship for me. I'll grumble, comply, and see how things settle before thinking of moving."
+  },
+  "C02": {
+    "case": "rto_sp500",
+    "cell": "F-manager-short-nocare",
+    "twin_policy_pct": 15.0,
+    "twin_base_pct": 8.0,
+    "twin_band": 1,
+    "quote": "Three set days with badge tracking is annoying, and I'm not thrilled about policing my own team's swipes. But my commute is only 32 minutes, I live alone so the office isn't a bad place to be, and I'm not walking away from seven years over this. I'll quietly keep an eye on what else is out there."
+  },
+  "C03": {
+    "case": "rto5_blr",
+    "cell": "M-mid-short-care",
+    "twin_policy_pct": 25.0,
+    "twin_base_pct": 12.0,
+    "twin_band": 2,
+    "quote": "Honestly it's annoying, five days is a big jump from two, and I have my father at home to think about. My commute is short so I'll manage, but if a good hybrid offer comes along I won't ignore it."
+  },
+  "C04": {
+    "case": "rto_sp500",
+    "cell": "M-junior-long-care",
+    "twin_policy_pct": 24.0,
+    "twin_base_pct": 12.0,
+    "twin_band": 2,
+    "quote": "Three days a week with a two-hour round trip and a kid to get to school is a real hit on my time and childcare, and I'm annoyed. But I'm only two years in and job hunting is a slog, so I'll probably grumble, comply, and quietly keep an eye on remote-friendly openings."
+  },
+  "C05": {
+    "case": "rto5_blr",
+    "cell": "M-junior-long-nocare",
+    "twin_policy_pct": 38.0,
+    "twin_base_pct": 20.0,
+    "twin_band": 3,
+    "quote": "Three more days of 3 hours on the road is brutal, and with attendance tied to ratings I can't just ignore it. I'll grumble and comply for now, but I'll start looking quietly since hybrid jobs exist at other places."
+  },
+  "C06": {
+    "case": "rto_sp500",
+    "cell": "M-manager-short-nocare",
+    "twin_policy_pct": 9.0,
+    "twin_base_pct": 6.0,
+    "twin_band": 0,
+    "quote": "Three days is annoying and the badge tracking feels a bit petty, but I live eleven minutes away and I've got fifteen years in here. I'll comply, grumble, and keep an eye on what else is out there."
+  },
+  "C07": {
+    "case": "rto5_blr",
+    "cell": "M-manager-short-nocare",
+    "twin_policy_pct": 17.0,
+    "twin_base_pct": 10.0,
+    "twin_band": 1,
+    "quote": "Honestly it's annoying, but my commute is only 25 minutes so I'm not in the same boat as the people stuck in traffic for two hours. I'll grumble, go in, and keep an eye on what other places are offering, but I'm not walking out over this."
+  },
+  "C08": {
+    "case": "rto_sp500",
+    "cell": "F-junior-short-nocare",
+    "twin_policy_pct": 22.0,
+    "twin_base_pct": 12.0,
+    "twin_band": 2,
+    "quote": "Ugh, three set days with badge tracking is annoying, and the commute adds up, but it's not like I'm quitting tomorrow. I'll comply for now and keep an eye on what other places offer, especially since I'm a year in and my r\u00e9sum\u00e9's getting stronger."
+  },
+  "C09": {
+    "case": "rto5_blr",
+    "cell": "M-mid-long-care",
+    "twin_policy_pct": 30.0,
+    "twin_base_pct": 12.0,
+    "twin_band": 2,
+    "quote": "Five days with a 79-minute commute each way and two small kids, plus late US calls, is brutal, and tying it to ratings means I can't just ignore it. I'll comply for now and quietly start talking to recruiters, since hybrid places are hiring people like me."
+  },
+  "C10": {
+    "case": "rto_sp500",
+    "cell": "F-junior-long-care",
+    "twin_policy_pct": 35.0,
+    "twin_base_pct": 12.0,
+    "twin_band": 3,
+    "quote": "Three days a week is nearly 9 hours of commuting, and I have my mom at home to look after. I'm not quitting tomorrow, but I'll start looking quietly, and I'll try for an exception first."
+  },
+  "C11": {
+    "case": "rto5_blr",
+    "cell": "F-mid-short-care",
+    "twin_policy_pct": 22.0,
+    "twin_base_pct": 12.0,
+    "twin_band": 2,
+    "quote": "Honestly my commute is nothing, so it's not the travel that bothers me. It's the late US calls with two small kids, and now attendance is going to be rated too. I'll grumble and comply for now, but I'll quietly see what hybrid offers are out there."
+  },
+  "C12": {
+    "case": "rto_sp500",
+    "cell": "M-mid-long-nocare",
+    "twin_policy_pct": 17.0,
+    "twin_base_pct": 8.0,
+    "twin_band": 1,
+    "quote": "Three days at 80 minutes each way is about 8 hours a week in the car for work I do fine from home. I'll grumble and probably comply, but I'll quietly take recruiter calls I'd have ignored before."
+  }
+}

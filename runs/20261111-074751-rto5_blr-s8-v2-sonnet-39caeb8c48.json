@@ -1,0 +1,1335 @@
+{
+  "case": "rto5_blr",
+  "title": "Five-day office return at a Bengaluru IT services firm",
+  "kind": "forward",
+  "seed": 8,
+  "prompt": "v2",
+  "persona_model": "claude-sonnet-5-5",
+  "voices": [
+    {
+      "cell": "F-junior-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Kavya",
+        "gender": "woman",
+        "age": 29,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 83,
+        "home": "an elderly parent who lives with them",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 38.0,
+        "feeling": -1.5,
+        "quote": "Three extra days of almost three hours on the road, with Amma at home and late US calls on top, is a lot. I'm not resigning tomorrow, but I'll quietly start talking to recruiters, since plenty of competitors still offer hybrid.",
+        "top_factor": "Commute plus elder care"
+      }
+    },
+    {
+      "cell": "F-junior-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Fatima",
+        "gender": "woman",
+        "age": 27,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 62,
+        "home": "two young children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 30.0,
+        "feeling": -1.5,
+        "quote": "Five days with a 62-minute commute each way and two small kids is a lot, and now it affects my rating too. I'll comply for now and quietly start looking at the hybrid options, but I'm not walking out tomorrow.",
+        "top_factor": "Commute plus childcare burden"
+      }
+    },
+    {
+      "cell": "F-junior-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Ananya",
+        "gender": "woman",
+        "age": 24,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 69,
+        "home": "lives alone",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 30.0,
+        "feeling": -1.0,
+        "quote": "Five days is a lot with a 69-minute commute each way, and late client calls make it worse. I'm not quitting tomorrow, but I'll start quietly looking, since other places still offer hybrid and I only have a year here anyway.",
+        "top_factor": "Commute time, losing hybrid"
+      }
+    },
+    {
+      "cell": "F-junior-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Lakshmi",
+        "gender": "woman",
+        "age": 29,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 69,
+        "home": "lives with a partner, no children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 27.0,
+        "feeling": -1.0,
+        "quote": "Five days is a lot with a 70-minute commute each way, and now it's tied to my rating so I can't even grumble and skip. I'll comply for now and quietly see what hybrid roles are out there, but I'm not walking out tomorrow.",
+        "top_factor": "Commute time, rating pressure"
+      }
+    },
+    {
+      "cell": "F-junior-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Lakshmi",
+        "gender": "woman",
+        "age": 29,
+        "role": "marketing associate",
+        "level": "junior",
+        "tenure_years": 3,
+        "commute_min_each_way": 27,
+        "home": "an elderly parent who lives with them",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 24.0,
+        "feeling": -1.0,
+        "quote": "Five days is a lot with Amma at home, and now attendance affects my rating so I can't even push back. The commute is only 27 minutes so I'll manage for now, but I'll quietly start looking at hybrid roles.",
+        "top_factor": "Elderly parent care, lost flexibility"
+      }
+    },
+    {
+      "cell": "F-junior-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Kavya",
+        "gender": "woman",
+        "age": 24,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 21,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 27.0,
+        "feeling": -1.0,
+        "quote": "Five days is a pain with a toddler, but my commute is only 21 minutes so I can manage it. Annoying that attendance now counts toward ratings, and I'll quietly look around since other places still offer hybrid, but I'm not walking out over this alone.",
+        "top_factor": "Toddler logistics, rating tied to attendance"
+      }
+    },
+    {
+      "cell": "F-junior-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Fatima",
+        "gender": "woman",
+        "age": 27,
+        "role": "finance analyst",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 17,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 22.0,
+        "feeling": -1.0,
+        "quote": "Honestly, my commute is only 17 minutes, so it's not a disaster for me, but I don't love losing the flexibility, especially with late client calls. I'll grumble and comply, and I'll keep an eye on what other hybrid places are offering.",
+        "top_factor": "Short commute softens loss"
+      }
+    },
+    {
+      "cell": "F-junior-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Ananya",
+        "gender": "woman",
+        "age": 23,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 12,
+        "home": "no caring duties",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 22.0,
+        "feeling": -1.0,
+        "quote": "Honestly it's annoying, but my commute is only 12 minutes so it doesn't hurt me like it does others. I'm new here and still learning, so being in the office more isn't terrible, but I'll keep an eye on what other companies are offering.",
+        "top_factor": "Short commute, early career"
+      }
+    },
+    {
+      "cell": "F-mid-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Kavya",
+        "gender": "woman",
+        "age": 33,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 4,
+        "commute_min_each_way": 61,
+        "home": "an elderly parent who lives with them",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 30.0,
+        "feeling": -1.0,
+        "quote": "Two hours a day in traffic, five days a week, with Amma at home and late US calls on top of it? That's tough, and tying it to ratings means I can't just ignore it. I'll comply for now, but I'll quietly start looking at the hybrid options at competitors.",
+        "top_factor": "Commute plus elderly parent care"
+      }
+    },
+    {
+      "cell": "F-mid-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Sneha",
+        "gender": "woman",
+        "age": 28,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 7,
+        "commute_min_each_way": 55,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 30.0,
+        "feeling": -1.5,
+        "quote": "Five days with a toddler and a 55-minute commute each way is going to be really hard, and now it's tied to my rating too. I'm not going to rage-quit, but I'll quietly start talking to a couple of companies that still do hybrid.",
+        "top_factor": "Toddler plus long commute"
+      }
+    },
+    {
+      "cell": "F-mid-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Ananya",
+        "gender": "woman",
+        "age": 29,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 2,
+        "commute_min_each_way": 74,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 27.0,
+        "feeling": -1.0,
+        "quote": "Ugh, five days with almost two and a half hours on the road every day is exhausting, and the late client calls don't go away. I'll grumble and comply for now, but I'll start quietly looking at hybrid offers, and I'm not jumping until something clearly better shows up.",
+        "top_factor": "Commute time, lost hybrid flexibility"
+      }
+    },
+    {
+      "cell": "F-mid-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Ananya",
+        "gender": "woman",
+        "age": 28,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 2,
+        "commute_min_each_way": 77,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 30.0,
+        "feeling": -1.0,
+        "quote": "Honestly it's annoying. Almost 2.5 hours a day in traffic, and still late calls with the US. I'll start looking quietly, but I'm not quitting until I actually have a better offer, and most competitors still do hybrid so it's worth a look.",
+        "top_factor": "Commute time, losing hybrid"
+      }
+    },
+    {
+      "cell": "F-mid-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Divya",
+        "gender": "woman",
+        "age": 31,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 5,
+        "commute_min_each_way": 34,
+        "home": "a child in primary school",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 25.0,
+        "feeling": -1.0,
+        "quote": "Five days is a lot with a school-going kid and late client calls, and tying it to ratings feels heavy-handed. The commute isn't terrible, so I'll comply for now and quietly see what hybrid options are out there, but I'm not walking out tomorrow.",
+        "top_factor": "Loss of hybrid flexibility"
+      }
+    },
+    {
+      "cell": "F-mid-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Kavya",
+        "gender": "woman",
+        "age": 28,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 14,
+        "home": "a child in primary school",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 17.0,
+        "feeling": -1.0,
+        "quote": "Honestly my commute is short so it's not a disaster for me, but tying attendance to ratings is annoying and the late US calls plus school pickup get harder. I'll grumble, adjust, and keep an eye on what hybrid roles are out there.",
+        "top_factor": "Short commute softens impact"
+      }
+    },
+    {
+      "cell": "F-mid-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Sneha",
+        "gender": "woman",
+        "age": 30,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 34,
+        "home": "lives with a partner, no children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 22.0,
+        "feeling": -1.0,
+        "quote": "Five days is annoying, especially with late US calls and then sitting in traffic, and tying it to ratings feels heavy-handed. But my commute is only 34 minutes and I've got eight years here, so I'll grumble, comply, and quietly look around to see what hybrid offers exist.",
+        "top_factor": "Losing hybrid flexibility"
+      }
+    },
+    {
+      "cell": "F-mid-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Divya",
+        "gender": "woman",
+        "age": 29,
+        "role": "product marketing lead",
+        "level": "mid",
+        "tenure_years": 4,
+        "commute_min_each_way": 17,
+        "home": "lives alone",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 22.0,
+        "feeling": -1.0,
+        "quote": "Honestly, my commute is short and I live alone, so it hurts me a lot less than it does most people, but I don't love being tracked on attendance. I'll grumble, keep my head down, and maybe quietly look around, but I'm not walking out over this alone.",
+        "top_factor": "Short commute, lives alone"
+      }
+    },
+    {
+      "cell": "F-manager-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Sneha",
+        "gender": "woman",
+        "age": 44,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 11,
+        "commute_min_each_way": 61,
+        "home": "two young children",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 25.0,
+        "feeling": -1.0,
+        "quote": "Two hours a day in traffic with two small kids and late US calls is a lot, and tying attendance to ratings feels like a stick. I'll start quietly looking at hybrid roles, but after 11 years I'm not walking out until something clearly better turns up.",
+        "top_factor": "Commute and childcare burden"
+      }
+    },
+    {
+      "cell": "F-manager-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Fatima",
+        "gender": "woman",
+        "age": 40,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 5,
+        "commute_min_each_way": 89,
+        "home": "an elderly parent who lives with them",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 27.0,
+        "feeling": -1.5,
+        "quote": "Three hours a day on the road with Amma at home is not something I can sustain, and now it's tied to my rating. I'll try to negotiate and see how it settles, but I'll quietly start talking to people at the hybrid competitors.",
+        "top_factor": "89-minute commute, parent care"
+      }
+    },
+    {
+      "cell": "F-manager-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Divya",
+        "gender": "woman",
+        "age": 39,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 5,
+        "commute_min_each_way": 85,
+        "home": "lives alone",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 27.0,
+        "feeling": -1.0,
+        "quote": "Three extra days of 85 minutes each way is almost 8 more hours a week on the road, and the shuttle won't fix that. I'll grumble and comply for now, but I'll quietly take recruiter calls since competitors still offer hybrid.",
+        "top_factor": "Commute time, losing hybrid"
+      }
+    },
+    {
+      "cell": "F-manager-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Lakshmi",
+        "gender": "woman",
+        "age": 34,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 15,
+        "commute_min_each_way": 85,
+        "home": "lives alone",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 27.0,
+        "feeling": -1.0,
+        "quote": "Three more days of 85 minutes each way is almost 8 extra hours a week on the road, on top of late US calls. I'll grumble, see how it's enforced and quietly start talking to a couple of recruiters, but after 15 years I'm not walking out over this alone.",
+        "top_factor": "Commute time, five days"
+      }
+    },
+    {
+      "cell": "F-manager-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Fatima",
+        "gender": "woman",
+        "age": 36,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 10,
+        "commute_min_each_way": 18,
+        "home": "a child in primary school",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 7.0,
+        "policy": 14.0,
+        "feeling": -1.0,
+        "quote": "Honestly it's annoying, three more days in the office when my commute is short at least, but I'm not going to jump over it. School pickups and late US calls will be harder to juggle, so I'll see how it goes and quietly keep an eye on what other companies offer.",
+        "top_factor": "Childcare juggling, short commute"
+      }
+    },
+    {
+      "cell": "F-manager-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Sneha",
+        "gender": "woman",
+        "age": 38,
+        "role": "director of operations",
+        "level": "manager",
+        "tenure_years": 15,
+        "commute_min_each_way": 13,
+        "home": "a child in primary school",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 6.0,
+        "policy": 14.0,
+        "feeling": -1.0,
+        "quote": "Honestly, it's annoying, but my commute is 13 minutes so it hits me far less than most of the team. The real irritation is the late US calls and being home for my kid, but I'll work it out, and I'm more worried about losing good people than about myself.",
+        "top_factor": "Short commute, school-age child"
+      }
+    },
+    {
+      "cell": "F-manager-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Ananya",
+        "gender": "woman",
+        "age": 34,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 9,
+        "commute_min_each_way": 30,
+        "home": "lives with a partner, no children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 22.0,
+        "feeling": -1.0,
+        "quote": "Honestly it's annoying, going from two days to five with late US calls means I'm just in the office longer and still taking calls from home at night. My commute is short so I'll comply and grumble, but I'll quietly keep an eye on what hybrid roles are out there.",
+        "top_factor": "Loss of hybrid flexibility"
+      }
+    },
+    {
+      "cell": "F-manager-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Kavya",
+        "gender": "woman",
+        "age": 46,
+        "role": "director of operations",
+        "level": "manager",
+        "tenure_years": 11,
+        "commute_min_each_way": 25,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 18.0,
+        "feeling": -1.0,
+        "quote": "Five days is annoying, but my commute is short and I live alone, so it's not hurting me the way it hurts people with kids or long drives. What bugs me is attendance being tied to ratings, as if results don't count. I'll comply and quietly keep an eye on what else is out there.",
+        "top_factor": "Rigid attendance-based ratings"
+      }
+    },
+    {
+      "cell": "M-junior-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Arjun",
+        "gender": "man",
+        "age": 25,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 89,
+        "home": "an elderly parent who lives with them",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 30.0,
+        "feeling": -1.0,
+        "quote": "Three hours a day on the road, five days a week, with my parent at home? That's rough. I'm not quitting tomorrow, but I'll start quietly looking at the hybrid places, and I'll see if the shuttle actually covers my route.",
+        "top_factor": "3 hours daily commute"
+      }
+    },
+    {
+      "cell": "M-junior-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Rahul",
+        "gender": "man",
+        "age": 28,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 85,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 35.0,
+        "feeling": -2,
+        "quote": "Three hours a day on the road with a toddler at home, and attendance is going to count in my rating? That's rough. I'm not quitting tomorrow, but I'll start quietly looking at the hybrid offers, and a shuttle isn't going to fix a 85-minute commute.",
+        "top_factor": "Commute plus toddler, five days"
+      }
+    },
+    {
+      "cell": "M-junior-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Siddharth",
+        "gender": "man",
+        "age": 29,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 3,
+        "commute_min_each_way": 97,
+        "home": "lives alone",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 30.0,
+        "feeling": -1.5,
+        "quote": "Three hours a day in traffic, five days a week, and it counts in my rating? That's brutal. I'll grumble, quietly start updating my resume and see what the hybrid companies offer, but I'm not walking out tomorrow.",
+        "top_factor": "97-minute commute, five days"
+      }
+    },
+    {
+      "cell": "M-junior-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Karthik",
+        "gender": "man",
+        "age": 23,
+        "role": "marketing associate",
+        "level": "junior",
+        "tenure_years": 3,
+        "commute_min_each_way": 69,
+        "home": "lives alone",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 25.0,
+        "feeling": -1.0,
+        "quote": "Five days is a pain with a 69-minute commute each way, and tying it to ratings means I can't really push back. I'll grumble and comply for now, but I'll start quietly looking at hybrid options, since I'm young and don't have anything tying me down.",
+        "top_factor": "Long commute, five days"
+      }
+    },
+    {
+      "cell": "M-junior-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Karthik",
+        "gender": "man",
+        "age": 23,
+        "role": "marketing associate",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 12,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 22.0,
+        "feeling": -1.0,
+        "quote": "Honestly my commute is only 12 minutes so it's not a disaster for me, but with a toddler and my partner also working, losing the flexibility is annoying. I'll grumble and comply, and I'll quietly keep an eye on what hybrid roles are out there.",
+        "top_factor": "Losing flexibility with toddler"
+      }
+    },
+    {
+      "cell": "M-junior-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Arjun",
+        "gender": "man",
+        "age": 29,
+        "role": "finance analyst",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 32,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 27.0,
+        "feeling": -1.0,
+        "quote": "Five days is a pain with a toddler and both of us working, and the late US calls mean I'm still logging in from home after getting back anyway. But 32 minutes isn't terrible, and I'm not jumping without a better offer. I'll start looking quietly and see what hybrid options are out there.",
+        "top_factor": "Toddler logistics, lost flexibility"
+      }
+    },
+    {
+      "cell": "M-junior-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Imran",
+        "gender": "man",
+        "age": 25,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 3,
+        "commute_min_each_way": 30,
+        "home": "no caring duties",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 20.0,
+        "feeling": -1.0,
+        "quote": "Five days is annoying, but my commute is only 30 minutes and I'm not stuck with kids or long travel, so I'll deal with it. I'll keep an eye on what other firms are offering, but I'm not quitting over this alone.",
+        "top_factor": "Lost flexibility, short commute"
+      }
+    },
+    {
+      "cell": "M-junior-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Siddharth",
+        "gender": "man",
+        "age": 25,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 18,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 22.0,
+        "feeling": -1.0,
+        "quote": "Honestly, my commute is short and I live alone, so it doesn't hit me like it hits others, and I'd actually get more face time with seniors. But the late US calls are still going to happen, and now I'll be in the office for them or doing both, and the rating thing is annoying. I'll grumble, keep my head down, and maybe quietly see what else is out there.",
+        "top_factor": "Loss of flexibility, short commute"
+      }
+    },
+    {
+      "cell": "M-mid-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Siddharth",
+        "gender": "man",
+        "age": 38,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 4,
+        "commute_min_each_way": 69,
+        "home": "a child in primary school",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 24.0,
+        "feeling": -1.0,
+        "quote": "Three more days of 69 minutes each way is almost 7 extra hours a week on the road, and I'm already stretched with my kid's school. I'll grumble and comply for now, but I'll quietly start looking at the hybrid offers, since the market has them.",
+        "top_factor": "Commute time and family"
+      }
+    },
+    {
+      "cell": "M-mid-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Imran",
+        "gender": "man",
+        "age": 37,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 6,
+        "commute_min_each_way": 63,
+        "home": "two young children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 27.0,
+        "feeling": -1.0,
+        "quote": "Five days is a lot with two small kids and over two hours on the road every day, and now it's tied to my rating, so I can't just ignore it. I'll comply for now and quietly see what hybrid offers are out there, but I'm not walking out tomorrow.",
+        "top_factor": "Commute and childcare burden"
+      }
+    },
+    {
+      "cell": "M-mid-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Arjun",
+        "gender": "man",
+        "age": 31,
+        "role": "product marketing lead",
+        "level": "mid",
+        "tenure_years": 4,
+        "commute_min_each_way": 99,
+        "home": "no caring duties",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 30.0,
+        "feeling": -1.5,
+        "quote": "Three hours a day in traffic, five days a week, is brutal, and tying it to my rating just feels like a stick. I'm not walking out tomorrow, but I'll quietly start talking to recruiters since the hybrid competitors are hiring.",
+        "top_factor": "99-minute commute, five days"
+      }
+    },
+    {
+      "cell": "M-mid-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Arjun",
+        "gender": "man",
+        "age": 30,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 7,
+        "commute_min_each_way": 100,
+        "home": "lives alone",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 30.0,
+        "feeling": -1.0,
+        "quote": "Five days with a 100-minute commute each way is brutal, and now it's tied to my rating. I'll grumble and comply for now, but I'll quietly start looking at the hybrid options, since everyone's hiring my skills.",
+        "top_factor": "200-minute daily commute"
+      }
+    },
+    {
+      "cell": "M-mid-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Arjun",
+        "gender": "man",
+        "age": 38,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 3,
+        "commute_min_each_way": 23,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 30.0,
+        "feeling": -1.0,
+        "quote": "Five days is a pain with a toddler and late US calls, and tying attendance to ratings feels heavy-handed. My commute is short so I'll grudgingly comply, but I'll quietly see what hybrid offers are out there.",
+        "top_factor": "Loss of hybrid flexibility"
+      }
+    },
+    {
+      "cell": "M-mid-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Karthik",
+        "gender": "man",
+        "age": 35,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 6,
+        "commute_min_each_way": 24,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 24.0,
+        "feeling": -1.0,
+        "quote": "Five days is annoying with a toddler and late US calls, and tying attendance to ratings feels petty. My commute is short so I'll comply for now, but I'll quietly see what the hybrid competitors are offering.",
+        "top_factor": "Lost flexibility with toddler"
+      }
+    },
+    {
+      "cell": "M-mid-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Siddharth",
+        "gender": "man",
+        "age": 37,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 28,
+        "home": "lives with a partner, no children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 20.0,
+        "feeling": -1.0,
+        "quote": "Honestly it's annoying, especially with the late US calls and now attendance being tied to ratings. My commute is only 28 minutes so it's not a disaster, and I'm not walking out over it, but I'll quietly keep an eye on what the hybrid competitors are offering.",
+        "top_factor": "Loss of hybrid flexibility"
+      }
+    },
+    {
+      "cell": "M-mid-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Vikram",
+        "gender": "man",
+        "age": 30,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 7,
+        "commute_min_each_way": 26,
+        "home": "lives alone",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 22.0,
+        "feeling": -1.0,
+        "quote": "Five days is annoying, especially with late US calls, but my commute is short and I live alone, so the office isn't terrible. I'll grumble, keep an eye on what other places offer, but I'm not quitting over this alone.",
+        "top_factor": "Loss of flexibility, short commute"
+      }
+    },
+    {
+      "cell": "M-manager-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Karthik",
+        "gender": "man",
+        "age": 48,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 5,
+        "commute_min_each_way": 87,
+        "home": "two young children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 22.0,
+        "feeling": -1.0,
+        "quote": "Three more hours a day on the road, with two small kids at home and late US calls on top, is a lot. I'll grumble and quietly check what the competitors are offering, but at 48 I'm not jumping unless a good hybrid role actually turns up.",
+        "top_factor": "Commute and young kids"
+      }
+    },
+    {
+      "cell": "M-manager-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Arjun",
+        "gender": "man",
+        "age": 36,
+        "role": "director of operations",
+        "level": "manager",
+        "tenure_years": 15,
+        "commute_min_each_way": 98,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 30.0,
+        "feeling": -1.5,
+        "quote": "Ninety-eight minutes each way, five days a week, with a toddler at home and late US calls? That's about 3+ hours a day on the road. I'm not quitting tomorrow, but I'll quietly start taking recruiter calls, and hybrid offers will look very good.",
+        "top_factor": "Commute plus toddler, five days"
+      }
+    },
+    {
+      "cell": "M-manager-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Vikram",
+        "gender": "man",
+        "age": 44,
+        "role": "director of operations",
+        "level": "manager",
+        "tenure_years": 8,
+        "commute_min_each_way": 75,
+        "home": "lives with a partner, no children",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 22.0,
+        "feeling": -1.0,
+        "quote": "Five days is a lot with a 75-minute commute each way, and late US calls on top of that. I'll grumble and comply for now, but I'll quietly see what the hybrid options at competitors look like.",
+        "top_factor": "Commute plus late client calls"
+      }
+    },
+    {
+      "cell": "M-manager-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Karthik",
+        "gender": "man",
+        "age": 36,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 8,
+        "commute_min_each_way": 79,
+        "home": "lives with a partner, no children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 28.0,
+        "feeling": -1.0,
+        "quote": "Three more days of 79 minutes each way is about 8 extra hours a week in traffic, and a shuttle on main routes won't fix that. I'll grumble and comply for now, but I'll quietly start talking to a couple of recruiters since hybrid jobs are out there.",
+        "top_factor": "Commute time, lost hybrid"
+      }
+    },
+    {
+      "cell": "M-manager-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Karthik",
+        "gender": "man",
+        "age": 48,
+        "role": "director of operations",
+        "level": "manager",
+        "tenure_years": 13,
+        "commute_min_each_way": 13,
+        "home": "two young children",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 6.0,
+        "policy": 11.0,
+        "feeling": -1.0,
+        "quote": "Honestly my commute is short, so it doesn't hurt me much, but it's a pain with the kids and the late US calls, and I feel for the team who spend two hours in traffic. I'll comply and see how the attrition numbers look before I think about anything else.",
+        "top_factor": "Short commute, kids, late calls"
+      }
+    },
+    {
+      "cell": "M-manager-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Vikram",
+        "gender": "man",
+        "age": 41,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 12,
+        "commute_min_each_way": 24,
+        "home": "an elderly parent who lives with them",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 6.0,
+        "policy": 14.0,
+        "feeling": -1.0,
+        "quote": "Five days is a pain, but my commute is only 24 minutes, so it's not the end of the world. I'm more bothered that attendance now feeds into ratings, and that with Dad at home I lose the flexibility. I'll grumble, comply, and keep an eye on what the competitors are offering.",
+        "top_factor": "Lost flexibility, elderly parent"
+      }
+    },
+    {
+      "cell": "M-manager-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Arjun",
+        "gender": "man",
+        "age": 46,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 7,
+        "commute_min_each_way": 33,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 17.0,
+        "feeling": -1.0,
+        "quote": "Five days is a pain, but my commute is only half an hour, so I'm not going to quit over it. I'll grumble, go in, and keep an ear out for hybrid roles elsewhere in case something good turns up.",
+        "top_factor": "Lost flexibility, short commute"
+      }
+    },
+    {
+      "cell": "M-manager-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Rahul",
+        "gender": "man",
+        "age": 50,
+        "role": "director of operations",
+        "level": "manager",
+        "tenure_years": 10,
+        "commute_min_each_way": 13,
+        "home": "no caring duties",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 5.0,
+        "policy": 8.0,
+        "feeling": 0.0,
+        "quote": "Five days is more than I'd like, but my commute is 13 minutes so it doesn't hurt me much. I'm 50 with ten years here, so I'll just get on with it and keep an eye out for how the late client calls get handled.",
+        "top_factor": "Short commute, long tenure"
+      }
+    }
+  ],
+  "forecast": {
+    "employees": 5000,
+    "relative_change": 1.259,
+    "leavers_status_quo": 573,
+    "leavers_with_policy": 1305,
+    "feeling": -1.1,
+    "subgroups": {
+      "gender": {
+        "F": {
+          "relative_change": 1.277,
+          "headcount": 1899
+        },
+        "M": {
+          "relative_change": 1.247,
+          "headcount": 3101
+        }
+      },
+      "managerial": {
+        "non-manager": {
+          "relative_change": 1.201,
+          "headcount": 4250
+        },
+        "manager": {
+          "relative_change": 1.771,
+          "headcount": 750
+        }
+      },
+      "level": {
+        "junior": {
+          "relative_change": 1.075,
+          "headcount": 2500
+        },
+        "mid": {
+          "relative_change": 1.407,
+          "headcount": 1750
+        },
+        "manager": {
+          "relative_change": 1.771,
+          "headcount": 750
+        }
+      },
+      "commute": {
+        "long": {
+          "relative_change": 1.507,
+          "headcount": 3000
+        },
+        "short": {
+          "relative_change": 0.884,
+          "headcount": 2000
+        }
+      },
+      "caregiver": {
+        "caregiver": {
+          "relative_change": 1.623,
+          "headcount": 1650
+        },
+        "no caring duties": {
+          "relative_change": 1.113,
+          "headcount": 3350
+        }
+      }
+    },
+    "cells": [
+      {
+        "cell": "F-junior-long-care",
+        "headcount": 85,
+        "base": 0.12,
+        "policy": 0.34,
+        "feeling": -1.5
+      },
+      {
+        "cell": "F-junior-long-nocare",
+        "headcount": 484,
+        "base": 0.12,
+        "policy": 0.285,
+        "feeling": -1.0
+      },
+      {
+        "cell": "F-junior-short-care",
+        "headcount": 57,
+        "base": 0.12,
+        "policy": 0.255,
+        "feeling": -1.0
+      },
+      {
+        "cell": "F-junior-short-nocare",
+        "headcount": 323,
+        "base": 0.135,
+        "policy": 0.22,
+        "feeling": -1.0
+      },
+      {
+        "cell": "F-mid-long-care",
+        "headcount": 180,
+        "base": 0.1,
+        "policy": 0.3,
+        "feeling": -1.25
+      },
+      {
+        "cell": "F-mid-long-nocare",
+        "headcount": 219,
+        "base": 0.135,
+        "policy": 0.285,
+        "feeling": -1.0
+      },
+      {
+        "cell": "F-mid-short-care",
+        "headcount": 120,
+        "base": 0.09,
+        "policy": 0.21,
+        "feeling": -1.0
+      },
+      {
+        "cell": "F-mid-short-nocare",
+        "headcount": 146,
+        "base": 0.1,
+        "policy": 0.22,
+        "feeling": -1.0
+      },
+      {
+        "cell": "F-manager-long-care",
+        "headcount": 111,
+        "base": 0.08,
+        "policy": 0.26,
+        "feeling": -1.25
+      },
+      {
+        "cell": "F-manager-long-nocare",
+        "headcount": 60,
+        "base": 0.1,
+        "policy": 0.27,
+        "feeling": -1.0
+      },
+      {
+        "cell": "F-manager-short-care",
+        "headcount": 74,
+        "base": 0.065,
+        "policy": 0.14,
+        "feeling": -1.0
+      },
+      {
+        "cell": "F-manager-short-nocare",
+        "headcount": 40,
+        "base": 0.09,
+        "policy": 0.2,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-junior-long-care",
+        "headcount": 140,
+        "base": 0.12,
+        "policy": 0.325,
+        "feeling": -1.5
+      },
+      {
+        "cell": "M-junior-long-nocare",
+        "headcount": 791,
+        "base": 0.12,
+        "policy": 0.275,
+        "feeling": -1.25
+      },
+      {
+        "cell": "M-junior-short-care",
+        "headcount": 93,
+        "base": 0.12,
+        "policy": 0.245,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-junior-short-nocare",
+        "headcount": 527,
+        "base": 0.135,
+        "policy": 0.21,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-mid-long-care",
+        "headcount": 293,
+        "base": 0.1,
+        "policy": 0.255,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-mid-long-nocare",
+        "headcount": 358,
+        "base": 0.12,
+        "policy": 0.3,
+        "feeling": -1.25
+      },
+      {
+        "cell": "M-mid-short-care",
+        "headcount": 195,
+        "base": 0.11,
+        "policy": 0.27,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-mid-short-nocare",
+        "headcount": 239,
+        "base": 0.1,
+        "policy": 0.21,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-manager-long-care",
+        "headcount": 181,
+        "base": 0.08,
+        "policy": 0.26,
+        "feeling": -1.25
+      },
+      {
+        "cell": "M-manager-long-nocare",
+        "headcount": 98,
+        "base": 0.08,
+        "policy": 0.25,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-manager-short-care",
+        "headcount": 121,
+        "base": 0.06,
+        "policy": 0.125,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-manager-short-nocare",
+        "headcount": 65,
+        "base": 0.065,
+        "policy": 0.125,
+        "feeling": -0.5
+      }
+    ]
+  },
+  "briefing": {
+    "headline": "The simulation predicts that leaving more than doubles: about 1,305 departures in the next 12 months versus 573 under today's hybrid model, roughly 730 extra exits (+126%), taking annual attrition from about 11% to 26% of the workforce.",
+    "most_at_risk": "Managers (+177%), caregivers (+162%) and people with long commutes (+151%) react worst, because three extra days of 1\u20131.5 hour commutes collide with young children, elderly parents and late US calls, and competitors still offer the hybrid work they would be giving up.",
+    "risks": [
+      "Losing managers and team leads at the highest rate (+177%) puts client delivery and team stability at risk; they are the hardest to replace and may take their teams with them.",
+      "Tying attendance to performance ratings removes any quiet flexibility and lands hardest on caregivers, so the policy is likely to be seen as unfair and could damage your appeal to parents and people caring for elderly relatives.",
+      "Even employees with short commutes and no caring duties say they will 'quietly look around'. Exits may come gradually over the year as competitor offers arrive, so early attrition figures could look fine and give false reassurance."
+    ],
+    "design_changes": [
+      "Remove attendance from performance ratings. Voices repeatedly name it as the factor that turns annoyance into job-hunting.",
+      "Move to three set office days rather than five, or phase toward more days with a review point. A smaller step keeps you closer to competitors' hybrid offers.",
+      "Add explicit flexibility for late client calls, such as working from home or starting later on days with evening US or Europe calls, plus defined provisions for caregivers and very long commutes; voices say a shuttle alone won't fix an 85\u201398 minute commute."
+    ],
+    "confidence": "low, the direction is consistent across every group, so a sharp rise in leaving is credible, but the exact numbers rest on only 48 modelled voices (about two per group), and most voices describe 'quietly looking' rather than resigning, so how many actually leave is the most uncertain part; treat 1,305 as a warning signal, not a forecast."
+  },
+  "score": null,
+  "mode": "claude",
+  "spend": {
+    "usd": 0.1786,
+    "calls": 49,
+    "by_role": {
+      "persona (claude-sonnet-5-5)": {
+        "calls": 48,
+        "usd": 0.1382,
+        "output": 7102
+      },
+      "analyst (claude-opus-5-5)": {
+        "calls": 1,
+        "usd": 0.0403,
+        "output": 1621
+      }
+    },
+    "budget_usd": 5.0,
+    "total_usd": 1.3213
+  },
+  "seconds": 30.9
+}

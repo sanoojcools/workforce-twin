@@ -1,0 +1,1353 @@
+{
+  "case": "rto_sp500",
+  "title": "Return-to-office mandate at a big US tech or finance firm",
+  "kind": "backtest",
+  "seed": 7,
+  "prompt": "v3",
+  "voices": [
+    {
+      "cell": "F-junior-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Emily",
+        "gender": "woman",
+        "age": 27,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 88,
+        "home": "an elderly parent who lives with them",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 30.0,
+        "feeling": -1.5,
+        "quote": "Three days in the office with an 88-minute commute each way, while I'm the one looking after my dad at home, isn't workable. I'll ask for an exception, but I'm already looking at remote-friendly jobs in case it gets denied.",
+        "top_factor": "Elderly parent caregiving plus long commute"
+      }
+    },
+    {
+      "cell": "F-junior-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Keisha",
+        "gender": "woman",
+        "age": 26,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 85,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 6.0,
+        "policy": 22.0,
+        "feeling": -2,
+        "quote": "Three days a week in the office adds about eight and a half hours of commuting, on top of daycare pickups with a toddler and a partner who works full time. I like the job, but I'm going to start looking at places that still let people work from home.",
+        "top_factor": "Long commute plus childcare"
+      }
+    },
+    {
+      "cell": "F-junior-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Maria",
+        "gender": "woman",
+        "age": 26,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 92,
+        "home": "lives alone",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 7.0,
+        "policy": 28.0,
+        "feeling": -1.0,
+        "quote": "Three days a week means over four hours of commuting on each of those days, and I'd be doing it for the badge count. I'm already looking at what else is out there, though I'd rather not start over at a new firm.",
+        "top_factor": "92-minute commute, three days"
+      }
+    },
+    {
+      "cell": "F-junior-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Jessica",
+        "gender": "woman",
+        "age": 23,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 71,
+        "home": "lives alone",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 7.0,
+        "policy": 28.0,
+        "feeling": -1.5,
+        "quote": "Three days in the office means adding about seven hours of commuting a week on top of the job. I'm going to be checking other offers before the 90 days are up.",
+        "top_factor": "71-minute commute burden"
+      }
+    },
+    {
+      "cell": "F-junior-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Ashley",
+        "gender": "woman",
+        "age": 26,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 13,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 5.0,
+        "policy": 22.0,
+        "feeling": -2,
+        "quote": "Three days in the office with a toddler and a partner who works full time means we'd be scrambling for childcare every week, and VP approval for exceptions feels like a hurdle designed to make us give up. I'm going to start looking at what else is out there, because I don't want to spend my evenings on the phone with daycare.",
+        "top_factor": "childcare logistics with toddler"
+      }
+    },
+    {
+      "cell": "F-junior-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Ashley",
+        "gender": "woman",
+        "age": 28,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 27,
+        "home": "an elderly parent who lives with them",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 7.0,
+        "policy": 22.0,
+        "feeling": -2,
+        "quote": "Three set office days with badge tracking and VP sign-off for exceptions? My mom lives with me and I can't just leave her for that. I'm going to look at what else is out there, and I'm not going to pretend I'm fine with it.",
+        "top_factor": "caregiving for parent at home"
+      }
+    },
+    {
+      "cell": "F-junior-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Jessica",
+        "gender": "woman",
+        "age": 28,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 34,
+        "home": "lives with a partner, no children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 20.0,
+        "feeling": -1.0,
+        "quote": "Ugh, three days in the office with badge tracking is a real step backward. I'm not updating my resume tonight, but I'll be watching the job boards more than I was last week.",
+        "top_factor": "Lost chosen flexibility, badge tracking"
+      }
+    },
+    {
+      "cell": "F-junior-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Ashley",
+        "gender": "woman",
+        "age": 24,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 23,
+        "home": "lives with a partner, no children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 20.0,
+        "feeling": -1.0,
+        "quote": "Three days in the office is annoying, but my commute is short and I'm still new, so I'm not going to panic. If other places are hiring, though, I'll start looking, because I didn't sign up for this.",
+        "top_factor": "Lost day-to-day flexibility"
+      }
+    },
+    {
+      "cell": "F-mid-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Keisha",
+        "gender": "woman",
+        "age": 34,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 4,
+        "commute_min_each_way": 56,
+        "home": "an elderly parent who lives with them",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 30.0,
+        "feeling": -2,
+        "quote": "Three days in the office means adding about three hours of commuting a week, and I'm the one who has to get my dad to his appointments. Exceptions need a VP sign-off, so I'm not counting on one. I'm already quietly looking at what's out there.",
+        "top_factor": "Caregiving plus long commute"
+      }
+    },
+    {
+      "cell": "F-mid-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Keisha",
+        "gender": "woman",
+        "age": 33,
+        "role": "product marketing lead",
+        "level": "mid",
+        "tenure_years": 3,
+        "commute_min_each_way": 68,
+        "home": "a child in primary school",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 30.0,
+        "feeling": -1.0,
+        "quote": "Three days in the office means adding about seven hours a week of commuting on top of school pickup, and I'm not sure how that works. I'll be job hunting quietly, but I'm not going to walk out tomorrow.",
+        "top_factor": "Long commute plus school pickup"
+      }
+    },
+    {
+      "cell": "F-mid-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Jessica",
+        "gender": "woman",
+        "age": 28,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 4,
+        "commute_min_each_way": 95,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 5.0,
+        "policy": 15.0,
+        "feeling": -1.0,
+        "quote": "Three days a week with a 95-minute commute each way is going to really eat into my life, and badge tracking feels like they don't trust us. I'm going to see how it goes and start looking at what else is out there if it doesn't get better.",
+        "top_factor": "Long commute versus lost flexibility"
+      }
+    },
+    {
+      "cell": "F-mid-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Jessica",
+        "gender": "woman",
+        "age": 33,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 4,
+        "commute_min_each_way": 57,
+        "home": "lives alone",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 18.0,
+        "feeling": -1.0,
+        "quote": "Three days in with a 57-minute commute each way is a real hit, and I didn't love losing the choice. I'll probably grumble and make it work, but I'm going to start looking at what other companies offer.",
+        "top_factor": "Long commute plus lost flexibility"
+      }
+    },
+    {
+      "cell": "F-mid-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Jessica",
+        "gender": "woman",
+        "age": 31,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 6,
+        "commute_min_each_way": 18,
+        "home": "an elderly parent who lives with them",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 7.0,
+        "policy": 22.0,
+        "feeling": -2,
+        "quote": "Three set office days with VP sign-off for exceptions, while I'm the one caring for my dad at home? I'm going to push for an exception and start looking at what's out there if they won't budge.",
+        "top_factor": "caregiving conflicts with mandate"
+      }
+    },
+    {
+      "cell": "F-mid-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Keisha",
+        "gender": "woman",
+        "age": 33,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 5,
+        "commute_min_each_way": 17,
+        "home": "two young children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 6.0,
+        "policy": 17.0,
+        "feeling": -1.0,
+        "quote": "Three set office days with badge tracking is a real hit with two little kids and pickup times. I'm not going to walk out over it, but I'll be looking at what's out there and I'm annoyed.",
+        "top_factor": "Childcare logistics and lost flexibility"
+      }
+    },
+    {
+      "cell": "F-mid-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Priya",
+        "gender": "woman",
+        "age": 29,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 3,
+        "commute_min_each_way": 29,
+        "home": "lives alone",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 7.0,
+        "policy": 20.0,
+        "feeling": -1.0,
+        "quote": "Three days a week in the office, with badge swipes reviewed by managers, feels like a step backward after how well we've been doing remotely. I'm annoyed, and I'll probably start looking around, but I like my team and I'm not going to bolt tomorrow.",
+        "top_factor": "Losing day-to-day flexibility"
+      }
+    },
+    {
+      "cell": "F-mid-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Ashley",
+        "gender": "woman",
+        "age": 29,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 2,
+        "commute_min_each_way": 33,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 9.0,
+        "policy": 22.0,
+        "feeling": -1.0,
+        "quote": "Honestly, I'm annoyed. Three days in when I've been getting my work done fine on my own schedule is a step backward, and the badge tracking feels like they don't trust us. I'm going to see what's out there, but I'm not walking out tomorrow.",
+        "top_factor": "losing schedule flexibility"
+      }
+    },
+    {
+      "cell": "F-manager-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Ashley",
+        "gender": "woman",
+        "age": 38,
+        "role": "director of operations",
+        "level": "manager",
+        "tenure_years": 13,
+        "commute_min_each_way": 77,
+        "home": "a child in primary school",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 22.0,
+        "feeling": -1.5,
+        "quote": "Three days in the office on top of a 77-minute commute each way means I'd lose most of my evenings with my kid and about eight hours a week to driving. I've given them 13 years, so I'm going to ask for an exception and see what they say before I start looking around.",
+        "top_factor": "Long commute plus childcare"
+      }
+    },
+    {
+      "cell": "F-manager-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Keisha",
+        "gender": "woman",
+        "age": 47,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 5,
+        "commute_min_each_way": 65,
+        "home": "an elderly parent who lives with them",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 7.0,
+        "policy": 22.0,
+        "feeling": -1.5,
+        "quote": "Three days in the office on a 65-minute commute, with Mom at home, isn't workable for me. I'm going to ask for an exception and start looking quietly, because I don't want to give up five years here, but I'm not going to pretend this is fine.",
+        "top_factor": "Caregiving plus long commute"
+      }
+    },
+    {
+      "cell": "F-manager-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Jessica",
+        "gender": "woman",
+        "age": 45,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 10,
+        "commute_min_each_way": 80,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 5.0,
+        "policy": 16.0,
+        "feeling": -1.0,
+        "quote": "Ten years here and I'm fine with going in when the team needs me, but three set days with badge tracking on an 80-minute commute each way is a lot. I'm going to see what's out there before I decide anything.",
+        "top_factor": "Long commute plus mandated office days"
+      }
+    },
+    {
+      "cell": "F-manager-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Maria",
+        "gender": "woman",
+        "age": 43,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 10,
+        "commute_min_each_way": 59,
+        "home": "lives alone",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 22.0,
+        "feeling": -1.5,
+        "quote": "Three days in the office with a 59-minute commute each way means I lose about twelve hours a week, and I'm not sure what that buys the team. I'll comply for now, but I'm going to quietly check what's out there.",
+        "top_factor": "Long commute plus lost flexibility"
+      }
+    },
+    {
+      "cell": "F-manager-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Priya",
+        "gender": "woman",
+        "age": 35,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 12,
+        "commute_min_each_way": 17,
+        "home": "an elderly parent who lives with them",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 6.0,
+        "policy": 22.0,
+        "feeling": -2,
+        "quote": "Three set days in the office with badge tracking, and exceptions go to a VP? I've got Mom at home and I'm the one covering her care, so this is a real problem. I'm not walking out tomorrow, but I'm going to start looking quietly.",
+        "top_factor": "Caregiving for parent at home"
+      }
+    },
+    {
+      "cell": "F-manager-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Keisha",
+        "gender": "woman",
+        "age": 43,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 9,
+        "commute_min_each_way": 27,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 22.0,
+        "feeling": -1.5,
+        "quote": "Nine years here and I'm supposed to be in the building three days a week with a toddler at home and a partner working full time too? I'm not quitting tomorrow, but I'm definitely updating my resume and seeing what's out there.",
+        "top_factor": "Losing childcare-compatible flexibility"
+      }
+    },
+    {
+      "cell": "F-manager-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Maria",
+        "gender": "woman",
+        "age": 40,
+        "role": "director of operations",
+        "level": "manager",
+        "tenure_years": 7,
+        "commute_min_each_way": 32,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 6.0,
+        "policy": 16.0,
+        "feeling": -1.0,
+        "quote": "Three days in the office with badge tracking is annoying, and I don't love being watched like that after I've delivered for seven years. But my commute is manageable and I like my team, so I'll probably grumble, go in, and start looking quietly only if it gets worse.",
+        "top_factor": "Loss of chosen flexibility"
+      }
+    },
+    {
+      "cell": "F-manager-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Maria",
+        "gender": "woman",
+        "age": 47,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 11,
+        "commute_min_each_way": 19,
+        "home": "lives alone",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 6.0,
+        "policy": 14.0,
+        "feeling": -1.0,
+        "quote": "Honestly, three days in the office with badge tracking feels like a step backward, and I'm not thrilled about it. But my commute is short and I have 11 years here, so I'm going to see how it plays out before I start looking elsewhere.",
+        "top_factor": "Lost flexibility and badge tracking"
+      }
+    },
+    {
+      "cell": "M-junior-long-care",
+      "i": 0,
+      "persona": {
+        "name": "James",
+        "gender": "man",
+        "age": 29,
+        "role": "marketing associate",
+        "level": "junior",
+        "tenure_years": 3,
+        "commute_min_each_way": 80,
+        "home": "a child in primary school",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 22.0,
+        "feeling": -1.5,
+        "quote": "Three days in on top of an 80-minute commute each way means I'd be dropping my kid off earlier and picking up later, and I'd basically lose the flexibility that made this job work for me. I'm going to ask for an exception and see what they say before I decide anything else.",
+        "top_factor": "Commute plus childcare conflict"
+      }
+    },
+    {
+      "cell": "M-junior-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Michael",
+        "gender": "man",
+        "age": 29,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 60,
+        "home": "a child in primary school",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 6.0,
+        "policy": 24.0,
+        "feeling": -1.5,
+        "quote": "Three days in with a 60-minute commute each way means I lose about six hours a week, and that's time I need for my kid. I'm not walking out tomorrow, but I'm definitely updating my resume and seeing what's out there.",
+        "top_factor": "Long commute versus family time"
+      }
+    },
+    {
+      "cell": "M-junior-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Carlos",
+        "gender": "man",
+        "age": 28,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 96,
+        "home": "lives alone",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 7.0,
+        "policy": 30.0,
+        "feeling": -2,
+        "quote": "Three days a week means roughly three extra hours of commuting on each of those days, and I'd lose the flexibility I've been using to make the 96-minute drive work. I'm going to start looking at what's out there, because I don't want to spend half my week in transit.",
+        "top_factor": "Adds hours of daily commuting"
+      }
+    },
+    {
+      "cell": "M-junior-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "James",
+        "gender": "man",
+        "age": 29,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 75,
+        "home": "no caring duties",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 27.0,
+        "feeling": -1.0,
+        "quote": "Three days in the office on top of a 75-minute commute each way is a lot of my week gone. I'm not thrilled, but I'd probably tough it out for a bit and see if I can find something more flexible in the meantime.",
+        "top_factor": "Long commute makes mandate costly"
+      }
+    },
+    {
+      "cell": "M-junior-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Kevin",
+        "gender": "man",
+        "age": 28,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 19,
+        "home": "two young children",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 7.0,
+        "policy": 16.0,
+        "feeling": -1.0,
+        "quote": "Three days in the office with two little kids and a 19-minute commute is a real hit to our family routine. I'm going to grumble about it, and I'll probably look around a bit, but I'm not going to blow up my first year over it yet.",
+        "top_factor": "Lost flexibility with young kids"
+      }
+    },
+    {
+      "cell": "M-junior-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Michael",
+        "gender": "man",
+        "age": 27,
+        "role": "finance analyst",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 31,
+        "home": "a child in primary school",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 20.0,
+        "feeling": -1.0,
+        "quote": "Three days in the office with badge tracking is a real hit with a kid in primary school and a 31-minute commute each way. I'll probably comply for now, but I'm going to see what else is out there.",
+        "top_factor": "childcare logistics and badge tracking"
+      }
+    },
+    {
+      "cell": "M-junior-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Carlos",
+        "gender": "man",
+        "age": 25,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 17,
+        "home": "lives alone",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 20.0,
+        "feeling": -1.0,
+        "quote": "Three set office days with badge tracking is annoying, and I liked picking my days. But my commute is short and I live alone, so it's a grumble, not a reason to start job hunting again.",
+        "top_factor": "Loss of flexible schedule"
+      }
+    },
+    {
+      "cell": "M-junior-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "James",
+        "gender": "man",
+        "age": 28,
+        "role": "marketing associate",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 27,
+        "home": "no caring duties",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 7.0,
+        "policy": 15.0,
+        "feeling": -1.0,
+        "quote": "Three days in the office is annoying, but my commute is short and I can live with it. The badge tracking feels like they don't trust us, and I'm already looking at a couple of hybrid-friendly options just in case.",
+        "top_factor": "Badge tracking and lost flexibility"
+      }
+    },
+    {
+      "cell": "M-mid-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Kevin",
+        "gender": "man",
+        "age": 29,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 7,
+        "commute_min_each_way": 98,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 6.0,
+        "policy": 30.0,
+        "feeling": -2,
+        "quote": "Three days in with a 98-minute commute each way and a toddler at home means I'd barely see my kid on those days, and my partner would carry the whole load. I'm not going to pretend I'm fine with it, and I'm already looking at what else is out there.",
+        "top_factor": "Commute plus childcare conflict"
+      }
+    },
+    {
+      "cell": "M-mid-long-care",
+      "i": 1,
+      "persona": {
+        "name": "David",
+        "gender": "man",
+        "age": 32,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 2,
+        "commute_min_each_way": 67,
+        "home": "two young children",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 30.0,
+        "feeling": -2,
+        "quote": "Three days in the office on top of a 67-minute commute each way means I'd barely see my kids on those days. I'm going to start looking, because I don't want to find out in 90 days that I can't make this work.",
+        "top_factor": "Long commute with young kids"
+      }
+    },
+    {
+      "cell": "M-mid-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "David",
+        "gender": "man",
+        "age": 30,
+        "role": "product marketing lead",
+        "level": "mid",
+        "tenure_years": 4,
+        "commute_min_each_way": 68,
+        "home": "lives with a partner, no children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 4.0,
+        "policy": 18.0,
+        "feeling": -1.0,
+        "quote": "Three days a week on a 68-minute commute each way is a real cost, and the badge tracking makes it feel like they don't trust us. I'm annoyed, but I'd rather see whether I can get exceptions before I start job hunting.",
+        "top_factor": "Long commute meets mandated office days"
+      }
+    },
+    {
+      "cell": "M-mid-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "David",
+        "gender": "man",
+        "age": 38,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 80,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 6.0,
+        "policy": 17.0,
+        "feeling": -2,
+        "quote": "Three days a week means adding about three hours of commuting to my week on top of everything else, and I'm not thrilled. I've got eight years here and I like the work, so I'll grumble and see how it shakes out, but I'm already looking at what's out there.",
+        "top_factor": "80-minute commute, three-day mandate"
+      }
+    },
+    {
+      "cell": "M-mid-short-care",
+      "i": 0,
+      "persona": {
+        "name": "David",
+        "gender": "man",
+        "age": 36,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 7,
+        "commute_min_each_way": 32,
+        "home": "an elderly parent who lives with them",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 22.0,
+        "feeling": -1.5,
+        "quote": "Three days a week plus badge tracking, with VP sign-off for exceptions, is a lot when my dad needs me at home. I'm not walking out tomorrow, but I'm going to start quietly looking at what's out there.",
+        "top_factor": "Caregiving schedule versus mandated office days"
+      }
+    },
+    {
+      "cell": "M-mid-short-care",
+      "i": 1,
+      "persona": {
+        "name": "James",
+        "gender": "man",
+        "age": 29,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 5,
+        "commute_min_each_way": 27,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 4.0,
+        "policy": 18.0,
+        "feeling": -2,
+        "quote": "Three days a week with badge tracking and VP-only exceptions, with a toddler at home and my partner working full time? I'm not thrilled. I'm going to quietly look at what's out there, because other places in our field still offer flexibility.",
+        "top_factor": "Losing flexibility with toddler"
+      }
+    },
+    {
+      "cell": "M-mid-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "James",
+        "gender": "man",
+        "age": 35,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 4,
+        "commute_min_each_way": 21,
+        "home": "lives with a partner, no children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 5.0,
+        "policy": 14.0,
+        "feeling": -1.0,
+        "quote": "Three set days plus badge tracking feels like they're checking up on us, not trusting people who've been delivering for years. I'm annoyed, and I'll probably start looking at what's out there, but I like my team and the commute is short, so I'm not walking out tomorrow.",
+        "top_factor": "Lost daily flexibility plus badge monitoring"
+      }
+    },
+    {
+      "cell": "M-mid-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "James",
+        "gender": "man",
+        "age": 37,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 5,
+        "commute_min_each_way": 25,
+        "home": "lives with a partner, no children",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 18.0,
+        "feeling": -1.0,
+        "quote": "Three days in the office with badge tracking is a real step back, and I'm annoyed about it. But my commute is only 25 minutes and I like my team, so I'll probably adjust and see how it goes.",
+        "top_factor": "Loss of day-to-day flexibility"
+      }
+    },
+    {
+      "cell": "M-manager-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Michael",
+        "gender": "man",
+        "age": 46,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 5,
+        "commute_min_each_way": 68,
+        "home": "a child in primary school",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 7.0,
+        "policy": 18.0,
+        "feeling": -1.0,
+        "quote": "Three days in the office on top of a 68-minute commute each way is a real hit to my time with my kid, and the badge tracking feels like they don't trust us. I'll go along with it for now and see whether the VP exceptions are actually granted, but I'm keeping my options open.",
+        "top_factor": "Long commute and family time"
+      }
+    },
+    {
+      "cell": "M-manager-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Michael",
+        "gender": "man",
+        "age": 46,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 4,
+        "commute_min_each_way": 69,
+        "home": "two young children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 7.0,
+        "policy": 19.0,
+        "feeling": -1.5,
+        "quote": "Three days in the office means adding about seven hours of commuting a week on top of what I already do, and that's time I'd otherwise spend with the kids. I'm going to ask for an exception and see what I can get, but I'm also quietly checking what's out there.",
+        "top_factor": "69-minute commute with young kids"
+      }
+    },
+    {
+      "cell": "M-manager-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Kevin",
+        "gender": "man",
+        "age": 35,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 9,
+        "commute_min_each_way": 100,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 5.0,
+        "policy": 22.0,
+        "feeling": -1.5,
+        "quote": "Three days in the office means three more days of a 200-minute round trip, and I'm not doing that for a policy that doesn't make my work any better. I'm going to quietly see what's out there, and if something flexible comes up, I'll take it.",
+        "top_factor": "Long commute makes mandated office days costly"
+      }
+    },
+    {
+      "cell": "M-manager-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Kevin",
+        "gender": "man",
+        "age": 34,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 10,
+        "commute_min_each_way": 58,
+        "home": "lives alone",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 5.0,
+        "policy": 14.0,
+        "feeling": -1.0,
+        "quote": "Three days a week on a 58-minute commute each way is about six extra hours a week I don't get back. I'm annoyed, and I'll probably quietly check what's out there, but I've got ten years here and I'm not walking away over it yet.",
+        "top_factor": "Lost commute flexibility, two hours daily"
+      }
+    },
+    {
+      "cell": "M-manager-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Michael",
+        "gender": "man",
+        "age": 36,
+        "role": "director of operations",
+        "level": "manager",
+        "tenure_years": 6,
+        "commute_min_each_way": 14,
+        "home": "two young children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 7.0,
+        "policy": 20.0,
+        "feeling": -1.0,
+        "quote": "Three days in the office with badge tracking is a real hit when I'm doing school pickups and the commute is short anyway, so it doesn't make sense to me. I'm annoyed, and I'll probably start looking around, but I'm not walking out the door over it yet.",
+        "top_factor": "lost flexibility with young kids"
+      }
+    },
+    {
+      "cell": "M-manager-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Kevin",
+        "gender": "man",
+        "age": 43,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 12,
+        "commute_min_each_way": 20,
+        "home": "an elderly parent who lives with them",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 6.0,
+        "policy": 16.0,
+        "feeling": -1.0,
+        "quote": "Three set days plus badge tracking is a real hit, since Dad needs someone at home and I'm the one who's there. I'll try for an exception first, and if VP approval is a brick wall I'll start looking, but I've got twelve years and a team I like, so I'm not bolting tomorrow.",
+        "top_factor": "elderly parent caregiving constraint"
+      }
+    },
+    {
+      "cell": "M-manager-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "James",
+        "gender": "man",
+        "age": 40,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 4,
+        "commute_min_each_way": 12,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 18.0,
+        "feeling": -1.0,
+        "quote": "Three set office days is annoying, but my commute is only 12 minutes, so it's not the end of the world. I'm more bothered that they're tracking badge swipes like we're kids, and I'll be checking my options a bit more seriously.",
+        "top_factor": "Loss of schedule control"
+      }
+    },
+    {
+      "cell": "M-manager-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "James",
+        "gender": "man",
+        "age": 38,
+        "role": "director of operations",
+        "level": "manager",
+        "tenure_years": 15,
+        "commute_min_each_way": 11,
+        "home": "lives alone",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 5.0,
+        "policy": 11.0,
+        "feeling": -1.0,
+        "quote": "Three days in the office is a pain, and the badge tracking feels like they don't trust us, but my commute is eleven minutes and I've got fifteen years here, so I'm going to grumble and comply.",
+        "top_factor": "Loss of flexibility, badge tracking"
+      }
+    }
+  ],
+  "forecast": {
+    "employees": 5000,
+    "relative_change": 1.818,
+    "leavers_status_quo": 364,
+    "leavers_with_policy": 1038,
+    "feeling": -1.29,
+    "subgroups": {
+      "gender": {
+        "F": {
+          "relative_change": 1.875,
+          "headcount": 1750
+        },
+        "M": {
+          "relative_change": 1.786,
+          "headcount": 3250
+        }
+      },
+      "managerial": {
+        "non-manager": {
+          "relative_change": 1.823,
+          "headcount": 4000
+        },
+        "manager": {
+          "relative_change": 1.793,
+          "headcount": 1000
+        }
+      },
+      "level": {
+        "junior": {
+          "relative_change": 1.705,
+          "headcount": 2000
+        },
+        "mid": {
+          "relative_change": 1.968,
+          "headcount": 2000
+        },
+        "manager": {
+          "relative_change": 1.793,
+          "headcount": 1000
+        }
+      },
+      "commute": {
+        "long": {
+          "relative_change": 2.5,
+          "headcount": 2250
+        },
+        "short": {
+          "relative_change": 1.334,
+          "headcount": 2750
+        }
+      },
+      "caregiver": {
+        "caregiver": {
+          "relative_change": 2.196,
+          "headcount": 1651
+        },
+        "no caring duties": {
+          "relative_change": 1.646,
+          "headcount": 3349
+        }
+      }
+    },
+    "cells": [
+      {
+        "cell": "F-junior-long-care",
+        "headcount": 47,
+        "base": 0.07,
+        "policy": 0.26,
+        "feeling": -1.75
+      },
+      {
+        "cell": "F-junior-long-nocare",
+        "headcount": 268,
+        "base": 0.07,
+        "policy": 0.28,
+        "feeling": -1.25
+      },
+      {
+        "cell": "F-junior-short-care",
+        "headcount": 58,
+        "base": 0.06,
+        "policy": 0.22,
+        "feeling": -2.0
+      },
+      {
+        "cell": "F-junior-short-nocare",
+        "headcount": 327,
+        "base": 0.1,
+        "policy": 0.2,
+        "feeling": -1.0
+      },
+      {
+        "cell": "F-mid-long-care",
+        "headcount": 126,
+        "base": 0.08,
+        "policy": 0.3,
+        "feeling": -1.5
+      },
+      {
+        "cell": "F-mid-long-nocare",
+        "headcount": 189,
+        "base": 0.065,
+        "policy": 0.165,
+        "feeling": -1.0
+      },
+      {
+        "cell": "F-mid-short-care",
+        "headcount": 154,
+        "base": 0.065,
+        "policy": 0.195,
+        "feeling": -1.5
+      },
+      {
+        "cell": "F-mid-short-nocare",
+        "headcount": 231,
+        "base": 0.08,
+        "policy": 0.21,
+        "feeling": -1.0
+      },
+      {
+        "cell": "F-manager-long-care",
+        "headcount": 87,
+        "base": 0.075,
+        "policy": 0.22,
+        "feeling": -1.5
+      },
+      {
+        "cell": "F-manager-long-nocare",
+        "headcount": 71,
+        "base": 0.065,
+        "policy": 0.19,
+        "feeling": -1.25
+      },
+      {
+        "cell": "F-manager-short-care",
+        "headcount": 106,
+        "base": 0.07,
+        "policy": 0.22,
+        "feeling": -1.75
+      },
+      {
+        "cell": "F-manager-short-nocare",
+        "headcount": 86,
+        "base": 0.06,
+        "policy": 0.15,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-junior-long-care",
+        "headcount": 88,
+        "base": 0.07,
+        "policy": 0.23,
+        "feeling": -1.5
+      },
+      {
+        "cell": "M-junior-long-nocare",
+        "headcount": 497,
+        "base": 0.075,
+        "policy": 0.285,
+        "feeling": -1.5
+      },
+      {
+        "cell": "M-junior-short-care",
+        "headcount": 107,
+        "base": 0.075,
+        "policy": 0.18,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-junior-short-nocare",
+        "headcount": 608,
+        "base": 0.095,
+        "policy": 0.175,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-mid-long-care",
+        "headcount": 234,
+        "base": 0.08,
+        "policy": 0.3,
+        "feeling": -2.0
+      },
+      {
+        "cell": "M-mid-long-nocare",
+        "headcount": 351,
+        "base": 0.05,
+        "policy": 0.175,
+        "feeling": -1.5
+      },
+      {
+        "cell": "M-mid-short-care",
+        "headcount": 286,
+        "base": 0.06,
+        "policy": 0.2,
+        "feeling": -1.75
+      },
+      {
+        "cell": "M-mid-short-nocare",
+        "headcount": 429,
+        "base": 0.075,
+        "policy": 0.16,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-manager-long-care",
+        "headcount": 161,
+        "base": 0.07,
+        "policy": 0.185,
+        "feeling": -1.25
+      },
+      {
+        "cell": "M-manager-long-nocare",
+        "headcount": 131,
+        "base": 0.05,
+        "policy": 0.18,
+        "feeling": -1.25
+      },
+      {
+        "cell": "M-manager-short-care",
+        "headcount": 197,
+        "base": 0.065,
+        "policy": 0.18,
+        "feeling": -1.0
+      },
+      {
+        "cell": "M-manager-short-nocare",
+        "headcount": 161,
+        "base": 0.065,
+        "policy": 0.145,
+        "feeling": -1.0
+      }
+    ]
+  },
+  "briefing": {
+    "headline": "The simulation predicts the three-fixed-days mandate would nearly triple departures over the next 12 months, from about 364 to about 1,038 of 5,000 employees (+182%, roughly 670 extra leavers); read this as a strong warning signal rather than a precise forecast.",
+    "most_at_risk": "Employees with long commutes react worst (+250% leaving vs +133% for short commutes), followed by caregivers (+220% vs +165%) and mid-level staff (+197%), because fixed office days cost them hours of travel and break childcare and eldercare arrangements they built around flexibility.",
+    "risks": [
+      "Mid-level and long-tenured people may leave, not just new hires: several modelled managers and directors with 11 to 15 years of service say they will start looking, and competitors in the field still offer flexibility.",
+      "Badge tracking reviewed with managers is read as distrust even by people who plan to comply, so the average reaction is strongly negative (-1.29 on a -2 to +2 scale) and morale among those who stay is likely to suffer.",
+      "Requiring VP approval for exceptions discourages caregivers and long-commute staff from asking ('I'm not counting on one'), so they look for other jobs quietly instead of raising the issue, and attrition may surface late and with little warning."
+    ],
+    "design_changes": [
+      "Let teams choose their own anchor days, or allow a weekly or monthly office target, instead of three company-set days, so people can fit office time around school runs, care duties and long commutes.",
+      "Drop individual badge-swipe reviews, or report only team-level attendance, and explain plainly what in-office time is meant to achieve for the work.",
+      "Let direct managers approve exceptions using published criteria (for example caregiving or commutes over a set length), phase the change in over a longer period than 90 days, and test these variants in a re-run of the simulation before announcing."
+    ],
+    "confidence": "medium, because the direction is consistent across every group and every modelled voice, but the figures rest on only 48 modelled voices (about two per group), so the 1,038 figure and the gaps between groups should not be quoted as forecasts."
+  },
+  "score": {
+    "predicted": 1.818,
+    "published": 0.14,
+    "direction_hit": true,
+    "abs_error_pp": 167.8,
+    "subgroup_hits": 1,
+    "subgroup_checks": [
+      {
+        "claim": "Bigger rise for women (nearly 3x men)",
+        "twin": "F +188% vs M +179%",
+        "hit": true
+      },
+      {
+        "claim": "Bigger rise for mid and senior managers",
+        "twin": "manager +179% vs non-manager +182%",
+        "hit": false
+      }
+    ]
+  },
+  "mode": "claude",
+  "spend": {
+    "usd": 0.0472,
+    "calls": 49,
+    "by_role": {
+      "persona (claude-haiku-5-5)": {
+        "calls": 48,
+        "usd": 0.0108,
+        "output": 17766
+      },
+      "analyst (claude-opus-5-5)": {
+        "calls": 1,
+        "usd": 0.0364,
+        "output": 1442
+      }
+    },
+    "budget_usd": 5.0,
+    "total_usd": 0.6195
+  },
+  "seconds": 31.3,
+  "persona_model": "claude-haiku-5-5"
+}

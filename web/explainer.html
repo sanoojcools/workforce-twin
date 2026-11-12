@@ -1,0 +1,310 @@
+<title>Workforce Twin</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one long scroll. A 5,000-dot workforce opens it; then a CHRO's day in four steps; then the proof (error rate, human check, cost). */
+:root{
+  --bg:#f5f6f8; --panel:#ffffff; --ink:#15202b; --muted:#5a6672; --line:#dadfe5; --soft:#eceff3;
+  --stay:#b9c3cf; --leave:#d9532c; --leave-soft:#fbe5dc; --saved:#1f8a7a; --saved-soft:#d8efeb; --pub:#15202b; --v1:#d9532c; --v2:#2f5fb3;
+  --display:"Bricolage Grotesque",system-ui,sans-serif; --body:"Source Sans 3",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#10161c; --panel:#18212a; --ink:#e7ecf1; --muted:#9ba7b3; --line:#2b3641; --soft:#1f2a34;
+  --stay:#3c4a58; --leave:#f07a52; --leave-soft:#3b2219; --saved:#4cc2ad; --saved-soft:#173430; --pub:#e7ecf1; --v1:#f07a52; --v2:#7fa6ee; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10161c; --panel:#18212a; --ink:#e7ecf1; --muted:#9ba7b3; --line:#2b3641; --soft:#1f2a34;
+  --stay:#3c4a58; --leave:#f07a52; --leave-soft:#3b2219; --saved:#4cc2ad; --saved-soft:#173430; --pub:#e7ecf1; --v1:#f07a52; --v2:#7fa6ee; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.015em}
+h1{font-size:clamp(34px,5.4vw,56px);font-weight:800;line-height:1.02}
+h2{font-size:clamp(26px,3.4vw,34px);font-weight:800;line-height:1.1}
+h3{font-size:20px;font-weight:600}
+p{margin:0}
+.eyebrow{font:600 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lead{font-size:20px;color:var(--muted);max-width:60ch}
+.sec{display:flex;flex-direction:column;gap:18px}
+.prose{max-width:66ch;display:flex;flex-direction:column;gap:10px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.hero{display:flex;flex-direction:column;gap:18px}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:700px){.fields{grid-template-columns:minmax(0,1fr)}}
+.field{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.field canvas{width:100%;aspect-ratio:2/1;display:block}
+.field .head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.big{font:600 30px var(--mono);font-variant-numeric:tabular-nums}
+.big.leave{color:var(--leave)}
+.key{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--muted);align-items:center}
+.sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.steps{display:grid;gap:14px;counter-reset:s}
+.step{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start}
+.step .n{font:600 15px var(--mono);width:36px;height:36px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center}
+.step .body{display:flex;flex-direction:column;gap:10px;min-width:0;padding-bottom:10px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;min-width:0}
+.memo{font-size:15.5px;border-left:3px solid var(--ink);padding-left:12px}
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.quotes{grid-template-columns:minmax(0,1fr)}}
+.quote{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.quote q{font-size:16px}
+.quote .who{font-size:13.5px;color:var(--muted)}
+.chip{display:inline-block;font:600 12.5px var(--mono);padding:2px 8px;border-radius:99px;background:var(--leave-soft);color:var(--leave)}
+.chip.good{background:var(--saved-soft);color:var(--saved)}
+.scroll{overflow-x:auto}
+svg text{fill:var(--muted);font-family:var(--mono);font-size:11px}
+svg .ink{fill:var(--ink)}
+.cmp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.cmp{grid-template-columns:minmax(0,1fr)}}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:4px}
+.stat.saved{border-color:var(--saved);background:var(--saved-soft)}
+.stat small{color:var(--muted);font-size:14px}
+ul.clean{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.who-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.who-grid .panel{display:flex;flex-direction:column;gap:6px}
+.note{font-size:14.5px;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+td.num{white-space:nowrap}
+a{color:var(--v2)}
+footer{font-size:14px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+</style>
+
+<div class="wrap">
+
+<header class="hero">
+  <span class="eyebrow">Workforce Twin</span>
+  <h1>Hear 5,000 reactions before you send the email.</h1>
+  <p class="lead">A synthetic copy of your workforce reads a draft policy and tells you who would leave, who would shrug, and what to change, before anyone real finds out. Then it shows you how wrong it has been on real policies.</p>
+  <div class="fields">
+    <div class="field"><div class="head"><span class="eyebrow">If nothing changes</span><span class="big num" id="sqN"></span></div><canvas id="cv0" aria-label="5,000 employees, leavers highlighted"></canvas><span class="note">Expected leavers over the next 12 months</span></div>
+    <div class="field"><div class="head"><span class="eyebrow">With a five-day office mandate</span><span class="big num leave" id="polN"></span></div><canvas id="cv1" aria-label="5,000 employees under the mandate, leavers highlighted"></canvas><span class="note" id="polNote"></span></div>
+  </div>
+  <div class="key"><span><i class="sw" style="background:var(--stay)"></i>stays</span><span><i class="sw" style="background:var(--leave)"></i>leaves within 12 months</span><span>Each dot is one simulated employee at a 5,000-person IT services firm in Bengaluru.</span></div>
+</header>
+
+<section class="sec">
+  <span class="eyebrow">The customer's day</span>
+  <h2>Meera has 48 hours before the CEO announces five days in the office.</h2>
+  <p class="prose lead">Meera is CHRO of a 5,000-person IT services company in Bengaluru (a composite, not a real person). Today her people work two set days in the office. The CEO wants five, starting next quarter. The draft email is on her screen.</p>
+  <div class="steps">
+    <div class="step"><span class="n">1</span><div class="body"><h3>She pastes the draft.</h3><p class="memo" id="polText"></p></div></div>
+    <div class="step"><span class="n">2</span><div class="body"><h3>The twin builds her workforce and asks it.</h3>
+      <p class="prose">5,000 people, split into 24 groups by gender, level, commute and caring duties, in her real headcount mix. Two people from every group read the email and say what they would actually do. Their answers are weighted back up to 5,000.</p>
+      <div class="panel scroll"><svg id="grid" role="img" aria-label="Change in 12-month leaving for each of 24 groups"></svg></div>
+      <p class="note">Each square is one group, sized by headcount. Colour shows how much the mandate raises that group's chance of leaving.</p></div></div>
+    <div class="step"><span class="n">3</span><div class="body"><h3>She listens.</h3><div class="quotes" id="quotes"></div></div></div>
+    <div class="step"><span class="n">4</span><div class="body"><h3>She redesigns before anyone sees it.</h3>
+      <p class="prose" id="redesignText"></p>
+      <div class="cmp" id="cmp"></div></div></div>
+  </div>
+</section>
+
+<section class="sec">
+  <span class="eyebrow">Who it lands on</span>
+  <h2>The mandate does not hit everyone equally.</h2>
+  <div class="panel scroll"><svg id="subs" role="img" aria-label="Change in leaving by group, five-day vs redesigned policy"></svg></div>
+  <p class="note">Relative change in 12-month leaving versus today. Orange: the five-day draft. Teal: the redesigned three-day version.</p>
+</section>
+
+<section class="sec">
+  <span class="eyebrow">The briefing Meera takes to the CEO</span>
+  <h2 id="bHead"></h2>
+  <div class="panel prose" id="brief" style="max-width:none"></div>
+  <p class="note">Written by Claude Opus 5.5 from the simulation output. It never sees the employees' private profiles, only the weighted numbers and a sample of voices.</p>
+</section>
+
+<section class="sec">
+  <span class="eyebrow">Can she trust it?</span>
+  <h2>We ran it on three real policies with published results, and we publish the miss.</h2>
+  <p class="prose">The twin was shown each company, the status quo and the announcement. It was never shown the outcome. Each policy was run three times with fresh voices.</p>
+  <div class="panel scroll"><svg id="board" role="img" aria-label="Twin forecasts versus published results for three studies"></svg></div>
+  <div class="key"><span><i class="sw" style="background:var(--pub)"></i>published result</span><span><i class="sw" style="background:var(--v1)"></i>first version (Haiku voices)</span><span><i class="sw" style="background:var(--v2)"></i>now (Sonnet voices, say-do check)</span></div>
+  <div class="prose" id="boardText"></div>
+  <div class="scroll"><table id="boardTable"></table></div>
+</section>
+
+<section class="sec">
+  <span class="eyebrow">A human check</span>
+  <h2>Does it read people the way an HR leader does?</h2>
+  <div class="prose" id="human"></div>
+</section>
+
+<section class="sec">
+  <span class="eyebrow">What it costs</span>
+  <h2 id="costHead"></h2>
+  <p class="prose" id="costText"></p>
+</section>
+
+<section class="sec">
+  <span class="eyebrow">Who it is for</span>
+  <div class="who-grid">
+    <div class="panel"><h3>CHRO</h3><p>Walks into the CEO conversation with a number, the groups at risk and a better version of the policy, not a gut feel.</p></div>
+    <div class="panel"><h3>CEO and CFO</h3><p>Sees regrettable attrition as a cost before the decision, alongside the real-estate savings.</p></div>
+    <div class="panel"><h3>HR business partners</h3><p>Know which teams to sit with first, and what those people will say, on announcement day.</p></div>
+    <div class="panel"><h3>Employees</h3><p>Their likely reactions shape the policy before it ships, instead of in an exit interview after.</p></div>
+  </div>
+</section>
+
+<section class="sec">
+  <span class="eyebrow">Limits</span>
+  <ul class="clean prose">
+    <li>Three backtests is a small sample. The say-do fix was written after seeing the return-to-office miss, so that result is in-sample.</li>
+    <li>The studies measure different things over different windows (a six-month trial, an event study of turnover, a six-month pilot). The twin forecasts a 12-month change, so the comparison is approximate.</li>
+    <li>The models may have read these studies. The twin is never told the outcome, but contamination cannot be ruled out; that is why the forward case and the human check matter.</li>
+    <li>The workforce is synthetic. A real deployment would build the 24 groups from the company's HRIS, never from individuals' records, and would keep the output at group level.</li>
+  </ul>
+</section>
+
+<footer>
+  <span>Code, runs and validation: <a href="https://github.com/sanoojcools/workforce-twin">github.com/sanoojcools/workforce-twin</a>. Built by Sanuj, a certified Amazon Bar Raiser and HR leader (Trianz, Swvl, Carrefour).</span>
+  <span id="sources"></span>
+</footer>
+</div>
+
+<script>
+const D = {"rto5": {"policy": "From the first of next quarter, everyone works from the office five days a week. Attendance counts toward your performance rating. A shuttle service will be added on main routes.", "status_quo": "Hybrid: two set office days a week, the rest from home.", "rel": 1.146, "sq": 631, "pol": 1377, "feeling": -1.13, "subgroups": {"gender": {"F": {"relative_change": 1.272, "headcount": 1899}, "M": {"relative_change": 1.074, "headcount": 3101}}, "managerial": {"non-manager": {"relative_change": 1.117, "headcount": 4250}, "manager": {"relative_change": 1.404, "headcount": 750}}, "level": {"junior": {"relative_change": 0.993, "headcount": 2500}, "mid": {"relative_change": 1.344, "headcount": 1750}, "manager": {"relative_change": 1.404, "headcount": 750}}, "commute": {"long": {"relative_change": 1.382, "headcount": 3000}, "short": {"relative_change": 0.766, "headcount": 2000}}, "caregiver": {"caregiver": {"relative_change": 1.551, "headcount": 1650}, "no caring duties": {"relative_change": 0.996, "headcount": 3350}}}, "cells": [{"cell": "F-junior-long-care", "headcount": 85, "base": 0.11, "policy": 0.365}, {"cell": "F-junior-long-nocare", "headcount": 484, "base": 0.15, "policy": 0.335}, {"cell": "F-junior-short-care", "headcount": 57, "base": 0.1, "policy": 0.235}, {"cell": "F-junior-short-nocare", "headcount": 323, "base": 0.135, "policy": 0.23}, {"cell": "F-mid-long-care", "headcount": 180, "base": 0.1, "policy": 0.325}, {"cell": "F-mid-long-nocare", "headcount": 219, "base": 0.12, "policy": 0.3}, {"cell": "F-mid-short-care", "headcount": 120, "base": 0.11, "policy": 0.22}, {"cell": "F-mid-short-nocare", "headcount": 146, "base": 0.11, "policy": 0.185}, {"cell": "F-manager-long-care", "headcount": 111, "base": 0.08, "policy": 0.22}, {"cell": "F-manager-long-nocare", "headcount": 60, "base": 0.07, "policy": 0.195}, {"cell": "F-manager-short-care", "headcount": 74, "base": 0.075, "policy": 0.19}, {"cell": "F-manager-short-nocare", "headcount": 40, "base": 0.08, "policy": 0.155}, {"cell": "M-junior-long-care", "headcount": 140, "base": 0.12, "policy": 0.325}, {"cell": "M-junior-long-nocare", "headcount": 791, "base": 0.16, "policy": 0.325}, {"cell": "M-junior-short-care", "headcount": 93, "base": 0.11, "policy": 0.195}, {"cell": "M-junior-short-nocare", "headcount": 527, "base": 0.15, "policy": 0.235}, {"cell": "M-mid-long-care", "headcount": 293, "base": 0.12, "policy": 0.325}, {"cell": "M-mid-long-nocare", "headcount": 358, "base": 0.12, "policy": 0.285}, {"cell": "M-mid-short-care", "headcount": 195, "base": 0.11, "policy": 0.235}, {"cell": "M-mid-short-nocare", "headcount": 239, "base": 0.11, "policy": 0.195}, {"cell": "M-manager-long-care", "headcount": 181, "base": 0.08, "policy": 0.22}, {"cell": "M-manager-long-nocare", "headcount": 98, "base": 0.1, "policy": 0.245}, {"cell": "M-manager-short-care", "headcount": 121, "base": 0.08, "policy": 0.145}, {"cell": "M-manager-short-nocare", "headcount": 65, "base": 0.09, "policy": 0.16}], "quotes": [{"who": "Rahul, 23, marketing associate", "detail": "12 min commute \u00b7 no caring duties", "quote": "Honestly, it's annoying, but my commute is only 12 minutes so it doesn't hurt me like it does others. I'll grumble and go in, though I'll keep an eye on what other companies are offering since some still do hybrid.", "base": 15.0, "policy": 20.0}, {"who": "Vikram, 24, finance analyst", "detail": "19 min commute \u00b7 an elderly parent who lives with them", "quote": "Honestly it's annoying, but my commute is short so it's not a disaster for me. The late client calls and having my parent at home make five days less convenient, and I'll keep an eye on what other places offer, but I'm not quitting over this alone.", "base": 12.0, "policy": 22.0}, {"who": "Lakshmi, 49, marketing manager", "detail": "88 min commute \u00b7 no caring duties", "quote": "Three more days of nearly three hours on the road is exhausting, and tying it to my rating feels petty after 13 years. I'll grumble and look around a bit, but I'm not walking out over this alone; let's see how strictly they enforce it.", "base": 6.0, "policy": 22.0}, {"who": "Kavya, 28, accountant", "detail": "85 min commute \u00b7 a toddler and a partner who also works full time", "quote": "Three more days of 85 minutes each way with a toddler at home is just not workable, and now they're tying it to my rating. I'll start quietly looking, but I'm not walking out until I have a hybrid offer in hand.", "base": 12.0, "policy": 38.0}], "briefing": {"headline": "The simulation predicts that a five-day office mandate would roughly double attrition over the next 12 months, from about 631 to 1,377 leavers (746 more people, +115%), taking annual turnover from about 13% to about 28% of staff.", "most_at_risk": "Caregivers (+155%) and people with long commutes (+138%) react worst, especially parents of young children facing 85-to-90-minute commutes each way, who say they will start looking for hybrid jobs right away; managers (+140%) and mid-level staff (+134%) also show steep rises, and they are the hardest to replace.", "risks": ["Departures would likely come quietly and in a wave: people say they will stay until they hold a hybrid offer, and competitors are actively hiring these skills, so the loss may show up suddenly rather than gradually.", "Women (+127% vs +107% for men) and caregivers would leave at higher rates, which would weaken diversity and the leadership pipeline and could become a fairness and reputation issue.", "Linking attendance to performance ratings is seen as a punishment, and top performers call it insulting; it would push out strong people and make ratings less about the quality of work."], "design_changes": ["Remove attendance from performance ratings. Employees single it out as the most offensive part of the policy, and it adds nothing the attendance rule does not already achieve.", "Move to three set office days instead of five, and let people work from home on days with late US or Europe client calls, so they do not face a long commute and an evening call on the same day.", "Offer flexible start times to avoid peak traffic, plus a formal flexibility option for caregivers and long-distance commuters. Employees say the shuttle alone 'won't fix' a 90-minute commute, so do not rely on it."], "confidence": "medium, because every group and every sample voice points the same way (more leaving, with commute and caregiving as the main drivers), but this is a model built on only 48 voices, so treat the exact figure of 746 extra leavers as a rough indication of scale rather than a forecast."}, "usd": 0.1755, "calls": 49}, "rto3": {"policy": "From the first of next quarter, teams work from the office three set days a week, chosen by each team to match client hours. Attendance is not part of performance ratings. A shuttle service will be added on main routes, and anyone with caring or health needs can apply for an exception that HR answers within two weeks.", "status_quo": "Hybrid: two set office days a week, the rest from home.", "rel": 0.388, "sq": 641, "pol": 893, "feeling": -0.79, "subgroups": {"gender": {"F": {"relative_change": 0.393, "headcount": 1899}, "M": {"relative_change": 0.385, "headcount": 3101}}, "managerial": {"non-manager": {"relative_change": 0.378, "headcount": 4250}, "manager": {"relative_change": 0.471, "headcount": 750}}, "level": {"junior": {"relative_change": 0.319, "headcount": 2500}, "mid": {"relative_change": 0.484, "headcount": 1750}, "manager": {"relative_change": 0.471, "headcount": 750}}, "commute": {"long": {"relative_change": 0.482, "headcount": 3000}, "short": {"relative_change": 0.242, "headcount": 2000}}, "caregiver": {"caregiver": {"relative_change": 0.509, "headcount": 1650}, "no caring duties": {"relative_change": 0.34, "headcount": 3350}}}, "cells": [{"cell": "F-junior-long-care", "headcount": 85, "base": 0.135, "policy": 0.21}, {"cell": "F-junior-long-nocare", "headcount": 484, "base": 0.15, "policy": 0.21}, {"cell": "F-junior-short-care", "headcount": 57, "base": 0.135, "policy": 0.17}, {"cell": "F-junior-short-nocare", "headcount": 323, "base": 0.15, "policy": 0.18}, {"cell": "F-mid-long-care", "headcount": 180, "base": 0.12, "policy": 0.22}, {"cell": "F-mid-long-nocare", "headcount": 219, "base": 0.135, "policy": 0.185}, {"cell": "F-mid-short-care", "headcount": 120, "base": 0.12, "policy": 0.155}, {"cell": "F-mid-short-nocare", "headcount": 146, "base": 0.11, "policy": 0.135}, {"cell": "F-manager-long-care", "headcount": 111, "base": 0.08, "policy": 0.14}, {"cell": "F-manager-long-nocare", "headcount": 60, "base": 0.1, "policy": 0.15}, {"cell": "F-manager-short-care", "headcount": 74, "base": 0.09, "policy": 0.125}, {"cell": "F-manager-short-nocare", "headcount": 40, "base": 0.09, "policy": 0.115}, {"cell": "M-junior-long-care", "headcount": 140, "base": 0.15, "policy": 0.22}, {"cell": "M-junior-long-nocare", "headcount": 791, "base": 0.15, "policy": 0.2}, {"cell": "M-junior-short-care", "headcount": 93, "base": 0.135, "policy": 0.175}, {"cell": "M-junior-short-nocare", "headcount": 527, "base": 0.135, "policy": 0.165}, {"cell": "M-mid-long-care", "headcount": 293, "base": 0.09, "policy": 0.155}, {"cell": "M-mid-long-nocare", "headcount": 358, "base": 0.12, "policy": 0.2}, {"cell": "M-mid-short-care", "headcount": 195, "base": 0.12, "policy": 0.16}, {"cell": "M-mid-short-nocare", "headcount": 239, "base": 0.12, "policy": 0.145}, {"cell": "M-manager-long-care", "headcount": 181, "base": 0.09, "policy": 0.14}, {"cell": "M-manager-long-nocare", "headcount": 98, "base": 0.12, "policy": 0.185}, {"cell": "M-manager-short-care", "headcount": 121, "base": 0.08, "policy": 0.1}, {"cell": "M-manager-short-nocare", "headcount": 65, "base": 0.08, "policy": 0.095}], "quotes": [{"who": "Siddharth, 39, marketing manager", "detail": "14 min commute \u00b7 lives alone", "quote": "Three days instead of two, and I'm only 14 minutes away, so it barely changes my week. Teams picking their own days is sensible, and attendance isn't in ratings, so I'll just get on with it.", "base": 8.0, "policy": 9.0}, {"who": "Lakshmi, 23, finance analyst", "detail": "28 min commute \u00b7 a child in primary school", "quote": "It's one more day in the office, but the commute is only 28 minutes and there's a shuttle, so I can manage. Attendance isn't in ratings and I can apply for an exception if school pickups get hard, so I'll wait and see before I think about anything else.", "base": 15.0, "policy": 19.0}, {"who": "Lakshmi, 29, software engineer", "detail": "69 min commute \u00b7 lives alone", "quote": "Three days instead of two is annoying with the 69-minute commute, but the shuttle might help and attendance isn't in ratings, so I'll just deal with it. I'm not job hunting over one extra day, though I'll keep an eye on what other places offer.", "base": 15.0, "policy": 21.0}, {"who": "Ananya, 30, senior engineer", "detail": "79 min commute \u00b7 a toddler and a partner who also works full time", "quote": "Three days is annoying with a toddler and a 79-minute commute each way, but it's only one extra day, attendance isn't in ratings, and I can apply for the caring exception. I'll try the shuttle and see how it goes, and quietly keep an eye on hybrid openings elsewhere.", "base": 12.0, "policy": 22.0}], "briefing": {"headline": "Moving from two to three office days is predicted to raise leavers over the next 12 months from 641 to 893, about 250 more people or a 39% increase, with mood clearly negative (-0.79 on a -2 to +2 scale).", "most_at_risk": "Caregivers (+51%, 1,650 people) and long commuters (+48%, 3,000 people, 60% of staff) react worst, along with mid-level staff and managers (+47\u201348% versus +32% for juniors), while short-commute staff barely mind (+24%) because one extra 15\u201330 minute trip changes little for them.", "risks": ["The exception process carries most of the caregiver risk: the long-commute parents quoted say they will apply and wait, and one says outright she will start looking if HR says no, so a slow or stingy process could turn waiting into resignations.", "Almost every voice with a 30+ minute commute says they will 'keep an eye on' hybrid competitors, so this policy creates a pool of passive job-seekers that active recruiters can easily convert, even if most stay at first.", "The higher loss rates among mid-level staff and managers, about 1 in 2.8 of the extra leavers coming from the 750 managers alone if rates hold, would cost more in client continuity and replacement than the junior headline suggests."], "design_changes": ["Open exception applications now, publish clear approval criteria for caring and health needs, and give decisions before the policy starts so no one spends the first weeks of the quarter waiting and job-hunting.", "Before launch, check that shuttle routes actually cover where the 3,000 long commuters live (80\u201390 minutes each way in the voices), and let teams set office-day start and end times to avoid peak traffic and fit late client calls.", "Phase in the third day or pilot it with a few teams, and commit publicly to a review date using actual resignation and exception data, since several voices say they would only leave 'if they keep tightening it.'"], "confidence": "medium, the direction and the ranking of groups are consistent across every cut and match the voices, but with only 48 modelled voices (about two per group) treat the extra 250 leavers as a rough range, not a forecast."}, "usd": 0.1819, "calls": 49}, "board": [{"config": "v1|claude-haiku-5-5", "label": "A. First version: Haiku 5.5 voices", "case": "hybrid_trip", "title": "Hybrid WFH at a travel-tech company", "kind": "backtest", "runs": 3, "twin_each": [-0.38, -0.381, -0.39], "twin_mean": -0.38366666666666666, "usd_per_run": 0.04493333333333333, "published": -0.33, "study": "Bloom, Han & Liang (2024), randomised trial of 1,612 Trip.com employees, Nature", "caveat": "Randomised trial, the strongest evidence of the three.", "sources": ["https://www.scimex.org/newsfeed/working-from-home-flexibility-can-improve-staff-retention-without-impacting-their-performance", "https://cep.lse.ac.uk/_NEW/PUBLICATIONS/abstract.asp?index=10993"], "abs_error_pp": 5.366666666666664, "direction_hits": 3, "subgroup_hits": 9, "subgroup_total": 9, "stage": "first"}, {"config": "v1|claude-haiku-5-5", "label": "A. First version: Haiku 5.5 voices", "case": "rto_sp500", "title": "Return-to-office mandate at a big US tech or finance firm", "kind": "backtest", "runs": 3, "twin_each": [2.114, 2.219, 2.147], "twin_mean": 2.1599999999999997, "usd_per_run": 0.04093333333333333, "published": 0.14, "study": "Ding, Jin, Ma, Xing & Yang (2024), LinkedIn data on 3M+ employees at 54 S&P 500 tech and finance firms, SSRN 5031481", "caveat": "Observational (event study), not randomised.", "sources": ["https://hankamer.baylor.edu/news/story/2025/return-office-mandates-and-hidden-cost-brain-drain", "https://fortune.com/2024/12/13/return-to-office-mandate-risk-losing-top-performers-study/"], "abs_error_pp": 201.99999999999994, "direction_hits": 3, "subgroup_hits": 6, "subgroup_total": 6, "stage": "first"}, {"config": "v1|claude-haiku-5-5", "label": "A. First version: Haiku 5.5 voices", "case": "fourday_uk", "title": "Four-day week at UK small and mid-size firms", "kind": "backtest", "runs": 2, "twin_each": [-0.484, -0.491], "twin_mean": -0.4875, "usd_per_run": 0.04325, "published": -0.57, "study": "Autonomy and 4 Day Week Global (2023), UK pilot, 61 companies, about 2,900 workers", "caveat": "Firms volunteered and there was no control group, so the drop is likely overstated.", "sources": ["https://autonomy.work/portfolio/uk4dwpilotresults/"], "abs_error_pp": 8.249999999999996, "direction_hits": 2, "subgroup_hits": 0, "subgroup_total": 0, "stage": "first"}, {"config": "v2|claude-sonnet-5-5", "label": "C. Sonnet 5.5 voices + say-do check (current)", "case": "hybrid_trip", "title": "Hybrid WFH at a travel-tech company", "kind": "backtest", "runs": 3, "twin_each": [-0.351, -0.338, -0.338], "twin_mean": -0.3423333333333334, "usd_per_run": 0.16206666666666666, "published": -0.33, "study": "Bloom, Han & Liang (2024), randomised trial of 1,612 Trip.com employees, Nature", "caveat": "Randomised trial, the strongest evidence of the three.", "sources": ["https://www.scimex.org/newsfeed/working-from-home-flexibility-can-improve-staff-retention-without-impacting-their-performance", "https://cep.lse.ac.uk/_NEW/PUBLICATIONS/abstract.asp?index=10993"], "abs_error_pp": 1.2333333333333363, "direction_hits": 3, "subgroup_hits": 5, "subgroup_total": 9, "stage": "final"}, {"config": "v2|claude-sonnet-5-5", "label": "C. Sonnet 5.5 voices + say-do check (current)", "case": "rto_sp500", "title": "Return-to-office mandate at a big US tech or finance firm", "kind": "backtest", "runs": 3, "twin_each": [0.935, 0.911, 0.89], "twin_mean": 0.912, "usd_per_run": 0.17013333333333333, "published": 0.14, "study": "Ding, Jin, Ma, Xing & Yang (2024), LinkedIn data on 3M+ employees at 54 S&P 500 tech and finance firms, SSRN 5031481", "caveat": "Observational (event study), not randomised.", "sources": ["https://hankamer.baylor.edu/news/story/2025/return-office-mandates-and-hidden-cost-brain-drain", "https://fortune.com/2024/12/13/return-to-office-mandate-risk-losing-top-performers-study/"], "abs_error_pp": 77.2, "direction_hits": 3, "subgroup_hits": 6, "subgroup_total": 6, "stage": "final"}, {"config": "v2|claude-sonnet-5-5", "label": "C. Sonnet 5.5 voices + say-do check (current)", "case": "fourday_uk", "title": "Four-day week at UK small and mid-size firms", "kind": "backtest", "runs": 3, "twin_each": [-0.481, -0.493, -0.501], "twin_mean": -0.4916666666666667, "usd_per_run": 0.16146666666666668, "published": -0.57, "study": "Autonomy and 4 Day Week Global (2023), UK pilot, 61 companies, about 2,900 workers", "caveat": "Firms volunteered and there was no control group, so the drop is likely overstated.", "sources": ["https://autonomy.work/portfolio/uk4dwpilotresults/"], "abs_error_pp": 7.833333333333325, "direction_hits": 3, "subgroup_hits": 0, "subgroup_total": 0, "stage": "final"}], "mid": [{"config": "v2|claude-haiku-5-5", "label": "B. Haiku 5.5 voices + say-do check", "case": "hybrid_trip", "title": "Hybrid WFH at a travel-tech company", "kind": "backtest", "runs": 3, "twin_each": [-0.325, -0.336, -0.309], "twin_mean": -0.3233333333333333, "usd_per_run": 0.04203333333333333, "published": -0.33, "study": "Bloom, Han & Liang (2024), randomised trial of 1,612 Trip.com employees, Nature", "caveat": "Randomised trial, the strongest evidence of the three.", "sources": ["https://www.scimex.org/newsfeed/working-from-home-flexibility-can-improve-staff-retention-without-impacting-their-performance", "https://cep.lse.ac.uk/_NEW/PUBLICATIONS/abstract.asp?index=10993"], "abs_error_pp": 0.666666666666671, "direction_hits": 3, "subgroup_hits": 7, "subgroup_total": 9}, {"config": "v2|claude-haiku-5-5", "label": "B. Haiku 5.5 voices + say-do check", "case": "rto_sp500", "title": "Return-to-office mandate at a big US tech or finance firm", "kind": "backtest", "runs": 3, "twin_each": [1.868, 1.802, 1.754], "twin_mean": 1.808, "usd_per_run": 0.04376666666666667, "published": 0.14, "study": "Ding, Jin, Ma, Xing & Yang (2024), LinkedIn data on 3M+ employees at 54 S&P 500 tech and finance firms, SSRN 5031481", "caveat": "Observational (event study), not randomised.", "sources": ["https://hankamer.baylor.edu/news/story/2025/return-office-mandates-and-hidden-cost-brain-drain", "https://fortune.com/2024/12/13/return-to-office-mandate-risk-losing-top-performers-study/"], "abs_error_pp": 166.8, "direction_hits": 3, "subgroup_hits": 3, "subgroup_total": 6}, {"config": "v2|claude-haiku-5-5", "label": "B. Haiku 5.5 voices + say-do check", "case": "fourday_uk", "title": "Four-day week at UK small and mid-size firms", "kind": "backtest", "runs": 1, "twin_each": [-0.427], "twin_mean": -0.427, "usd_per_run": 0.0467, "published": -0.57, "study": "Autonomy and 4 Day Week Global (2023), UK pilot, 61 companies, about 2,900 workers", "caveat": "Firms volunteered and there was no control group, so the drop is likely overstated.", "sources": ["https://autonomy.work/portfolio/uk4dwpilotresults/"], "abs_error_pp": 14.299999999999995, "direction_hits": 1, "subgroup_hits": 0, "subgroup_total": 0}], "human": {"kappa": 0.59, "spearman": 0.71, "within_one": 11, "exact": 3, "n": 12, "text": "Sanuj, an HR leader with roles at Trianz, Swvl and Carrefour, made blind calls on 12 simulated employees (six at the Bengaluru firm, six at the US firm) on 12 November 2026: how likely each person is to leave within 12 months if the mandate goes ahead, in five bands. The twin's answers were hidden until all 12 were saved. Result: quadratic-weighted kappa 0.59, rank correlation 0.71, 11 of 12 calls within one band (3 exact). The twin ran hotter than the human on 7 of 12 people (average band 1.67 vs 1.17). It is the same lean the backtest found: on a takeaway, the simulated employees overstate how many would actually walk."}};
+const $ = id => document.getElementById(id);
+const pct = x => (x>=0?"+":"") + Math.round(x*100) + "%";
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+function el(tag, attrs, text){const e=document.createElement(tag); for(const k in (attrs||{})) e.setAttribute(k,attrs[k]); if(text!=null) e.textContent=text; return e;}
+function sv(tag, attrs, text){const e=document.createElementNS("http://www.w3.org/2000/svg",tag); for(const k in attrs) e.setAttribute(k,attrs[k]); if(text!=null) e.textContent=text; return e;}
+const F = D.rto5, R = D.rto3;
+
+/* hero dot fields: same people, same random draw, so the extra orange dots are the policy's effect */
+function rng(seed){let s=seed>>>0; return ()=>{s=(s*1664525+1013904223)>>>0; return s/4294967296;};}
+const ORDER = (()=>{const r=rng(42), a=[...Array(5000).keys()]; for(let i=a.length-1;i>0;i--){const j=Math.floor(r()*(i+1)); [a[i],a[j]]=[a[j],a[i]];} return a;})();
+function drawField(cv, n){
+  const w=cv.clientWidth, h=w/2, dpr=window.devicePixelRatio||1; cv.width=w*dpr; cv.height=h*dpr;
+  const g=cv.getContext("2d"); g.scale(dpr,dpr);
+  const cols=100, rows=50, cw=w/cols, ch=h/rows, rad=Math.max(1, Math.min(cw,ch)*0.36);
+  const lit=new Set(ORDER.slice(0,n)); const stay=css("--stay"), leave=css("--leave");
+  for(let k=0;k<5000;k++){ g.fillStyle=lit.has(k)?leave:stay; g.beginPath(); g.arc((k%cols+.5)*cw, (Math.floor(k/cols)+.5)*ch, rad, 0, 7); g.fill(); }
+}
+function heroes(){ drawField($("cv0"), F.sq); drawField($("cv1"), F.pol); }
+$("sqN").textContent = F.sq.toLocaleString(); $("polN").textContent = F.pol.toLocaleString();
+$("polNote").textContent = `${(F.pol-F.sq).toLocaleString()} more people leave (${pct(F.rel)}). Same people, same luck; only the policy differs. On takeaways the twin runs hot, so read this as a ceiling (see the error rate below).`;
+
+/* step 1 */
+$("polText").textContent = "“" + F.policy + "”";
+
+/* step 2: 24-group grid */
+(function(){
+  const s=$("grid"), levels=["junior","mid","manager"], genders=["F","M"], commute=["short","long"], care=["nocare","care"];
+  const W=720, cellW=140, cellH=58, x0=150, y0=48; s.setAttribute("viewBox",`0 0 ${W} ${y0+6*cellH+10}`); s.style.minWidth="560px";
+  const byKey=Object.fromEntries(F.cells.map(c=>[c.cell,c]));
+  const cols=[]; commute.forEach(cm=>care.forEach(cg=>cols.push([cm,cg])));
+  cols.forEach(([cm,cg],j)=>{ s.appendChild(sv("text",{x:x0+j*cellW+cellW/2-20,y:y0-22,"text-anchor":"middle",class:"ink"}, `${cm} commute`)); s.appendChild(sv("text",{x:x0+j*cellW+cellW/2-20,y:y0-9,"text-anchor":"middle"}, cg==="care"?"carer":"no caring duties")); });
+  const maxHc=Math.max(...F.cells.map(c=>c.headcount)); const leave=css("--leave");
+  let row=0;
+  genders.forEach(g=>levels.forEach(l=>{
+    s.appendChild(sv("text",{x:x0-10,y:y0+row*cellH+cellH/2+4,"text-anchor":"end",class:"ink"}, `${g==="F"?"Women":"Men"}, ${l}`));
+    cols.forEach(([cm,cg],j)=>{
+      const c=byKey[`${g}-${l}-${cm}-${cg}`]; if(!c) return;
+      const rel=c.base? c.policy/c.base-1 : 0, side=Math.sqrt(c.headcount/maxHc)*(cellH-8);
+      const cx=x0+j*cellW+cellW/2, cy=y0+row*cellH+cellH/2;
+      const op=Math.min(1, .15+rel/2.5);
+      s.appendChild(sv("rect",{x:cx-side/2-30,y:cy-side/2,width:side,height:side,rx:3,fill:leave,"fill-opacity":op.toFixed(2)}));
+      s.appendChild(sv("text",{x:cx-30+side/2+6,y:cy+4,class:"ink"}, pct(rel)));
+      s.appendChild(sv("text",{x:cx-30+side/2+6,y:cy+17}, `${c.headcount} ppl`));
+    });
+    row++;
+  }));
+})();
+
+/* step 3: voices */
+F.quotes.forEach(v=>{
+  const d=el("div",{class:"quote"}); d.appendChild(el("q",{},v.quote));
+  d.appendChild(el("span",{class:"who"}, `${v.who} · ${v.detail}`));
+  const up=v.policy-v.base; const c=el("span",{class:"chip"+(up<=2?" good":"")}, `chance of leaving ${Math.round(v.base)}% → ${Math.round(v.policy)}%`);
+  d.appendChild(c); $("quotes").appendChild(d);
+});
+
+/* step 4: redesign */
+$("redesignText").textContent = `Meera tests a second draft: three office days chosen by each team around client hours, attendance kept out of ratings, the shuttle, and a two-week route for caring or health exceptions. Same 5,000 people, same luck.`;
+(function(){
+  const kept=R.pol? F.pol-R.pol : 0;
+  [[`${F.pol.toLocaleString()}`,"leave under the five-day draft",""],[`${R.pol.toLocaleString()}`,"leave under the redesign",""],[`${kept.toLocaleString()}`,"people kept by changing the email","saved"]]
+  .forEach(([n,t,cls])=>{const s=el("div",{class:"stat "+cls}); s.appendChild(el("span",{class:"big num"},n)); s.appendChild(el("small",{},t)); $("cmp").appendChild(s);});
+})();
+
+/* subgroup bars */
+(function(){
+  const s=$("subs"), rows=[["Women","gender","F"],["Men","gender","M"],["Junior","level","junior"],["Mid","level","mid"],["Managers","level","manager"],["Long commute","commute","long"],["Short commute","commute","short"],["Carers","caregiver","caregiver"],["No caring duties","caregiver","no caring duties"]];
+  const W=720, x0=150, x1=W-60, rowH=34, y0=16;
+  const vals=rows.flatMap(([_,a,g])=>[F.subgroups[a][g].relative_change, R.subgroups[a][g].relative_change]);
+  const mx=Math.max(.5, ...vals)*1.1, X=v=>x0+(x1-x0)*Math.max(0,v)/mx;
+  s.setAttribute("viewBox",`0 0 ${W} ${y0+rows.length*rowH+20}`); s.style.minWidth="520px";
+  [0,.5,1,1.5,2,2.5,3].filter(t=>t<=mx).forEach(t=>{s.appendChild(sv("line",{x1:X(t),x2:X(t),y1:y0-6,y2:y0+rows.length*rowH,stroke:css("--line")})); s.appendChild(sv("text",{x:X(t),y:y0+rows.length*rowH+14,"text-anchor":"middle"}, pct(t)));});
+  rows.forEach(([label,a,g],i)=>{
+    const y=y0+i*rowH, f=F.subgroups[a][g].relative_change, r=R.subgroups[a][g].relative_change;
+    s.appendChild(sv("text",{x:x0-10,y:y+15,"text-anchor":"end",class:"ink"},label));
+    s.appendChild(sv("rect",{x:x0,y:y+2,width:X(f)-x0,height:11,rx:2,fill:css("--leave")}));
+    s.appendChild(sv("rect",{x:x0,y:y+15,width:Math.max(1,X(r)-x0),height:11,rx:2,fill:css("--saved")}));
+    s.appendChild(sv("text",{x:X(f)+5,y:y+12}, pct(f))); s.appendChild(sv("text",{x:X(r)+5,y:y+25}, pct(r)));
+  });
+})();
+
+/* briefing */
+(function(){
+  const b=F.briefing; $("bHead").textContent=b.headline;
+  const box=$("brief");
+  box.appendChild(el("p",{},b.most_at_risk));
+  const h1=el("h3",{},"Risks"); box.appendChild(h1); const u1=el("ul",{class:"clean"}); b.risks.forEach(t=>u1.appendChild(el("li",{},t))); box.appendChild(u1);
+  box.appendChild(el("h3",{},"Change before announcing")); const u2=el("ul",{class:"clean"}); b.design_changes.forEach(t=>u2.appendChild(el("li",{},t))); box.appendChild(u2);
+  box.appendChild(el("p",{class:"note"},"Confidence: "+b.confidence));
+})();
+
+/* scoreboard */
+(function(){
+  const bt=D.board, studies=[...new Set(bt.map(b=>b.case))];
+  const s=$("board"), W=760, x0=210, x1=W-30, rowH=70, y0=24;
+  const all=bt.flatMap(b=>[b.published,...b.twin_each]); const lo=Math.min(-.8,...all)-.05, hi=Math.max(.4,...all)+.1;
+  const X=v=>x0+(x1-x0)*(v-lo)/(hi-lo);
+  s.setAttribute("viewBox",`0 0 ${W} ${y0+studies.length*rowH+24}`); s.style.minWidth="600px";
+  const ticks=[]; for(let t=Math.ceil(lo*2)/2;t<=hi;t+=.5) ticks.push(Math.round(t*10)/10);
+  ticks.forEach(t=>{s.appendChild(sv("line",{x1:X(t),x2:X(t),y1:y0-8,y2:y0+studies.length*rowH,stroke:t===0?css("--muted"):css("--line"),"stroke-dasharray":t===0?"":"2 3"})); s.appendChild(sv("text",{x:X(t),y:y0+studies.length*rowH+16,"text-anchor":"middle"},pct(t)));});
+  studies.forEach((cid,i)=>{
+    const y=y0+i*rowH+rowH/2, rows=bt.filter(b=>b.case===cid), t=rows[0].title;
+    const words=t.split(" "); let l1="",l2=""; words.forEach(w=>{ if((l1+" "+w).length<30 && !l2) l1=(l1+" "+w).trim(); else l2=(l2+" "+w).trim(); });
+    s.appendChild(sv("text",{x:x0-12,y:y-4,"text-anchor":"end",class:"ink"},l1)); if(l2) s.appendChild(sv("text",{x:x0-12,y:y+10,"text-anchor":"end",class:"ink"},l2));
+    rows.forEach(b=>{ const col=b.stage==="first"?css("--v1"):css("--v2"), dy=b.stage==="first"?-9:9;
+      b.twin_each.forEach(p=>s.appendChild(sv("circle",{cx:X(p),cy:y+dy,r:5,fill:col,"fill-opacity":.85}))); });
+    const p=rows[0].published; s.appendChild(sv("line",{x1:X(p),x2:X(p),y1:y-20,y2:y+20,stroke:css("--pub"),"stroke-width":3}));
+    s.appendChild(sv("text",{x:X(p),y:y-24,"text-anchor":"middle",class:"ink"},pct(p)));
+  });
+  const v1=bt.filter(b=>b.stage==="first"), v2=bt.filter(b=>b.stage==="final");
+  const mae=a=>a.length? Math.round(a.reduce((s,b)=>s+b.abs_error_pp,0)/a.length):null;
+  const rto1=v1.find(b=>b.case==="rto_sp500"), rto2=v2.find(b=>b.case==="rto_sp500");
+  const bx=$("boardText");
+  bx.appendChild(el("p",{}, `The first version got the direction right every time and was close on the two policies that give people more flexibility. It was badly wrong on the takeaway: it predicted the return-to-office mandate would raise leaving by ${rto1?pct(rto1.twin_mean):"?"}; the study found ${rto1?pct(rto1.published):"?"}. Average miss: ${mae(v1)} percentage points.`));
+  bx.appendChild(el("p",{}, `The simulated employees were answering the way people talk when a perk is taken away, not the way they act. Asking each voice to separate what they would say from what they would do barely moved the cheaper model (${D.mid.length? pct(D.mid.find(b=>b.case==="rto_sp500").twin_mean):"?"}). Switching the voices from Claude Haiku to Claude Sonnet did: the return-to-office forecast fell to ${pct(rto2.twin_mean)} and the average miss to ${mae(v2)} points. It still overstates exits from a takeaway about ${Math.round(rto2.twin_mean/rto2.published)} times.`));
+  bx.appendChild(el("p",{}, `What that means for Meera: trust the direction, the ranking of groups, and the comparison between two drafts. Treat the leaver count for a takeaway as a ceiling, not a budget number.`));
+  const tb=$("boardTable"); const hr=el("tr"); ["Study","Published","First version","After fix","Who it hit harder (twin got right)"].forEach(h=>hr.appendChild(el("th",{},h))); tb.appendChild(hr);
+  studies.forEach(cid=>{ const a=v1.find(b=>b.case===cid), b=v2.find(x=>x.case===cid), any=a||b; const tr=el("tr");
+    const td=el("td"); const link=el("a",{href:any.sources[0],target:"_blank",rel:"noopener"},any.study); td.appendChild(link); td.appendChild(el("div",{class:"note"},any.caveat)); tr.appendChild(td);
+    tr.appendChild(el("td",{class:"num"},pct(any.published)));
+    tr.appendChild(el("td",{class:"num"},a?`${pct(a.twin_mean)} (miss ${Math.round(a.abs_error_pp)} pp)`:"–"));
+    tr.appendChild(el("td",{class:"num"},b?`${pct(b.twin_mean)} (miss ${Math.round(b.abs_error_pp)} pp)`:"running"));
+    const best=b||a; tr.appendChild(el("td",{class:"num"}, best.subgroup_total?`${best.subgroup_hits} of ${best.subgroup_total}`:"not reported"));
+    tb.appendChild(tr); });
+  $("sources").textContent = "Sources: " + bt.filter((b,i,arr)=>arr.findIndex(x=>x.case===b.case)===i).map(b=>b.study).join("; ") + ".";
+})();
+
+/* human check */
+(function(){
+  const h=D.human, box=$("human");
+  if(!h){ box.appendChild(el("p",{},"An experienced HR leader is making blind calls on 12 simulated employees: for each person, how likely they are to leave if the policy goes ahead, without seeing the twin's answer. The agreement score will appear here.")); return; }
+  const row=el("div",{class:"cmp"}); [[h.kappa.toFixed(2),"agreement (weighted kappa)"],[h.spearman.toFixed(2),"rank correlation"],[`${h.within_one} of ${h.n}`,"calls within one band"]].forEach(([n,t])=>{const s=el("div",{class:"stat"}); s.appendChild(el("span",{class:"big num"},n)); s.appendChild(el("small",{},t)); row.appendChild(s);}); box.appendChild(row);
+  box.appendChild(el("p",{}, h.text));
+})();
+
+/* cost */
+(function(){
+  const c=F.usd, r=R.usd; $("costHead").textContent = `About ${(c*100).toFixed(0)} cents a run.`;
+  $("costText").textContent = `One run is ${F.calls} model calls: 48 short employee voices on Claude Sonnet 5.5 and one briefing on Claude Opus 5.5. It costs the same for 5,000 or 50,000 people, because the twin interviews groups, not individuals. Meera's two drafts cost $${(c+r).toFixed(2)} together. A hard spending cap stops the app at $5.`;
+})();
+
+heroes(); let t; window.addEventListener("resize",()=>{clearTimeout(t); t=setTimeout(heroes,150);});
+matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change",()=>location.reload());
+</script>

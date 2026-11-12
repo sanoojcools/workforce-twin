@@ -1,0 +1,1342 @@
+{
+  "case": "fourday_uk",
+  "title": "Four-day week at UK small and mid-size firms",
+  "kind": "backtest",
+  "seed": 9,
+  "prompt": "v2",
+  "persona_model": "claude-sonnet-5-5",
+  "voices": [
+    {
+      "cell": "F-junior-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Priya",
+        "gender": "woman",
+        "age": 24,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 3,
+        "commute_min_each_way": 87,
+        "home": "a child in primary school",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 9.0,
+        "feeling": 2,
+        "quote": "Honestly, a day back with my kid and no 3-hour round trip is huge for me. I'm a bit nervous about keeping output the same, but I'm not going to complain about it.",
+        "top_factor": "Day off, less commuting"
+      }
+    },
+    {
+      "cell": "F-junior-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Amira",
+        "gender": "woman",
+        "age": 25,
+        "role": "finance analyst",
+        "level": "junior",
+        "tenure_years": 3,
+        "commute_min_each_way": 64,
+        "home": "an elderly parent who lives with them",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 7.0,
+        "feeling": 2,
+        "quote": "Honestly, a day back every week with no pay cut is huge for me, with the long commute and looking after my mum. I'm a bit wary about squeezing the same work into four days, but I'm definitely not complaining.",
+        "top_factor": "Day back, less commuting"
+      }
+    },
+    {
+      "cell": "F-junior-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Sophie",
+        "gender": "woman",
+        "age": 26,
+        "role": "finance analyst",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 99,
+        "home": "no caring duties",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 25.0,
+        "policy": 10.0,
+        "feeling": 2,
+        "quote": "Honestly, a day back and no pay cut is huge when I'm spending over three hours a day commuting. I'll happily work a bit harder across four days to keep it, though I'll be watching whether the workload really adjusts.",
+        "top_factor": "Saves a 3-hour commute day"
+      }
+    },
+    {
+      "cell": "F-junior-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Priya",
+        "gender": "woman",
+        "age": 28,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 55,
+        "home": "lives alone",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 8.0,
+        "feeling": 2,
+        "quote": "Honestly, a day back every week with the same pay is brilliant, especially with my commute. I'm a bit wary about squeezing the same testing into fewer hours near release time, but I'm not complaining.",
+        "top_factor": "Extra day off, same pay"
+      }
+    },
+    {
+      "cell": "F-junior-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Grace",
+        "gender": "woman",
+        "age": 27,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 3,
+        "commute_min_each_way": 26,
+        "home": "two young children",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 5.0,
+        "feeling": 2,
+        "quote": "Honestly, a day a week back with the kids for the same pay is huge for me. I'm a bit wary about squeezing the same testing into fewer hours, but I'm not complaining.",
+        "top_factor": "Extra day with kids"
+      }
+    },
+    {
+      "cell": "F-junior-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Grace",
+        "gender": "woman",
+        "age": 27,
+        "role": "marketing associate",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 20,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 2,
+        "quote": "A day back with my toddler every week and no pay cut? Brilliant. I'm a bit wary about keeping output the same in fewer hours, but I'm happy to give it a go and I'd be gutted if it ended after the trial.",
+        "top_factor": "Extra day with toddler"
+      }
+    },
+    {
+      "cell": "F-junior-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Chloe",
+        "gender": "woman",
+        "age": 28,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 27,
+        "home": "no caring duties",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 25.0,
+        "policy": 15.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a day off a week for the same pay is hard to complain about, though I'm a bit wary about keeping the same output in fewer hours. I'm new here so I'll just see how the trial goes.",
+        "top_factor": "Extra day off, same pay"
+      }
+    },
+    {
+      "cell": "F-junior-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Priya",
+        "gender": "woman",
+        "age": 26,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 13,
+        "home": "no caring duties",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 20.0,
+        "policy": 10.0,
+        "feeling": 2,
+        "quote": "Honestly, a four-day week at the same pay is brilliant. I'm a bit wary about keeping output the same, since QA always gets squeezed when releases slip, but I'd happily give it a go.",
+        "top_factor": "Extra day off, same pay"
+      }
+    },
+    {
+      "cell": "F-mid-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Sophie",
+        "gender": "woman",
+        "age": 37,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 5,
+        "commute_min_each_way": 95,
+        "home": "a child in primary school",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 6.0,
+        "feeling": 2,
+        "quote": "Honestly, a day back with no pay cut is huge for me, it's one less 3-hour round trip and a day I can actually do school pickup. I'm a bit wary about squeezing the same output into fewer hours, especially around month-end, but I'll happily give it a go.",
+        "top_factor": "Day less commuting, more family time"
+      }
+    },
+    {
+      "cell": "F-mid-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Chloe",
+        "gender": "woman",
+        "age": 37,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 5,
+        "commute_min_each_way": 96,
+        "home": "a child in primary school",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 8.0,
+        "feeling": 2,
+        "quote": "Honestly, this is huge for me. Losing a day of that 3-hour round-trip commute and having one more day with my kid is worth more than a pay rise. I'm a bit wary about keeping output the same in fewer hours, but I'll happily give it a go.",
+        "top_factor": "Day less commuting, more family time"
+      }
+    },
+    {
+      "cell": "F-mid-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Sophie",
+        "gender": "woman",
+        "age": 28,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 3,
+        "commute_min_each_way": 90,
+        "home": "lives alone",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 9.0,
+        "feeling": 2,
+        "quote": "Honestly, a day less of that 90-minute each-way commute is a huge win for me, and I live alone so the extra day is real life back. I'm a bit wary about keeping output the same in fewer hours, but I'll happily give it a go.",
+        "top_factor": "One fewer commute day"
+      }
+    },
+    {
+      "cell": "F-mid-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Amira",
+        "gender": "woman",
+        "age": 32,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 5,
+        "commute_min_each_way": 85,
+        "home": "lives with a partner, no children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 20.0,
+        "policy": 9.0,
+        "feeling": 2,
+        "quote": "Honestly, a day less of that 85-minute commute each way is huge for me, and I'm not pretending otherwise. I'll make sure my team hits the output, but I'm wary about how we're meant to cut hours without the workload just getting squeezed into four days.",
+        "top_factor": "Day less commuting"
+      }
+    },
+    {
+      "cell": "F-mid-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Chloe",
+        "gender": "woman",
+        "age": 37,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 2,
+        "commute_min_each_way": 13,
+        "home": "a child in primary school",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a day back with my kid and no pay cut is great, but I'm a bit wary about hitting the same output with fewer hours, especially as a team lead. Let's see how the trial goes.",
+        "top_factor": "Extra day with my child"
+      }
+    },
+    {
+      "cell": "F-mid-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Sophie",
+        "gender": "woman",
+        "age": 33,
+        "role": "team lead",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 17,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 5.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a day with my toddler or just getting life admin done is brilliant, and I'm not complaining about the pay staying the same. I'm a bit wary about keeping output the same with fewer hours, because as team lead I'll be the one making that work, but I'm willing to try it.",
+        "top_factor": "Extra day for family"
+      }
+    },
+    {
+      "cell": "F-mid-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Chloe",
+        "gender": "woman",
+        "age": 31,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 3,
+        "commute_min_each_way": 18,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 8.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a day off every week for the same pay is great, and I'm not complaining. I just hope 'keep output the same' doesn't mean cramming five days of work into four and getting stressed about it.",
+        "top_factor": "Extra day off, same pay"
+      }
+    },
+    {
+      "cell": "F-mid-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Amira",
+        "gender": "woman",
+        "age": 34,
+        "role": "product marketing lead",
+        "level": "mid",
+        "tenure_years": 7,
+        "commute_min_each_way": 22,
+        "home": "no caring duties",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 7.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a day back for the same money is lovely, and I'm not going to argue with it. I just hope 'keep output the same' doesn't turn into us cramming five days of work into four and being stressed about it.",
+        "top_factor": "Extra day off, same pay"
+      }
+    },
+    {
+      "cell": "F-manager-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Sophie",
+        "gender": "woman",
+        "age": 43,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 8,
+        "commute_min_each_way": 97,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 6.0,
+        "feeling": 2,
+        "quote": "Honestly, a day back with my toddler and no 3-hour round trip on that day is huge for me. I'm a bit wary about keeping month-end output the same in fewer hours, but I'll happily make it work.",
+        "top_factor": "Day off, less commuting"
+      }
+    },
+    {
+      "cell": "F-manager-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Priya",
+        "gender": "woman",
+        "age": 40,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 11,
+        "commute_min_each_way": 55,
+        "home": "an elderly parent who lives with them",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 4.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a day back each week with Mum and no commute is huge for me, though I'm a bit wary about how we keep output the same with the team's workload. I'll make it work and see how the trial goes.",
+        "top_factor": "Extra day for caring"
+      }
+    },
+    {
+      "cell": "F-manager-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Sophie",
+        "gender": "woman",
+        "age": 50,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 5,
+        "commute_min_each_way": 82,
+        "home": "no caring duties",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 1.0,
+        "quote": "A day back from an 82-minute each-way commute is brilliant, and I'm not complaining about the pay. I just want to see how we keep output flat without my team burning out or me ending up covering the gaps.",
+        "top_factor": "Day saved on commute"
+      }
+    },
+    {
+      "cell": "F-manager-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Hannah",
+        "gender": "woman",
+        "age": 50,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 10,
+        "commute_min_each_way": 92,
+        "home": "lives with a partner, no children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 4.0,
+        "feeling": 2,
+        "quote": "Honestly, an extra day without a three-hour round trip is brilliant, and I'm not going anywhere if this sticks. I just hope we're realistic about what 'same output' means, because as a manager I'll be the one squeezing it all into four days.",
+        "top_factor": "Day off, less commuting"
+      }
+    },
+    {
+      "cell": "F-manager-short-care",
+      "i": 0,
+      "persona": {
+        "name": "Sophie",
+        "gender": "woman",
+        "age": 38,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 5,
+        "commute_min_each_way": 33,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a day back with my toddler at no pay cut is brilliant, but I'm the one who has to make sure the team keeps output flat, so I'll be watching how that's measured. If it works I'm not going anywhere.",
+        "top_factor": "Extra day with toddler"
+      }
+    },
+    {
+      "cell": "F-manager-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Chloe",
+        "gender": "woman",
+        "age": 36,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 11,
+        "commute_min_each_way": 35,
+        "home": "a child in primary school",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 10.0,
+        "policy": 5.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a day back with my kid and no pay cut is brilliant, but I'm a finance manager, so month-end and audits don't shrink just because we're on four days. I'll be the one working out how to fit the same work into less time, so I'm cautiously happy.",
+        "top_factor": "Extra day with child"
+      }
+    },
+    {
+      "cell": "F-manager-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Grace",
+        "gender": "woman",
+        "age": 48,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 9,
+        "commute_min_each_way": 29,
+        "home": "lives alone",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 4.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a day back every week for the same money is lovely, and I live alone so I'll happily use it. I just wonder how we keep campaign output the same, so I'll be watching that it doesn't turn into the same work crammed into fewer days.",
+        "top_factor": "Extra day off, same pay"
+      }
+    },
+    {
+      "cell": "F-manager-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Priya",
+        "gender": "woman",
+        "age": 45,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 4,
+        "commute_min_each_way": 27,
+        "home": "lives alone",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 7.0,
+        "feeling": 1.0,
+        "quote": "A day back each week with no pay cut is great, and I live alone so I'd use it well. I'm a bit wary about squeezing the same output into fewer hours, especially with my team's workload, but I'm happy to give it a go.",
+        "top_factor": "Extra day off, same pay"
+      }
+    },
+    {
+      "cell": "M-junior-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Ravi",
+        "gender": "man",
+        "age": 29,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 70,
+        "home": "an elderly parent who lives with them",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 25.0,
+        "policy": 12.0,
+        "feeling": 2,
+        "quote": "A day back with no pay cut is huge for me, that's 140 minutes of commuting gone and a proper day to help with my dad. I'll happily hit the same output if it means I'm not wrecked by Friday, and honestly it makes me less keen to look elsewhere.",
+        "top_factor": "Extra day for commute and caring"
+      }
+    },
+    {
+      "cell": "M-junior-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Callum",
+        "gender": "man",
+        "age": 25,
+        "role": "finance analyst",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 89,
+        "home": "an elderly parent who lives with them",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 22.0,
+        "policy": 9.0,
+        "feeling": 2,
+        "quote": "Honestly, a day back with no pay cut is huge for me, that's nearly three hours of commuting gone and more time to help with my dad. I'll happily work harder across the four days to make it stick.",
+        "top_factor": "Day off saves commute time"
+      }
+    },
+    {
+      "cell": "M-junior-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Oliver",
+        "gender": "man",
+        "age": 24,
+        "role": "software engineer",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 88,
+        "home": "no caring duties",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 25.0,
+        "policy": 12.0,
+        "feeling": 2,
+        "quote": "Honestly, that's brilliant. I lose a whole day of commuting, which is nearly three hours, and I get the same pay. I'll happily make sure we hit the output, and it makes me a lot less likely to start looking elsewhere.",
+        "top_factor": "Day less commuting, same pay"
+      }
+    },
+    {
+      "cell": "M-junior-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Tom",
+        "gender": "man",
+        "age": 24,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 89,
+        "home": "lives alone",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 25.0,
+        "policy": 12.0,
+        "feeling": 2,
+        "quote": "Honestly, a day back from an 89-minute each-way commute is huge for me, that's nearly three hours of my life every week. I'm a bit wary about squeezing the same output into four days, especially at busy periods like month-end, but I'll happily give it a go.",
+        "top_factor": "Day less commuting"
+      }
+    },
+    {
+      "cell": "M-junior-short-care",
+      "i": 0,
+      "persona": {
+        "name": "James",
+        "gender": "man",
+        "age": 27,
+        "role": "marketing associate",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 35,
+        "home": "an elderly parent who lives with them",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 8.0,
+        "feeling": 2,
+        "quote": "Honestly, brilliant. An extra day at home helps with looking after my dad, and I save a commute day too. I'll just have to make sure we actually hit the output, but I'm not going anywhere over this.",
+        "top_factor": "Extra day for caring"
+      }
+    },
+    {
+      "cell": "M-junior-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Tom",
+        "gender": "man",
+        "age": 23,
+        "role": "accountant",
+        "level": "junior",
+        "tenure_years": 2,
+        "commute_min_each_way": 24,
+        "home": "two young children",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 2,
+        "quote": "Honestly, a day off every week with the kids and no pay cut is brilliant. I just hope the workload doesn't get squeezed into four days, especially around month-end, but I'm happy to give it a go.",
+        "top_factor": "Extra day with kids"
+      }
+    },
+    {
+      "cell": "M-junior-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Tom",
+        "gender": "man",
+        "age": 25,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 0,
+        "commute_min_each_way": 22,
+        "home": "lives alone",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 20.0,
+        "policy": 10.0,
+        "feeling": 2,
+        "quote": "A day off every week for the same money is brilliant, and I'm not complaining. I'll have to see how the output commitment plays out in QA, since testing doesn't shrink just because we're around less, but I'm happy to give it a go.",
+        "top_factor": "Extra day off, same pay"
+      }
+    },
+    {
+      "cell": "M-junior-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Oliver",
+        "gender": "man",
+        "age": 29,
+        "role": "QA engineer",
+        "level": "junior",
+        "tenure_years": 1,
+        "commute_min_each_way": 12,
+        "home": "lives alone",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 8.0,
+        "feeling": 2,
+        "quote": "A day off a week for the same pay? Brilliant, I'm not complaining. Bit nervous about keeping output the same, especially around release time, but I'll happily give it a go.",
+        "top_factor": "Extra day off, same pay"
+      }
+    },
+    {
+      "cell": "M-mid-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Callum",
+        "gender": "man",
+        "age": 37,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 4,
+        "commute_min_each_way": 95,
+        "home": "an elderly parent who lives with them",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 14.0,
+        "policy": 6.0,
+        "feeling": 2,
+        "quote": "Honestly, this is brilliant for me. One fewer day of a 3-hour round-trip commute and more time with Dad is worth a lot. I'm a bit wary about squeezing the same output into four days, especially around month-end, but I'm not complaining.",
+        "top_factor": "Day less commuting, more caring time"
+      }
+    },
+    {
+      "cell": "M-mid-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Oliver",
+        "gender": "man",
+        "age": 31,
+        "role": "senior engineer",
+        "level": "mid",
+        "tenure_years": 3,
+        "commute_min_each_way": 55,
+        "home": "a child in primary school",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 5.0,
+        "feeling": 2,
+        "quote": "Honestly, a day back with my kid and no commute for a day? Brilliant. I'm a bit wary about squeezing the same output into four days, but I'm not going to complain about that trade.",
+        "top_factor": "Extra day with family"
+      }
+    },
+    {
+      "cell": "M-mid-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Callum",
+        "gender": "man",
+        "age": 32,
+        "role": "product marketing lead",
+        "level": "mid",
+        "tenure_years": 3,
+        "commute_min_each_way": 71,
+        "home": "lives with a partner, no children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 6.0,
+        "feeling": 2,
+        "quote": "Honestly, a day back every week with no pay cut is brilliant, especially with that 71 minute commute each way. I'll happily commit to keeping output up, though I'm a bit wary of how it's measured and whether we'll just be cramming five days of work into four.",
+        "top_factor": "Extra day off, no commute"
+      }
+    },
+    {
+      "cell": "M-mid-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Tom",
+        "gender": "man",
+        "age": 32,
+        "role": "senior finance analyst",
+        "level": "mid",
+        "tenure_years": 6,
+        "commute_min_each_way": 92,
+        "home": "lives with a partner, no children",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 8.0,
+        "feeling": 2,
+        "quote": "Honestly, a day back with no pay cut is huge when you spend three hours a day commuting. I'll need to see how we keep output up, but I'm definitely not complaining, and it makes me less likely to go looking elsewhere.",
+        "top_factor": "Day off saves commute"
+      }
+    },
+    {
+      "cell": "M-mid-short-care",
+      "i": 0,
+      "persona": {
+        "name": "James",
+        "gender": "man",
+        "age": 29,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 4,
+        "commute_min_each_way": 29,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 2,
+        "quote": "Honestly, a day a week with my little one and no pay cut is brilliant, and it makes me less likely to look elsewhere. I just hope the output expectations are realistic and we don't end up cramming five days of work into four.",
+        "top_factor": "Extra day with toddler"
+      }
+    },
+    {
+      "cell": "M-mid-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Daniel",
+        "gender": "man",
+        "age": 29,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 20,
+        "home": "two young children",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 5.0,
+        "feeling": 2,
+        "quote": "A day a week with the kids at no pay cut is brilliant, I'm not going to complain. The only worry is cramming the same workload into fewer hours, so I'll be keeping a close eye on that.",
+        "top_factor": "Extra day with kids"
+      }
+    },
+    {
+      "cell": "M-mid-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Daniel",
+        "gender": "man",
+        "age": 33,
+        "role": "product marketing lead",
+        "level": "mid",
+        "tenure_years": 8,
+        "commute_min_each_way": 18,
+        "home": "no caring duties",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a day back every week for the same pay is great, and I'm not going to complain. I just want to see how they'll measure 'same output', because in product marketing launches don't pause on Fridays.",
+        "top_factor": "Extra day off, same pay"
+      }
+    },
+    {
+      "cell": "M-mid-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Tom",
+        "gender": "man",
+        "age": 29,
+        "role": "data analyst",
+        "level": "mid",
+        "tenure_years": 3,
+        "commute_min_each_way": 15,
+        "home": "lives with a partner, no children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 15.0,
+        "policy": 8.0,
+        "feeling": 2,
+        "quote": "Honestly, great news. Same pay for a day back each week is a real perk, and I'm not too worried about keeping output up since I reckon we can tighten a few meetings. I just hope it doesn't turn into the same work crammed into four days, and that it actually sticks after the trial.",
+        "top_factor": "Extra day off, same pay"
+      }
+    },
+    {
+      "cell": "M-manager-long-care",
+      "i": 0,
+      "persona": {
+        "name": "Callum",
+        "gender": "man",
+        "age": 43,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 12,
+        "commute_min_each_way": 89,
+        "home": "a toddler and a partner who also works full time",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 5.0,
+        "feeling": 2,
+        "quote": "Honestly, a day back with my kid and no 3-hour commute that day is huge for me. I'm a bit wary about keeping output the same, since I'll be the one making that work for my team, but I'll take the trial and make it work.",
+        "top_factor": "Extra day, less commuting"
+      }
+    },
+    {
+      "cell": "M-manager-long-care",
+      "i": 1,
+      "persona": {
+        "name": "Callum",
+        "gender": "man",
+        "age": 44,
+        "role": "engineering manager",
+        "level": "manager",
+        "tenure_years": 5,
+        "commute_min_each_way": 100,
+        "home": "two young children",
+        "performance": "solid performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 5.0,
+        "feeling": 2,
+        "quote": "Honestly, a day back with the kids and no 200-minute commute is huge for me. The worry is keeping output the same with a team to look after, but I'll happily make that work, and it makes me much less likely to go looking elsewhere.",
+        "top_factor": "Day saved on commute"
+      }
+    },
+    {
+      "cell": "M-manager-long-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Daniel",
+        "gender": "man",
+        "age": 35,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 6,
+        "commute_min_each_way": 63,
+        "home": "lives with a partner, no children",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 1.0,
+        "quote": "A day back with no pay cut is brilliant, especially with a 63-minute commute each way. I just want to see how we keep month-end and reporting output the same in 32 hours, because that's where it could get squeezed.",
+        "top_factor": "Extra day off, long commute"
+      }
+    },
+    {
+      "cell": "M-manager-long-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Tom",
+        "gender": "man",
+        "age": 43,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 7,
+        "commute_min_each_way": 76,
+        "home": "lives alone",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 6.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a day back with no pay cut is great given my commute, that's over two and a half hours saved. I'm a bit wary about how we keep month-end and reporting output the same in fewer hours, but I'll give it a go.",
+        "top_factor": "Extra day off, long commute"
+      }
+    },
+    {
+      "cell": "M-manager-short-care",
+      "i": 0,
+      "persona": {
+        "name": "James",
+        "gender": "man",
+        "age": 49,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 11,
+        "commute_min_each_way": 33,
+        "home": "an elderly parent who lives with them",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 4.0,
+        "feeling": 2,
+        "quote": "Honestly, a day back each week is a big help with Dad at home, and I'm not going to complain about the same pay. I'll want to see how we actually keep output up, but I'm happy to give it a go.",
+        "top_factor": "Extra day for caring"
+      }
+    },
+    {
+      "cell": "M-manager-short-care",
+      "i": 1,
+      "persona": {
+        "name": "Ravi",
+        "gender": "man",
+        "age": 50,
+        "role": "director of operations",
+        "level": "manager",
+        "tenure_years": 6,
+        "commute_min_each_way": 11,
+        "home": "an elderly parent who lives with them",
+        "performance": "steady, meets expectations"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 4.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a day back for the same pay is welcome, especially with Dad at home. My worry is that as ops director I'll be the one making the same output fit into fewer hours, so let's see how the six months go.",
+        "top_factor": "Extra day for caring"
+      }
+    },
+    {
+      "cell": "M-manager-short-nocare",
+      "i": 0,
+      "persona": {
+        "name": "Ravi",
+        "gender": "man",
+        "age": 38,
+        "role": "finance manager",
+        "level": "manager",
+        "tenure_years": 10,
+        "commute_min_each_way": 16,
+        "home": "no caring duties",
+        "performance": "strong performer"
+      },
+      "reaction": {
+        "base": 8.0,
+        "policy": 5.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a day off a week with the same pay is hard to complain about, though I'm wary about month-end close and audit deadlines, since finance can't just do less. If we can make it work I'm happy, and if it gets scrapped after six months I'll shrug and carry on.",
+        "top_factor": "Extra day off, workload worry"
+      }
+    },
+    {
+      "cell": "M-manager-short-nocare",
+      "i": 1,
+      "persona": {
+        "name": "Daniel",
+        "gender": "man",
+        "age": 34,
+        "role": "marketing manager",
+        "level": "manager",
+        "tenure_years": 12,
+        "commute_min_each_way": 20,
+        "home": "lives alone",
+        "performance": "top performer"
+      },
+      "reaction": {
+        "base": 12.0,
+        "policy": 7.0,
+        "feeling": 1.0,
+        "quote": "Honestly, a day back every week for the same money is hard to complain about. I just want to know how we're meant to hit the same output with fewer hours, because I suspect I'll end up squeezing five days of work into four.",
+        "top_factor": "Extra day off, workload worry"
+      }
+    }
+  ],
+  "forecast": {
+    "employees": 5000,
+    "relative_change": -0.501,
+    "leavers_status_quo": 797,
+    "leavers_with_policy": 403,
+    "feeling": 1.61,
+    "subgroups": {
+      "gender": {
+        "F": {
+          "relative_change": -0.497,
+          "headcount": 2500
+        },
+        "M": {
+          "relative_change": -0.505,
+          "headcount": 2500
+        }
+      },
+      "managerial": {
+        "non-manager": {
+          "relative_change": -0.501,
+          "headcount": 4000
+        },
+        "manager": {
+          "relative_change": -0.494,
+          "headcount": 1000
+        }
+      },
+      "level": {
+        "junior": {
+          "relative_change": -0.491,
+          "headcount": 2000
+        },
+        "mid": {
+          "relative_change": -0.517,
+          "headcount": 2000
+        },
+        "manager": {
+          "relative_change": -0.494,
+          "headcount": 1000
+        }
+      },
+      "commute": {
+        "long": {
+          "relative_change": -0.553,
+          "headcount": 1500
+        },
+        "short": {
+          "relative_change": -0.473,
+          "headcount": 3500
+        }
+      },
+      "caregiver": {
+        "caregiver": {
+          "relative_change": -0.54,
+          "headcount": 1652
+        },
+        "no caring duties": {
+          "relative_change": -0.487,
+          "headcount": 3348
+        }
+      }
+    },
+    "cells": [
+      {
+        "cell": "F-junior-long-care",
+        "headcount": 45,
+        "base": 0.185,
+        "policy": 0.08,
+        "feeling": 2.0
+      },
+      {
+        "cell": "F-junior-long-nocare",
+        "headcount": 255,
+        "base": 0.2,
+        "policy": 0.09,
+        "feeling": 2.0
+      },
+      {
+        "cell": "F-junior-short-care",
+        "headcount": 105,
+        "base": 0.12,
+        "policy": 0.055,
+        "feeling": 2.0
+      },
+      {
+        "cell": "F-junior-short-nocare",
+        "headcount": 595,
+        "base": 0.225,
+        "policy": 0.125,
+        "feeling": 1.5
+      },
+      {
+        "cell": "F-mid-long-care",
+        "headcount": 120,
+        "base": 0.185,
+        "policy": 0.07,
+        "feeling": 2.0
+      },
+      {
+        "cell": "F-mid-long-nocare",
+        "headcount": 180,
+        "base": 0.21,
+        "policy": 0.09,
+        "feeling": 2.0
+      },
+      {
+        "cell": "F-mid-short-care",
+        "headcount": 280,
+        "base": 0.11,
+        "policy": 0.055,
+        "feeling": 1.0
+      },
+      {
+        "cell": "F-mid-short-nocare",
+        "headcount": 420,
+        "base": 0.135,
+        "policy": 0.075,
+        "feeling": 1.0
+      },
+      {
+        "cell": "F-manager-long-care",
+        "headcount": 83,
+        "base": 0.115,
+        "policy": 0.05,
+        "feeling": 1.5
+      },
+      {
+        "cell": "F-manager-long-nocare",
+        "headcount": 67,
+        "base": 0.11,
+        "policy": 0.05,
+        "feeling": 1.5
+      },
+      {
+        "cell": "F-manager-short-care",
+        "headcount": 193,
+        "base": 0.11,
+        "policy": 0.055,
+        "feeling": 1.0
+      },
+      {
+        "cell": "F-manager-short-nocare",
+        "headcount": 157,
+        "base": 0.1,
+        "policy": 0.055,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-junior-long-care",
+        "headcount": 45,
+        "base": 0.235,
+        "policy": 0.105,
+        "feeling": 2.0
+      },
+      {
+        "cell": "M-junior-long-nocare",
+        "headcount": 255,
+        "base": 0.25,
+        "policy": 0.12,
+        "feeling": 2.0
+      },
+      {
+        "cell": "M-junior-short-care",
+        "headcount": 105,
+        "base": 0.135,
+        "policy": 0.07,
+        "feeling": 2.0
+      },
+      {
+        "cell": "M-junior-short-nocare",
+        "headcount": 595,
+        "base": 0.175,
+        "policy": 0.09,
+        "feeling": 2.0
+      },
+      {
+        "cell": "M-mid-long-care",
+        "headcount": 120,
+        "base": 0.13,
+        "policy": 0.055,
+        "feeling": 2.0
+      },
+      {
+        "cell": "M-mid-long-nocare",
+        "headcount": 180,
+        "base": 0.15,
+        "policy": 0.07,
+        "feeling": 2.0
+      },
+      {
+        "cell": "M-mid-short-care",
+        "headcount": 280,
+        "base": 0.12,
+        "policy": 0.055,
+        "feeling": 2.0
+      },
+      {
+        "cell": "M-mid-short-nocare",
+        "headcount": 420,
+        "base": 0.135,
+        "policy": 0.07,
+        "feeling": 1.5
+      },
+      {
+        "cell": "M-manager-long-care",
+        "headcount": 83,
+        "base": 0.12,
+        "policy": 0.05,
+        "feeling": 2.0
+      },
+      {
+        "cell": "M-manager-long-nocare",
+        "headcount": 67,
+        "base": 0.12,
+        "policy": 0.06,
+        "feeling": 1.0
+      },
+      {
+        "cell": "M-manager-short-care",
+        "headcount": 193,
+        "base": 0.08,
+        "policy": 0.04,
+        "feeling": 1.5
+      },
+      {
+        "cell": "M-manager-short-nocare",
+        "headcount": 157,
+        "base": 0.1,
+        "policy": 0.06,
+        "feeling": 1.0
+      }
+    ]
+  },
+  "briefing": {
+    "headline": "The simulation predicts leavers over the next 12 months would roughly halve, from 797 to 403 out of 5,000. Read this as a strong positive signal, not a forecast, especially since the 12-month window runs past the six-month trial.",
+    "most_at_risk": "Long commuters (-55% leaving) and caregivers (-54%) gain the most because they get back travel time and family time, while managers, operations and finance carry the most risk because they expect to be the ones squeezing the same output into fewer hours around fixed deadlines like month-end close and audits.",
+    "risks": [
+      "Nearly every voice welcomes the extra day but worries about cramming the same work into four days, so if workloads don't actually change the goodwill could turn into burnout and resentment.",
+      "The retention gain assumes the benefit lasts, so scrapping or scaling back after six months could leave morale and attrition worse than today, especially among the long commuters and caregivers who value it most.",
+      "Deadline-driven and coordinating roles (finance, operations, managers) may quietly absorb the extra pressure or work on their day off, which would hollow out the benefit for exactly the people who have to make it work."
+    ],
+    "design_changes": [
+      "Agree concrete output measures with each team before launch, and say plainly what work will stop or shrink, such as cutting standing meetings, rather than relying on people simply working harder.",
+      "Publish the end-of-trial decision criteria and process upfront, and commit to a gradual adjustment rather than an abrupt return to five days if results are mixed.",
+      "Give deadline-heavy functions flexibility, such as staggered days off, rotas for client cover, or shifting the day around month-end, and give managers specific support and authority to re-plan workloads."
+    ],
+    "confidence": "low, because the effect is almost identical across every group (-47% to -55%) and the sample voices are strikingly similar, which suggests the model isn't distinguishing between groups well; the voices also come mostly from office-based roles, and the numbers don't show what happens to leaving if the trial ends at six months."
+  },
+  "score": {
+    "predicted": -0.501,
+    "published": -0.57,
+    "direction_hit": true,
+    "abs_error_pp": 6.9,
+    "subgroup_hits": 0,
+    "subgroup_checks": []
+  },
+  "mode": "claude",
+  "spend": {
+    "usd": 0.164,
+    "calls": 49,
+    "by_role": {
+      "persona (claude-sonnet-5-5)": {
+        "calls": 48,
+        "usd": 0.1315,
+        "output": 6547
+      },
+      "analyst (claude-opus-5-5)": {
+        "calls": 1,
+        "usd": 0.0325,
+        "output": 1251
+      }
+    },
+    "budget_usd": 5.0,
+    "total_usd": 2.6502
+  },
+  "seconds": 27.6
+}
